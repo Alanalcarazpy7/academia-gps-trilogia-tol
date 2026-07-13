@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Material original del cliente
+/source-assets/
+
+# Variables privadas
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">Ícono Academia GPS</title>
+  <desc id="desc">Marcador de ubicación con cruz médica de Academia GPS.</desc>
+  <ellipse cx="180" cy="316" rx="145" ry="39" fill="none" stroke="#004877" stroke-width="12"/>
+  <ellipse cx="180" cy="316" rx="82" ry="22" fill="#004877"/>
+  <path d="M180 16C102 16 45 75 45 150c0 94 135 175 135 175s135-81 135-175C315 75 258 16 180 16Z"
+        fill="#ffffff" stroke="#004877" stroke-width="12" stroke-linejoin="round"/>
+  <rect x="151" y="76" width="58" height="145" rx="19" fill="#008080"/>
+  <rect x="108" y="119" width="144" height="58" rx="19" fill="#008080"/>
+</svg>
