@@ -1,9 +1,9 @@
 import { siteConfig } from "./site";
 
 export const seoConfig = {
-  title: "Trilogía TOL | Finanzas, Marketing y Liderazgo para Clínicas",
+  title: "Academia GPS | La Trilogía TOL para clínicas rentables",
   description:
-    "Aprende a dirigir una clínica rentable con formación práctica en finanzas, marketing y liderazgo para profesionales de la salud.",
+    "Formación ejecutiva para profesionales de la salud que quieren dirigir una clínica rentable con finanzas, marketing y liderazgo.",
   metadataBaseUrl: "https://academiagps.online",
   canonicalPath: "/",
   canonicalPendingConfirmation: siteConfig.domains.finalDomainPendingConfirmation,

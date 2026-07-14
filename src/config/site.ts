@@ -7,7 +7,7 @@ export const siteConfig = {
   heroWordmarkLabel: "Academia GPS presenta",
   headline: "Dirigí una clínica rentable, no solo una agenda llena.",
   supportLine:
-    "La universidad te enseñó a atender pacientes. La Trilogía TOL te enseña a liderar con finanzas, marketing y estrategia.",
+    "Ordená finanzas, marketing y liderazgo para hacer crecer tu clínica con claridad.",
   description:
     "Una formación guiada para profesionales de la salud que quieren ordenar sus números, atraer mejores pacientes y liderar con claridad.",
   topBanner: {
@@ -33,6 +33,19 @@ export const siteConfig = {
     "4 meses de acompañamiento",
     "Herramientas aplicables",
   ],
+  authority: {
+    name: "Dra. Nidia Carolina",
+    role: "Fundadora de Academia GPS",
+  },
+  socialProof: {
+    label: "Profesionales de la salud ya están conociendo la metodología GPS",
+    avatars: [
+      "/images/social-proof/avatar-profesional-01.jpeg",
+      "/images/social-proof/avatar-profesional-02.avif",
+      "/images/social-proof/avatar-profesional-03.jpeg",
+      "/images/social-proof/avatar-profesional-04.jpg",
+    ],
+  },
   methodologyPreview: ["Aprender", "Reflexionar", "Implementar", "Acompañar"],
   domains: {
     candidates: ["academiagps.online", "academiagps.com"],

@@ -19,11 +19,25 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL(seoConfig.metadataBaseUrl),
+  applicationName: "Academia GPS",
   title: seoConfig.title,
   description: seoConfig.description,
   keywords: [...seoConfig.keywords],
+  creator: "Academia GPS",
+  publisher: "Academia GPS",
+  category: "education",
   alternates: {
     canonical: seoConfig.canonicalPath,
+  },
+  icons: {
+    icon: [
+      {
+        url: "/brand/academia-gps-icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    shortcut: "/brand/academia-gps-icon.svg",
+    apple: "/brand/academia-gps-icon.svg",
   },
   openGraph: {
     title: seoConfig.title,

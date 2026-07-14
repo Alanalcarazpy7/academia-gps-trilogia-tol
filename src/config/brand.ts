@@ -11,7 +11,7 @@ export const brandColors = {
 export const brandAssets = {
   academiaGpsLogo: "/brand/academia-gps-logo.svg",
   academiaGpsIcon: "/brand/academia-gps-icon.svg",
-  trilogiaTolLogo: null,
+  trilogiaTolLogo: "/brand/trilogia-tol-logo.png",
 } as const;
 
 export const brand = {

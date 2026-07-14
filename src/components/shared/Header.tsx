@@ -13,10 +13,10 @@ export function Header() {
   const paymentCta = getPrimaryPaymentCta();
 
   return (
-    <header className="sticky top-9 z-30 border-b border-brand-blue/10 bg-white/94 shadow-[0_10px_26px_rgba(0,72,119,0.07)] backdrop-blur-xl">
+    <header className="sticky top-9 z-30 border-b border-brand-blue/10 bg-white/95 shadow-[0_10px_26px_rgba(0,72,119,0.065)] backdrop-blur-xl">
       <Container className="relative flex h-16 items-center justify-between gap-3">
         <a
-          className="flex shrink-0 items-center rounded-full bg-white px-2 py-1 shadow-[0_8px_22px_rgba(0,72,119,0.08)] transition-[box-shadow,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(0,72,119,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-teal"
+          className="group flex min-w-0 shrink-0 items-center gap-2.5 rounded-full bg-white px-2.5 py-1.5 shadow-[0_8px_22px_rgba(0,72,119,0.07)] transition-[box-shadow,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 hover:shadow-[0_12px_28px_rgba(0,72,119,0.11)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-teal"
           href="#inicio"
           aria-label="Ir al inicio de Academia GPS"
           onClick={() => setIsMenuOpen(false)}
@@ -26,7 +26,7 @@ export function Header() {
             alt="Academia GPS"
             width={154}
             height={56}
-            className="h-9 w-auto sm:h-10"
+            className="h-8 w-auto sm:h-9"
           />
         </a>
 
@@ -59,12 +59,12 @@ export function Header() {
 
         <div className="hidden items-center gap-3 lg:flex">
           <Button
-            className="group min-w-36 gap-2 px-5 shadow-[0_14px_30px_rgba(0,72,119,0.16)]"
+            className="group min-w-40 gap-2 px-5 shadow-[0_14px_30px_rgba(0,72,119,0.16)]"
             href={paymentCta.href}
             isPlaceholder={paymentCta.isPlaceholder}
             size="sm"
           >
-            <span>Reservar</span>
+            <span>Reservar mi plaza</span>
             <span
               aria-hidden="true"
               className="grid h-6 w-6 place-items-center rounded-full bg-white/12 text-sm transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5"
@@ -113,6 +113,24 @@ export function Header() {
               : "invisible -translate-y-2 opacity-0",
           ].join(" ")}
         >
+          <div className="mb-2 flex items-center gap-3 rounded-[20px] bg-brand-cream px-3 py-2">
+            <Image
+              src={brand.assets.academiaGpsIcon}
+              alt=""
+              width={40}
+              height={40}
+              className="h-8 w-8"
+            />
+            <span className="min-w-0">
+              <span className="block text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-teal">
+                Academia GPS
+              </span>
+              <span className="mt-0.5 block text-sm font-extrabold text-brand-blue">
+                Centro educativo
+              </span>
+            </span>
+          </div>
+
           <nav aria-label="Navegación móvil" className="grid gap-1">
             {navigationItems.map((item, index) => (
               <a
