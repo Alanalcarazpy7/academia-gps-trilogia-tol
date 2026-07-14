@@ -5,8 +5,10 @@ import { Header } from "@/components/shared/Header";
 export default function Home() {
   return (
     <>
-      <TolTopBanner />
-      <Header />
+      <div className="sticky top-0 z-40">
+        <TolTopBanner />
+        <Header />
+      </div>
       <main>
         <TolHero />
       </main>

@@ -52,9 +52,9 @@ export const siteConfig = {
     finalDomainPendingConfirmation: true,
   },
   assets: {
-    heroImage: "/images/dra-nidia/dra-nidia-tablet.jpeg",
+    heroImage: "/images/dra-nidia/dra-nidia-hero.jpeg",
     heroImageAlt:
-      "Dra. Nidia Carolina sentada con una tablet en un entorno profesional luminoso.",
+      "Dra. Nidia Carolina sonriendo en un entorno profesional luminoso.",
   },
   futureRoute: "/trilogia-tol",
 } as const;

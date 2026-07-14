@@ -1,10 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
-  <title id="title">Ícono Academia GPS</title>
-  <desc id="desc">Marcador de ubicación con cruz médica de Academia GPS.</desc>
-  <ellipse cx="180" cy="316" rx="145" ry="39" fill="none" stroke="#004877" stroke-width="12"/>
-  <ellipse cx="180" cy="316" rx="82" ry="22" fill="#004877"/>
-  <path d="M180 16C102 16 45 75 45 150c0 94 135 175 135 175s135-81 135-175C315 75 258 16 180 16Z"
-        fill="#ffffff" stroke="#004877" stroke-width="12" stroke-linejoin="round"/>
-  <rect x="151" y="76" width="58" height="145" rx="19" fill="#008080"/>
-  <rect x="108" y="119" width="144" height="58" rx="19" fill="#008080"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 370 370" role="img" aria-labelledby="title desc">
+  <title id="title">Academia GPS icon</title>
+  <desc id="desc">Icono de Academia GPS.</desc>
+  <rect width="370" height="370" rx="92" fill="#F8F2EA"/>
+  <rect x="18" y="18" width="334" height="334" rx="78" fill="#FFFFFF" opacity="0.86"/>
+  <ellipse cx="185" cy="313" rx="135" ry="38" fill="none" stroke="#004877" stroke-width="12"/>
+  <ellipse cx="185" cy="313" rx="78" ry="21" fill="#004877"/>
+  <path d="M185 34C110 34 56 91 56 163c0 91 129 168 129 168s129-77 129-168C314 91 260 34 185 34Z" fill="#FFFFFF" stroke="#004877" stroke-linejoin="round" stroke-width="12"/>
+  <rect x="158" y="94" width="54" height="133" rx="18" fill="#008080"/>
+  <rect x="119" y="133" width="132" height="54" rx="18" fill="#008080"/>
 </svg>

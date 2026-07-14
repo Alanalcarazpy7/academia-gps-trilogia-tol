@@ -52,32 +52,109 @@ img {
 }
 
 .hero-premium-surface {
-  background:
-    linear-gradient(104deg, rgb(248 242 234 / 0.98) 0%, rgb(255 255 255 / 0.9) 52%, rgb(239 248 246 / 0.95) 100%),
-    linear-gradient(180deg, rgb(255 255 255 / 0.74), transparent 42%),
-    var(--brand-cream);
+  background: var(--brand-cream);
 }
 
 .hero-premium-surface::before {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;
   background:
-    linear-gradient(112deg, transparent 0%, transparent 52%, rgb(0 72 119 / 0.07) 52.2%, rgb(0 72 119 / 0.035) 100%),
-    repeating-linear-gradient(90deg, rgb(0 72 119 / 0.018) 0 1px, transparent 1px 18px);
-  opacity: 0.42;
+    radial-gradient(58% 56% at 100% 6%, rgb(230 198 25 / 0.28), transparent 64%),
+    radial-gradient(48% 46% at 84% 96%, rgb(118 168 88 / 0.22), transparent 62%),
+    radial-gradient(46% 44% at 0% 92%, rgb(0 128 128 / 0.16), transparent 64%),
+    linear-gradient(150deg, rgb(255 255 255 / 0.5) 0%, transparent 34%),
+    var(--brand-cream);
 }
 
 .hero-premium-surface::after {
   content: "";
   position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.07;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='52' height='52'%3E%3Cpath d='M52 0H0V52' fill='none' stroke='%23004877' stroke-width='1'/%3E%3C/svg%3E");
+  background-size: 52px 52px;
+}
+
+.header-premium-surface {
+  position: relative;
+  background: linear-gradient(160deg, #00597a 0%, #024a63 48%, #01313f 100%);
+}
+
+.header-premium-surface::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(112deg, rgb(255 255 255 / 0.12) 0%, transparent 32%, transparent 68%, rgb(0 128 128 / 0.26) 100%);
+}
+
+.header-premium-surface::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--brand-yellow) 30%, var(--brand-yellow) 70%, transparent);
+  opacity: 0.85;
+  box-shadow: 0 1px 8px rgb(230 198 25 / 0.4);
+}
+
+.btn-gold-glow {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, #fbe58a 0%, var(--brand-yellow) 46%, #cca300 100%);
+  color: var(--brand-blue);
+  box-shadow:
+    inset 0 1.5px 1px rgb(255 255 255 / 0.9),
+    inset 0 -4px 7px rgb(110 84 0 / 0.4),
+    0 4px 8px rgb(0 0 0 / 0.16),
+    0 14px 30px rgb(0 0 0 / 0.24);
+}
+
+.btn-gold-glow::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.35), transparent);
+  opacity: 0;
+  transform: translateX(-45%);
+  transition:
+    opacity 280ms var(--ease-premium-out),
+    transform 520ms var(--ease-premium-out);
+  pointer-events: none;
+}
+
+.btn-gold-glow:hover::before {
+  opacity: 1;
+  transform: translateX(45%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-gold-glow:hover {
+    background: linear-gradient(180deg, #fdedac 0%, #f0d033 46%, #d6ac00 100%);
+    box-shadow:
+      inset 0 1.5px 1px rgb(255 255 255 / 1),
+      inset 0 -4px 7px rgb(110 84 0 / 0.45),
+      0 6px 12px rgb(0 0 0 / 0.18),
+      0 22px 46px rgb(0 0 0 / 0.3);
+    transform: translateY(-2px) scale(1.015);
+  }
+}
+
+
+.hero-floor-shadow {
+  position: absolute;
   inset: auto 0 0;
   z-index: -1;
-  height: 42%;
+  height: 18%;
   pointer-events: none;
-  background: linear-gradient(0deg, rgb(255 255 255 / 0.72), transparent);
+  background: linear-gradient(0deg, rgb(0 72 119 / 0.05), transparent);
 }
 
 @keyframes hero-stage {
@@ -100,20 +177,18 @@ img {
   animation: hero-stage 820ms var(--ease-premium-out) 90ms both;
 }
 
-.hero-buy-button {
+.btn-glow-primary {
   position: relative;
   overflow: hidden;
-  background:
-    linear-gradient(135deg, rgb(255 255 255 / 0.22), transparent 38%),
-    linear-gradient(180deg, rgb(0 128 128 / 0.24), transparent 88%),
-    var(--brand-blue);
+  background: linear-gradient(180deg, #1f83a6 0%, var(--brand-blue) 48%, #012f4a 100%);
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.24),
-    inset 0 -1px 0 rgb(0 0 0 / 0.14),
-    0 20px 44px rgb(0 72 119 / 0.26);
+    inset 0 1.5px 1px rgb(255 255 255 / 0.4),
+    inset 0 -4px 7px rgb(0 15 26 / 0.45),
+    0 4px 8px rgb(0 0 0 / 0.14),
+    0 20px 44px rgb(0 72 119 / 0.3);
 }
 
-.hero-buy-button::before {
+.btn-glow-primary::before {
   content: "";
   position: absolute;
   inset: 1px;
@@ -127,30 +202,28 @@ img {
   pointer-events: none;
 }
 
-.hero-buy-button:hover::before {
+.btn-glow-primary:hover::before {
   opacity: 1;
   transform: translateX(45%);
 }
 
 @media (hover: hover) and (pointer: fine) {
-  .hero-buy-button:hover {
-    background:
-      linear-gradient(135deg, rgb(255 255 255 / 0.28), transparent 36%),
-      linear-gradient(180deg, rgb(0 128 128 / 0.36), transparent 88%),
-      var(--brand-blue);
+  .btn-glow-primary:hover {
+    background: linear-gradient(180deg, #2d99bd 0%, #005f8c 48%, #012f4a 100%);
     box-shadow:
-      inset 0 1px 0 rgb(255 255 255 / 0.28),
-      inset 0 -1px 0 rgb(0 0 0 / 0.16),
-      0 24px 54px rgb(0 72 119 / 0.32);
-    transform: translateY(-2px);
+      inset 0 1.5px 1px rgb(255 255 255 / 0.5),
+      inset 0 -4px 7px rgb(0 15 26 / 0.5),
+      0 6px 12px rgb(0 0 0 / 0.16),
+      0 30px 64px rgb(0 72 119 / 0.36);
+    transform: translateY(-2px) scale(1.015);
   }
 
-  .hero-buy-button:hover span:last-child {
+  .btn-glow-primary:hover span:last-child {
     background: rgb(255 255 255 / 0.22);
     transform: translateX(3px) translateY(-1px) scale(1.04);
   }
 
-  .hero-whatsapp-button:hover {
+  .btn-outline-whatsapp:hover {
     background:
       linear-gradient(135deg, rgb(0 128 128 / 0.08), transparent 54%),
       rgb(255 255 255 / 0.94);
@@ -159,7 +232,7 @@ img {
   }
 }
 
-.hero-offer-card {
+.pill-offer {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -179,7 +252,7 @@ img {
     0 12px 24px rgb(230 198 25 / 0.2);
 }
 
-.hero-photo-shell {
+.photo-frame-premium {
   position: relative;
   box-shadow:
     inset 0 1px 0 rgb(255 255 255 / 0.9),
@@ -187,7 +260,7 @@ img {
   border: 1px solid rgb(0 72 119 / 0.08);
 }
 
-.hero-photo-shell::before {
+.photo-frame-premium::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -196,6 +269,29 @@ img {
   background:
     linear-gradient(135deg, rgb(255 255 255 / 0.38), transparent 34%),
     linear-gradient(0deg, rgb(0 72 119 / 0.04), transparent 42%);
+}
+
+.photo-frame-premium::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: 0;
+  z-index: 1;
+  height: 3px;
+  border-radius: 999px 999px 0 0;
+  background: linear-gradient(90deg, var(--brand-teal), var(--brand-yellow) 52%, var(--brand-green));
+  pointer-events: none;
+}
+
+.thumb-float {
+  transition:
+    transform 460ms var(--ease-premium-out),
+    box-shadow 460ms var(--ease-premium-out);
+}
+
+.composition-group:hover .thumb-float {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 54px rgb(0 72 119 / 0.22);
 }
 
 @media (prefers-reduced-motion: reduce) {

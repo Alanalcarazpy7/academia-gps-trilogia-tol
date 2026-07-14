@@ -11,8 +11,38 @@ export const brandColors = {
 export const brandAssets = {
   academiaGpsLogo: "/brand/academia-gps-logo.svg",
   academiaGpsIcon: "/brand/academia-gps-icon.svg",
-  trilogiaTolLogo: "/brand/trilogia-tol-logo.png",
+  academiaGpsLogoDark: "/brand/academia-gps-logo-dark.svg",
+  trilogiaTolLogo: "/brand/trilogia-tol-logo-transparent.png",
+  trilogiaTolLogoPoster: "/brand/trilogia-tol-logo-poster.svg",
+  trilogiaTolProgramsOverview: "/brand/trilogia-tol-programs-overview.svg",
+  tolFiLogo: "/brand/tol-fi-logo.svg",
+  tolMarkLogo: "/brand/tol-mark-logo.svg",
+  tolCoachLogo: "/brand/tol-coach-logo.svg",
 } as const;
+
+export const trilogiaTolPrograms = [
+  {
+    id: "tol-fi",
+    name: "TOL-FI",
+    label: "Finanzas para clinicas rentables",
+    logo: brandAssets.tolFiLogo,
+    color: brandColors.blue,
+  },
+  {
+    id: "tol-mark",
+    name: "TOL-Mark",
+    label: "Marketing y experiencia del paciente",
+    logo: brandAssets.tolMarkLogo,
+    color: brandColors.teal,
+  },
+  {
+    id: "tol-coach",
+    name: "TOL-Coach",
+    label: "Coaching y liderazgo para clinicas",
+    logo: brandAssets.tolCoachLogo,
+    color: brandColors.yellow,
+  },
+] as const;
 
 export const brand = {
   name: "Academia GPS",
@@ -20,4 +50,5 @@ export const brand = {
   productDisplayName: "La Trilogía TOL",
   colors: brandColors,
   assets: brandAssets,
+  programs: trilogiaTolPrograms,
 } as const;
