@@ -36,21 +36,11 @@ export function Header() {
             <span className="pointer-events-none absolute inset-x-4 top-0 h-px bg-gradient-to-r from-transparent via-brand-yellow/65 to-transparent" />
             <span className="grid h-7 w-[4.7rem] shrink-0 place-items-center rounded-xl bg-white/85 px-1.5 shadow-[inset_0_0_0_1px_rgba(0,72,119,0.05)] transition-transform duration-300 group-hover:scale-[1.025] sm:w-[5rem] lg:h-8 lg:w-[5.4rem]">
               <Image
-                src={brand.assets.academiaGpsLogo}
+                src={brand.assets.academiaGpsLogoDark}
                 alt="Academia GPS"
                 width={1000}
                 height={360}
                 className="h-5 w-auto drop-shadow-[0_7px_12px_rgba(0,72,119,0.10)] lg:h-[1.4rem]"
-              />
-            </span>
-            <span className="hidden h-5 w-px shrink-0 bg-gradient-to-b from-transparent via-brand-blue/16 to-transparent sm:block" aria-hidden="true" />
-            <span className="hidden h-7 w-[5.3rem] shrink-0 place-items-center rounded-xl bg-white/70 px-1.5 shadow-[inset_0_0_0_1px_rgba(0,72,119,0.045)] transition-transform duration-300 group-hover:scale-[1.03] sm:grid lg:h-8 lg:w-[6rem]">
-              <Image
-                src={brand.assets.trilogiaTolLogo}
-                alt="La Trilogia TOL"
-                width={676}
-                height={350}
-                className="h-6 w-auto drop-shadow-[0_7px_12px_rgba(0,72,119,0.10)] lg:h-[1.65rem]"
               />
             </span>
           </a>
