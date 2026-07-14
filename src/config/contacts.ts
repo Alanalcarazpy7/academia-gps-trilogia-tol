@@ -14,7 +14,7 @@ export const advisorContacts: AdvisorContact[] = [];
 
 export const contactPlaceholders = {
   whatsappHref: "#contacto-pendiente",
-  whatsappLabel: "Consultar por WhatsApp",
+  whatsappLabel: "Consultar con una asesora",
   advisorStatus: "Pendiente de confirmar asesoras, números y mensajes.",
 } as const;
 

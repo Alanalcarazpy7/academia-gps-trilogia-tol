@@ -7,7 +7,7 @@ export const paymentLinks = {
 
 export const paymentPlaceholders = {
   href: "#pagopar-pendiente",
-  label: "Inscribirme",
+  label: "Quiero reservar mi plaza",
   status: "Pendiente de recibir enlaces exactos de Pagopar.",
 } as const;
 

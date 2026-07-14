@@ -28,6 +28,14 @@
 - [x] Hero usando "La Trilogía TOL" como texto preparado para sustituirse luego por el SVG oficial.
 - [x] Hero usando fotografía existente de la Dra. Nidia.
 - [x] Placeholders centralizados para Pagopar y WhatsApp.
+- [x] Segunda pasada visual aplicada al Header, TopBanner y Hero.
+- [x] Hero reforzado con propuesta comercial, micro-beneficios y línea de confianza.
+- [x] TopBanner actualizado con mensaje de pre-lanzamiento exclusivo.
+- [x] Navegación preparada para secciones futuras: Inicio, Metodología, Programas, Inversión y Preguntas frecuentes.
+- [x] Tercera pasada aplicada al primer pantallazo para que el Hero entre completo en escritorio.
+- [x] H1 comercial actualizado para primer impacto: "Dejá de atender pacientes sin dirigir realmente tu clínica."
+- [x] Oferta visible agregada al Hero con 50% de ahorro, fecha límite e inclusión de programas/masterclasses.
+- [x] CTA flotante mobile agregado para reservar plaza.
 
 ## Pendiente de la clienta
 
@@ -53,3 +61,7 @@ Antes de programar una función que dependa de un dato pendiente, usar un placeh
 
 - [x] `npm run lint`: ejecutado correctamente.
 - [x] `npm run build`: ejecutado correctamente.
+- [x] `npm run lint`: ejecutado correctamente después de la segunda pasada visual.
+- [x] `npm run build`: ejecutado correctamente después de la segunda pasada visual.
+- [x] `npm run lint`: ejecutado correctamente después del rediseño compacto del Hero.
+- [x] `npm run build`: ejecutado correctamente después del rediseño compacto del Hero.
