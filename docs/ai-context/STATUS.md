@@ -14,6 +14,21 @@
 - [x] Preparar para futura integración en Academia GPS.
 - [x] Seña recibida.
 
+## Implementado
+
+- [x] Repositorio conectado a GitHub.
+- [x] Rama `main` subida a `origin/main`.
+- [x] Primer bloque de la landing reemplazando el starter de Next.js.
+- [x] Poppins y Montserrat configuradas con `next/font/google`.
+- [x] Tokens oficiales de marca agregados en CSS y configuración centralizada.
+- [x] Configuración creada para marca, sitio, navegación, contactos, enlaces de pago y SEO.
+- [x] Componentes base creados: `Button` y `Container`.
+- [x] Componentes iniciales creados: `Header`, `TolTopBanner` y `TolHero`.
+- [x] Header usando el logo existente de Academia GPS.
+- [x] Hero usando "La Trilogía TOL" como texto preparado para sustituirse luego por el SVG oficial.
+- [x] Hero usando fotografía existente de la Dra. Nidia.
+- [x] Placeholders centralizados para Pagopar y WhatsApp.
+
 ## Pendiente de la clienta
 
 - [ ] Enlaces exactos de Pagopar.
@@ -33,3 +48,8 @@
 ## Regla para IA
 
 Antes de programar una función que dependa de un dato pendiente, usar un placeholder claramente marcado y centralizado. No inventar información.
+
+## Verificación técnica
+
+- [x] `npm run lint`: ejecutado correctamente.
+- [x] `npm run build`: ejecutado correctamente.
