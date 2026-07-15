@@ -20,3 +20,13 @@ export function getPrimaryPaymentCta() {
     isPlaceholder: !href,
   };
 }
+
+export function getInstallmentsPaymentCta() {
+  const href = paymentLinks.installmentsPrelaunch || paymentLinks.installmentsLaunch;
+
+  return {
+    label: paymentPlaceholders.label,
+    href: href || paymentPlaceholders.href,
+    isPlaceholder: !href,
+  };
+}

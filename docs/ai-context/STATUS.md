@@ -36,6 +36,11 @@
 - [x] H1 comercial actualizado para primer impacto: "Dejá de atender pacientes sin dirigir realmente tu clínica."
 - [x] Oferta visible agregada al Hero con 50% de ahorro, fecha límite e inclusión de programas/masterclasses.
 - [x] CTA flotante mobile agregado para reservar plaza.
+- [x] Primer bloque de secciones premium implementado: propuesta de valor, autoridad, identificacion y transformacion.
+- [x] Videos y posters locales excluidos de Git mediante `.gitignore`.
+- [x] Commit `4b03e8b` subido a `origin/develop`.
+- [x] Secciones 6 a 9 implementadas: potencial economico, oportunidad de mercado, metodologia GPS y programas TOL.
+- [x] Assets TOL renombrados y centralizados: TOL-FI, TOL-Mark, TOL-Coach y overview de programas.
 
 ## Pendiente de la clienta
 

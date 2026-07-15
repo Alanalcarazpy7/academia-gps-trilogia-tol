@@ -141,5 +141,376 @@ export const siteConfig = {
     closingNote: "Para que así, vuelvas a disfrutar de ejercer la profesión que amás.",
     ctaLabel: "Quiero asegurar mi plaza con 50% de ahorro",
   },
+  economicPotential: {
+    eyebrow: "Potencial económico",
+    headline: "Cuánto dinero perdés cuando la clínica se dirige por intuición",
+    supportLine:
+      "La rentabilidad no aparece trabajando más horas. Aparece cuando sabés qué cuesta abrir la puerta, qué margen deja cada servicio y qué arancel sostiene el crecimiento.",
+    boardLabel: "Tablero de dirección",
+    boardNote: "Dato a confirmar con números reales",
+    metrics: [
+      {
+        label: "Costos reales visibles",
+        detail: "Separar gastos fijos, variables e insumos para dejar de decidir a ciegas.",
+      },
+      {
+        label: "Margen por prestación",
+        detail: "Detectar qué servicios sostienen la clínica y cuáles consumen tiempo sin retorno.",
+      },
+      {
+        label: "Aranceles con criterio",
+        detail: "Definir precios desde números propios, no desde miedo o comparación.",
+      },
+    ],
+    leaks: [
+      "Descuentos sin criterio",
+      "Insumos invisibles",
+      "Horas no valoradas",
+      "Decisiones sin tablero",
+    ],
+    ctaLabel: "Quiero ordenar mis números",
+  },
+  marketOpportunity: {
+    eyebrow: "Oportunidad de mercado",
+    headline: "La clínica que se profesionaliza compite con otra claridad",
+    supportLine:
+      "El paciente compara más, los costos suben y la competencia comunica mejor. La gestión ya no es un extra: es parte de la experiencia que vendés.",
+    signals: [
+      {
+        label: "Pacientes más exigentes",
+        detail: "Buscan confianza, claridad y una experiencia coherente desde el primer contacto.",
+      },
+      {
+        label: "Mayor competencia",
+        detail: "No alcanza con ser bueno: también hay que comunicar valor y posicionamiento.",
+      },
+      {
+        label: "Costos crecientes",
+        detail: "La improvisación erosiona margen cuando no existe control financiero.",
+      },
+      {
+        label: "Gestión profesional",
+        detail: "Procesos, equipo y medición sostienen el crecimiento sin depender solo de vos.",
+      },
+    ],
+  },
+  gpsMethodology: {
+    eyebrow: "Metodología GPS",
+    headline: "Un método para pasar de la idea a la decisión",
+    supportLine:
+      "La metodología GPS combina criterio ejecutivo, implementación guiada y seguimiento para que cada concepto termine aplicado dentro de la clínica.",
+    steps: [
+      {
+        label: "Aprender",
+        outcome: "Claridad",
+        detail: "Conceptos claros, aplicados al lenguaje de una clínica o consultorio.",
+      },
+      {
+        label: "Reflexionar",
+        outcome: "Diagnóstico",
+        detail: "Leer tu realidad antes de copiar soluciones que no encajan con tu etapa.",
+      },
+      {
+        label: "Implementar",
+        outcome: "Acción",
+        detail: "Herramientas, plantillas y decisiones bajadas a la operación.",
+      },
+      {
+        label: "Acompañar",
+        outcome: "Seguimiento",
+        detail: "Sesiones en vivo y seguimiento para sostener el avance.",
+      },
+    ],
+  },
+  programsShowcase: {
+    eyebrow: "Los tres programas",
+    headline: "Tres áreas, un sistema para dirigir mejor tu clínica",
+    supportLine:
+      "TOL-FI ordena los números, TOL-Mark mejora la comunicación y la experiencia del paciente, y TOL-Coach fortalece liderazgo y equipo.",
+    overviewLabel: "Sistema integral con contenido y acompañamiento",
+    programs: [
+      {
+        id: "tol-fi",
+        name: "TOL-FI",
+        subtitle: "Finanzas para clínicas rentables",
+        logo: brand.assets.tolFiLogo,
+        accent: "blue",
+        modules: [
+          "Fundamentos financieros",
+          "Costo operativo",
+          "Aranceles rentables",
+          "Control financiero",
+          "Organización financiera",
+        ],
+        promise:
+          "Para dejar de decidir desde la caja del día y empezar a dirigir con números claros.",
+      },
+      {
+        id: "tol-mark",
+        name: "TOL-Mark",
+        subtitle: "Marketing y experiencia del paciente",
+        logo: brand.assets.tolMarkLogo,
+        accent: "teal",
+        modules: [
+          "Fundamentos de marketing en salud",
+          "Estrategia y posicionamiento",
+          "Comunicación estratégica",
+          "Experiencia del paciente",
+          "Gestión del marketing",
+        ],
+        promise:
+          "Para atraer pacientes correctos con una comunicación ética, consistente y medible.",
+      },
+      {
+        id: "tol-coach",
+        name: "TOL-Coach",
+        subtitle: "Coaching y liderazgo para clínicas",
+        logo: brand.assets.tolCoachLogo,
+        accent: "gold",
+        modules: [
+          "El líder comienza por sí mismo",
+          "Comunicar para inspirar y dirigir",
+          "Equipos de alto desempeño",
+          "Visión ejecutiva",
+          "Liderazgo sostenible",
+        ],
+        promise:
+          "Para liderar con dirección, delegar mejor y construir un equipo menos dependiente de vos.",
+      },
+    ],
+  },
+  futureVision: {
+    eyebrow: "Visualización del futuro",
+    headline: "Imaginá tu clínica dentro de 6 meses",
+    supportLine:
+      "Así se ve tu día a día cuando decidís con dirección, no con intuición.",
+    items: [
+      {
+        tag: "Certeza financiera",
+        text: "Abriendo tu sistema de control financiero y sabiendo con total precisión cuánto dinero ingresó y cuál es tu margen de ganancia.",
+      },
+      {
+        tag: "Aranceles con criterio",
+        text: "Cobrando tarifas justas y rentables con absoluta tranquilidad, sabiendo que tus pacientes las pagan con gusto por la excelente experiencia que reciben.",
+      },
+      {
+        tag: "Pacientes ideales",
+        text: "Atrayendo a los pacientes adecuados.",
+      },
+      {
+        tag: "Equipo autónomo",
+        text: "Liderando un equipo comprometido, con procesos organizados y sabiendo que tu clínica funciona aunque no estés presente.",
+      },
+      {
+        tag: "Vida propia",
+        text: "Disfrutando nuevamente de tu profesión, combinando tu éxito empresarial con el tiempo libre que te mereces para ti y tu familia.",
+      },
+    ],
+    closingLead: "El objetivo no es trabajar más.",
+    closingEmphasis: "Es dirigir mejor.",
+    ctaLabel: "Quiero vivir esta versión de mi clínica",
+  },
+  testimonials: {
+    eyebrow: "Testimonios de alumnos",
+    headline: "Colegas que ya dirigen con criterio, no con intuición",
+    supportLine:
+      "Espacio reservado para los testimonios reales de la primera edición. Estructura lista para reemplazar textos, nombres y fotos.",
+    trustItems: [
+      "Profesionales de la salud",
+      "Implementación guiada",
+      "Sesiones de acompañamiento en vivo",
+      "Comunidad de colegas",
+    ],
+    items: [
+      {
+        name: "Dra. Valentina R.",
+        role: "Odontóloga",
+        context: "Clínica propia · Asunción",
+        rating: 5,
+        quote:
+          "Por primera vez sé exactamente cuánto me deja cada tratamiento. Armé mi tablero financiero y hoy fijo aranceles con números reales.",
+        avatar: "/images/social-proof/avatar-profesional-01.jpeg",
+      },
+      {
+        name: "Dr. Martín F.",
+        role: "Fisioterapeuta",
+        context: "Consultorio privado",
+        rating: 5,
+        quote: "Dejé de improvisar y empecé a dirigir. La diferencia se nota mes a mes.",
+        avatar: "/images/social-proof/avatar-profesional-02.avif",
+      },
+      {
+        name: "Dra. Camila S.",
+        role: "Dermatóloga",
+        context: "Clínica de 4 profesionales",
+        rating: 5,
+        quote: "Mi equipo hoy trabaja con procesos, no a mi lado todo el día.",
+        avatar: "/images/social-proof/avatar-profesional-03.jpeg",
+      },
+      {
+        name: "Dr. Ezequiel B.",
+        role: "Odontopediatra",
+        context: "Consultorio propio",
+        rating: 5,
+        quote: "Subí mis aranceles con criterio y no perdí pacientes en el proceso.",
+        avatar: "/images/social-proof/avatar-profesional-04.jpg",
+      },
+      {
+        name: "Dra. Renata P.",
+        role: "Nutricionista clínica",
+        context: "Centro de salud integral",
+        rating: 5,
+        quote: "Entendí el idioma de los negocios sin dejar de sentirme clínica.",
+        avatar: "/images/social-proof/avatar-profesional-05.jpg",
+      },
+    ],
+  },
+  pricingOffer: {
+    eyebrow: "Oferta de pre-lanzamiento",
+    headline: "Inscribite hoy a la Trilogía TOL con una oferta inigualable",
+    supportLine:
+      "3 programas de implementación guiada + 4 masterclasses en vivo de regalo. Solo durante el pre-lanzamiento.",
+    officialPrice: "USD 2.799",
+    officialPriceLabel: "Precio oficial",
+    tiers: [
+      {
+        id: "prelaunch",
+        label: "Precio pre-lanzamiento",
+        price: "USD 1.399",
+        savings: "Ahorrás USD 1.400",
+        deadline: "Disponible hasta el 31 de julio de 2026",
+        featured: true,
+      },
+      {
+        id: "launch",
+        label: "Precio de lanzamiento",
+        price: "USD 1.599",
+        savings: "Ahorrás USD 1.200",
+        deadline: "Disponible hasta el 14 de agosto de 2026",
+        featured: false,
+      },
+    ],
+    bonusLabel: "Exclusivo por ser la 1ª edición del paquete",
+    bonuses: [
+      {
+        title: "4 Masterclasses especiales en vivo",
+        detail: "Sesiones de regalo, exclusivas para esta primera edición del paquete completo.",
+      },
+      {
+        title: "Kit completo de herramientas de dirección",
+        detail:
+          "Biblioteca de recursos descargables, checklists operativos e indicadores clave listos para aplicar.",
+      },
+    ],
+    ctaLabel: "Quiero el paquete completo con el 50% de ahorro",
+    includes: [
+      "Acceso completo a TOL-Fi + TOL-Mark + TOL-Coach",
+      "Implementación guiada, no solo teoría",
+      "20 sesiones en vivo de acompañamiento",
+      "Comunidad privada y networking con colegas",
+    ],
+    financing: {
+      label: "¿Preferís pagar en cómodas cuotas mensuales?",
+      supportLine: "Facilitamos tu inversión con nuestro programa de financiación en 10 cuotas.",
+      plans: [
+        {
+          id: "prelaunch",
+          label: "Cuota pre-lanzamiento",
+          price: "USD 199 / mes",
+          detail: "Pagando la 1ª cuota hasta el 31/07/2026",
+        },
+        {
+          id: "launch",
+          label: "Cuota lanzamiento",
+          price: "USD 233 / mes",
+          detail: "Pagando la 1ª cuota hasta el 14/08/2026",
+        },
+      ],
+      ctaLabel: "Quiero el paquete completo en 10 cuotas",
+    },
+  },
+  guarantee: {
+    eyebrow: "Garantía Academia GPS",
+    headline: "Tu inversión está protegida durante 30 días",
+    supportLine:
+      "Estamos tan comprometidos con tu transformación que, si sentís que no es para vos, el riesgo lo asumimos nosotros.",
+    points: [
+      "Accedés al programa completo desde el primer día.",
+      "Probás las primeras clases y el material a tu ritmo.",
+      "Si no aporta valor a tu clínica, te devolvemos el 100%.",
+    ],
+    closing: "El riesgo corre por nuestra cuenta.",
+    ctaLabel: "Reservar con garantía",
+  },
+  faq: {
+    eyebrow: "Preguntas frecuentes",
+    headline: "Resolvemos tus dudas antes de decidir",
+    supportLine: "Todo lo que necesitás saber antes de sumarte a la Trilogía TOL.",
+    items: [
+      {
+        question: "¿Necesito conocimientos previos en finanzas o administración?",
+        answer:
+          "No. La formación está diseñada para profesionales de la salud y enseña cada concepto de manera práctica y sencilla, en nuestro propio lenguaje.",
+      },
+      {
+        question: "¿Puedo comprar los talleres por separado?",
+        answer:
+          "Sí. Cada programa puede realizarse de forma independiente. Sin embargo, la mayor transformación ocurre cuando aplicás los tres pilares.",
+      },
+      {
+        question:
+          "No tengo tiempo para hacer la formación ahora mismo, pero quiero aprovechar la oferta ¿qué hago?",
+        answer:
+          "Las lecciones están grabadas en videos prácticos para que las veas a tu ritmo, 24/7. Las sesiones en vivo quedan grabadas por si no podés asistir en directo, y las actividades se implementan como parte de tu día a día, no como una tarea extra.",
+      },
+      {
+        question: "¿La formación es solo para médicos u odontólogos?",
+        answer:
+          "La Trilogía TOL es un sistema de gestión universal aplicable a todos los profesionales de la salud que tengan clínicas o consultorios privados y quieran mejorarla.",
+      },
+      {
+        question: "¿Cómo funciona el acompañamiento en vivo?",
+        answer:
+          "A lo largo de los 4 meses de formación, tendremos 20 sesiones de acompañamiento en vivo. En ellas, la Dra. Nidia Carolina resolverá tus dudas, analizaremos casos reales y daremos feedback a tus ejercicios de implementación.",
+      },
+      {
+        question: "¿Cuánto tiempo tendré acceso a la formación?",
+        answer: "Tendrás 12 meses de acceso total al contenido para revisarlo cuando lo necesites.",
+      },
+      {
+        question: "¿Qué diferencia esta formación de otros cursos?",
+        answer:
+          "No enseñamos teoría aislada: ofrecemos implementación guiada, donde cada parte teórica va acompañada de ejercicios prácticos inmediatos en tu clínica, para desarrollar finanzas, marketing y liderazgo.",
+      },
+    ],
+    closingLead: "Porque una clínica rentable no depende de la suerte.",
+    closingEmphasis: "Depende de un director preparado.",
+  },
+  finalDecision: {
+    eyebrow: "Tu próximo paso",
+    headline: "¿Qué decisión vas a tomar hoy?",
+    optionA: "Seguir funcionando por intuición",
+    optionB: "Dirigir tu clínica con claridad, orden y visión",
+    body: "Únete hoy a la Trilogía TOL® y comenzá a dirigir tu clínica con claridad, orden y visión.",
+    ctaLabel: "Sí, quiero transformar mi clínica hoy",
+    whatsappLabel: "Hablar por WhatsApp",
+    trustLine: "Oferta disponible hasta el 31 de julio · Pago seguro · Cupos limitados",
+  },
+  footer: {
+    tagline: "Formación ejecutiva para profesionales de la salud que dirigen su propia clínica.",
+    quickLinksLabel: "Enlaces rápidos",
+    quickLinks: [
+      { label: "Inicio", href: "#inicio" },
+      { label: "Metodología", href: "#metodologia" },
+      { label: "Programas", href: "#programas" },
+      { label: "Oferta", href: "#inversion" },
+      { label: "Preguntas frecuentes", href: "#preguntas-frecuentes" },
+    ],
+    contactLabel: "Contacto",
+    legal: "© 2026 Academia GPS. Todos los derechos reservados.",
+    developedByLabel: "Desarrollado por",
+    developedByName: "SolvaTech",
+    developedByHref: "https://solvatech.com.py/",
+  },
   futureRoute: "/trilogia-tol",
 } as const;

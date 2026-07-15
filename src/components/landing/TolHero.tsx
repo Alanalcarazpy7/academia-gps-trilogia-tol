@@ -153,18 +153,6 @@ export function TolHero() {
       <span id="pagopar-pendiente" className="sr-only">
         Enlaces de Pagopar pendientes de confirmación.
       </span>
-      <span id="metodologia" className="sr-only">
-        Metodología GPS pendiente de implementación.
-      </span>
-      <span id="programas" className="sr-only">
-        Programas TOL pendientes de implementación.
-      </span>
-      <span id="inversion" className="sr-only">
-        Inversión pendiente de implementación.
-      </span>
-      <span id="preguntas-frecuentes" className="sr-only">
-        Preguntas frecuentes pendientes de implementación.
-      </span>
     </section>
   );
 }

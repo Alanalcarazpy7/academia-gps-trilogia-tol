@@ -30,40 +30,42 @@ export function TolTransformation() {
           </p>
         </Reveal>
 
-        <Reveal delay={80}>
-          <div className="mx-auto mt-8 max-w-[680px]">
-            {transformationStory.paragraphs.map((paragraph) => (
-              <p
-                className="mt-4 text-pretty text-[1.02rem] font-medium leading-8 text-brand-blue/78 first:mt-0"
-                key={paragraph}
-              >
-                {paragraph}
+        <div className="story-pivot-row mt-8 sm:mt-10">
+          <Reveal delay={80}>
+            <p className="story-pivot-pill">{transformationStory.pivot}</p>
+          </Reveal>
+        </div>
+
+        <div className="story-diptych mx-auto mt-6 max-w-[980px] sm:mt-8">
+          <Reveal delay={130}>
+            <div className="story-problem-card">
+              <span className="story-card-tag">Lo que vivís hoy</span>
+              {transformationStory.paragraphs.map((paragraph) => (
+                <p
+                  className="mt-4 text-pretty text-[0.98rem] font-medium leading-7 text-brand-blue/76"
+                  key={paragraph}
+                >
+                  {paragraph}
+                </p>
+              ))}
+              <p className="mt-4 text-pretty text-[0.98rem] font-bold leading-7 text-brand-blue">
+                {transformationStory.consequence}
               </p>
-            ))}
-            <p className="mt-4 text-pretty text-[1.02rem] font-bold leading-8 text-brand-blue">
-              {transformationStory.consequence}
-            </p>
-          </div>
-        </Reveal>
+            </div>
+          </Reveal>
 
-        <Reveal delay={140}>
-          <div className="pivot-statement mx-auto mt-10 flex w-full max-w-[680px] justify-center sm:mt-12">
-            <p className="text-balance text-center font-heading text-[clamp(1.2rem,2.6vw,1.5rem)] font-extrabold text-brand-blue">
-              {transformationStory.pivot}
-            </p>
-          </div>
-        </Reveal>
-
-        <Reveal delay={200}>
-          <div className="vision-card mx-auto mt-8 max-w-[720px] px-7 py-8 sm:mt-10 sm:px-10 sm:py-10">
-            <p className="text-pretty text-[1.05rem] font-semibold leading-8 text-brand-blue/85">
-              {transformationStory.vision}
-            </p>
-            <p className="mt-4 text-pretty text-[0.94rem] font-medium leading-7 text-brand-blue/60">
-              {transformationStory.visionNote}
-            </p>
-          </div>
-        </Reveal>
+          <Reveal delay={190}>
+            <div className="vision-card story-shift-card px-7 py-8 sm:px-8 sm:py-9">
+              <span className="story-card-tag story-card-tag-accent">Lo que es posible</span>
+              <p className="mt-4 text-pretty text-[0.98rem] font-semibold leading-7 text-brand-blue/85">
+                {transformationStory.vision}
+              </p>
+              <p className="mt-4 text-pretty text-[0.9rem] font-medium leading-6 text-brand-blue/58">
+                {transformationStory.visionNote}
+              </p>
+            </div>
+          </Reveal>
+        </div>
 
         <Reveal delay={260}>
           <div className="mx-auto mt-10 max-w-[600px] text-center sm:mt-12">
