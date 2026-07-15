@@ -33,26 +33,11 @@ const icons: ReactNode[] = [
   </>,
 ];
 
-const cardAccents = ["#008080", "#76a858", "#004877", "#008080"] as const;
+const cardAccents = ["#e6c619", "#008080", "#76a858", "#004877", "#008080"] as const;
 
-function MomentCard({
-  tag,
-  text,
-  accent,
-  icon,
-  anchor,
-}: {
-  tag: string;
-  text: string;
-  accent: string;
-  icon: ReactNode;
-  anchor?: boolean;
-}) {
+function MomentCard({ tag, text, accent, icon }: { tag: string; text: string; accent: string; icon: ReactNode }) {
   return (
-    <div
-      className={`future-card${anchor ? " future-card-anchor" : ""}`}
-      style={{ "--card-accent": accent } as CSSProperties}
-    >
+    <div className="future-card" style={{ "--card-accent": accent } as CSSProperties}>
       <span className="future-card-icon" aria-hidden="true">
         <svg
           viewBox="0 0 20 20"
@@ -67,15 +52,6 @@ function MomentCard({
       </span>
       <span className="future-card-tag">{tag}</span>
       <p className="future-card-text">{text}</p>
-      {anchor ? (
-        <div className="future-anchor-bars" aria-hidden="true">
-          <span style={{ height: "35%" }} />
-          <span style={{ height: "58%" }} />
-          <span style={{ height: "46%" }} />
-          <span style={{ height: "78%" }} />
-          <span style={{ height: "100%" }} />
-        </div>
-      ) : null}
     </div>
   );
 }
@@ -83,78 +59,72 @@ function MomentCard({
 export function TolFutureVision() {
   const paymentCta = getPrimaryPaymentCta();
   const { futureVision } = siteConfig;
-  const [hero, ...rest] = futureVision.items;
 
-  const moments = [
-    { ...hero, accent: "#e6c619", icon: icons[0], anchor: true },
-    ...rest.map((item, index) => ({
-      ...item,
-      accent: cardAccents[index % cardAccents.length],
-      icon: icons[index + 1],
-      anchor: false,
-    })),
-  ];
   return (
     <section
       id="futuro"
-      className="future-surface relative isolate scroll-mt-32 overflow-hidden py-16 sm:py-20 lg:py-24"
+      className="future-surface relative isolate scroll-mt-32 overflow-hidden py-14 sm:py-16 lg:py-20"
       aria-labelledby="future-title"
     >
       <Container className="relative z-[1]">
-        <div className="future-split">
-          <div className="future-narrative">
-            <span className="future-ghost-num" aria-hidden="true">
-              6
+        <span className="future-month-dots" aria-hidden="true">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <span key={`month-dot-${index}`} />
+          ))}
+        </span>
+
+        <Reveal>
+          <div className="future-header">
+            <span className="section-eyebrow !border-brand-blue/14 !bg-brand-blue/6 !text-brand-blue">
+              {futureVision.eyebrow}
             </span>
-
-            <Reveal>
-              <span className="section-eyebrow !border-brand-blue/14 !bg-brand-blue/6 !text-brand-blue">
-                {futureVision.eyebrow}
-              </span>
-              <h2
-                id="future-title"
-                className="mt-4 text-balance font-heading text-[clamp(1.9rem,4vw,2.6rem)] font-extrabold leading-[1.1] text-brand-blue"
-              >
-                {futureVision.headline}
-              </h2>
-              <p className="mt-4 text-pretty text-[1rem] font-medium leading-7 text-brand-blue/62">
-                {futureVision.supportLine}
-              </p>
-            </Reveal>
-
-            <Reveal delay={100}>
-              <div className="future-remate mt-8">
-                <p className="future-closing-line">
-                  <span>{futureVision.closingLead}</span>
-                  <strong>{futureVision.closingEmphasis}</strong>
-                </p>
-
-                <Button
-                  className="btn-glow-primary group mt-6 min-h-14 w-full gap-3 whitespace-normal! px-6 py-3.5 text-center text-[0.92rem]"
-                  href={paymentCta.href}
-                  isPlaceholder={paymentCta.isPlaceholder}
-                  size="lg"
-                >
-                  <span>{futureVision.ctaLabel}</span>
-                  <span
-                    aria-hidden="true"
-                    className="grid h-8 w-8 place-items-center rounded-full bg-white/14 text-lg leading-none transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-1"
-                  >
-                    &rarr;
-                  </span>
-                </Button>
-              </div>
-            </Reveal>
+            <h2
+              id="future-title"
+              className="mt-3 text-balance font-heading text-[clamp(1.5rem,3vw,2rem)] font-extrabold leading-[1.15] text-brand-blue"
+            >
+              {futureVision.headline}
+            </h2>
+            <p className="mt-2.5 text-pretty text-[0.92rem] font-medium leading-6 text-brand-blue/62">
+              {futureVision.supportLine}
+            </p>
           </div>
+        </Reveal>
 
-          <div className="future-proof">
-            {moments.map((moment, index) => (
-              <Reveal delay={80 + index * 80} key={moment.tag}>
-                <MomentCard {...moment} />
-              </Reveal>
-            ))}
-          </div>
+        <div className="future-row">
+          {futureVision.items.map((item, index) => (
+            <Reveal delay={70 + index * 60} key={item.tag}>
+              <MomentCard
+                accent={cardAccents[index % cardAccents.length]}
+                icon={icons[index % icons.length]}
+                tag={item.tag}
+                text={item.text}
+              />
+            </Reveal>
+          ))}
         </div>
+
+        <Reveal delay={90 + futureVision.items.length * 60}>
+          <div className="future-remate">
+            <p className="future-closing-line">
+              <span>{futureVision.closingLead}</span>
+              <strong>{futureVision.closingEmphasis}</strong>
+            </p>
+
+            <Button
+              className="btn-glow-primary group min-h-12 shrink-0 gap-2.5 whitespace-normal! px-5 py-3 text-center text-[0.86rem]"
+              href={paymentCta.href}
+              isPlaceholder={paymentCta.isPlaceholder}
+            >
+              <span>{futureVision.ctaLabel}</span>
+              <span
+                aria-hidden="true"
+                className="grid h-6 w-6 place-items-center rounded-full bg-white/14 text-base leading-none transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-1"
+              >
+                &rarr;
+              </span>
+            </Button>
+          </div>
+        </Reveal>
       </Container>
     </section>
   );
