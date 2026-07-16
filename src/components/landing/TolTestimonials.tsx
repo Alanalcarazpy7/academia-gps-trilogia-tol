@@ -56,13 +56,14 @@ export function TolTestimonials() {
         </Reveal>
 
         <Reveal delay={120}>
-          <div className="testimonial-carousel mx-auto mt-10 max-w-[1100px] sm:mt-12">
+          <div className="testimonial-carousel mx-auto mt-10 max-w-[1120px] sm:mt-12">
             <div className="testimonial-viewport">
-              <div className="testimonial-track" role="region" aria-label="Testimonios de alumnos">
+              <div className="testimonial-track testimonial-marquee" role="list" aria-label="Testimonios de alumnos">
                 {loopItems.map((item, i) => (
                   <article
                     className="testimonial-slide"
                     key={`${item.name}-${i}`}
+                    role="listitem"
                     aria-hidden={i >= items.length}
                     style={{ "--card-accent": accents[i % accents.length] } as CSSProperties}
                   >

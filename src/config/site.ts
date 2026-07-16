@@ -17,6 +17,8 @@ export const siteConfig = {
     deadline: "hasta el 31 de julio de 2026",
     ctaLabel: "Reservar plaza",
   },
+  prelaunchDeadlineIso: "2026-07-31T23:59:59-03:00",
+  launchDeadlineIso: "2026-08-14T23:59:59-03:00",
   heroKicker: "Formación Ejecutiva para Profesionales de la Salud",
   heroPrimaryCtaLabel: "Asegurar mi plaza con 50% OFF",
   heroPrimaryCtaBadge: "50% OFF",

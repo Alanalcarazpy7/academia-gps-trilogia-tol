@@ -2,6 +2,7 @@ import { getInstallmentsPaymentCta, getPrimaryPaymentCta } from "@/config/paymen
 import { siteConfig } from "@/config/site";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { CountdownChips } from "@/components/ui/Countdown";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function TolOffer() {
@@ -37,6 +38,15 @@ export function TolOffer() {
             <span>{offer.officialPriceLabel}</span>
             <strong>{offer.officialPrice}</strong>
           </p>
+        </Reveal>
+
+        <Reveal delay={60}>
+          <div className="mt-6 flex flex-col items-center gap-2">
+            <span className="text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-brand-yellow/85">
+              El precio de pre-lanzamiento termina en
+            </span>
+            <CountdownChips target={siteConfig.prelaunchDeadlineIso} />
+          </div>
         </Reveal>
 
         <div className="offer-pricing-grid mx-auto mt-8 max-w-[900px] sm:mt-10">

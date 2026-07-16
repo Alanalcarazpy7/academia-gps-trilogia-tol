@@ -1,24 +1,24 @@
 import { siteConfig } from "./site";
 
 export const seoConfig = {
-  title: "Academia GPS | La Trilogía TOL para clínicas rentables",
+  title: "Academia GPS | La Trilogia TOL para clinicas rentables",
   description:
-    "Formación ejecutiva para profesionales de la salud que quieren dirigir una clínica rentable con finanzas, marketing y liderazgo.",
+    "Formacion ejecutiva para profesionales de la salud que quieren dirigir una clinica rentable con finanzas, marketing y liderazgo.",
   metadataBaseUrl: "https://academiagps.online",
   canonicalPath: "/",
   canonicalPendingConfirmation: siteConfig.domains.finalDomainPendingConfirmation,
   keywords: [
-    "gestión de clínicas",
-    "administración de clínicas",
-    "clínica rentable",
-    "marketing para clínicas",
-    "finanzas para clínicas",
-    "liderazgo en clínicas",
+    "gestion de clinicas",
+    "administracion de clinicas",
+    "clinica rentable",
+    "marketing para clinicas",
+    "finanzas para clinicas",
+    "liderazgo en clinicas",
     "cursos para profesionales de la salud",
-    "cómo dirigir una clínica",
-    "gestión de consultorios",
+    "como dirigir una clinica",
+    "gestion de consultorios",
     "Academia GPS",
-    "Trilogía TOL",
+    "Trilogia TOL",
   ],
   openGraph: {
     type: "website",

@@ -13,10 +13,21 @@ type RevealProps = {
 export function Reveal({ children, delay = 0, className = "", as = "div" }: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
+    setIsReady(true);
+
+    // Reveal immediately if it's already in view on mount (e.g. short pages,
+    // fast navigation, or if the observer callback is ever delayed).
+    const rect = node.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setIsVisible(true);
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -25,19 +36,29 @@ export function Reveal({ children, delay = 0, className = "", as = "div" }: Reve
           observer.disconnect();
         }
       },
-      { threshold: 0.15, rootMargin: "-40px 0px" },
+      { threshold: 0.05, rootMargin: "0px 0px -10px 0px" },
     );
 
     observer.observe(node);
-    return () => observer.disconnect();
+
+    // Safety net: never let content stay invisible indefinitely if the
+    // observer fails to fire for any reason.
+    const fallback = window.setTimeout(() => setIsVisible(true), 900);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(fallback);
+    };
   }, []);
 
   const Component = as;
 
+  const revealStateClass = isVisible ? "is-visible" : isReady ? "is-waiting" : "";
+
   return (
     <Component
       ref={ref as never}
-      className={["reveal-on-scroll", isVisible ? "is-visible" : "", className].join(" ").trim()}
+      className={["reveal-on-scroll", revealStateClass, className].join(" ").trim()}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
     >
       {children}

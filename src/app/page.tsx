@@ -16,10 +16,18 @@ import { TolTransformation } from "@/components/landing/TolTransformation";
 import { TolValueVideo } from "@/components/landing/TolValueVideo";
 import { Footer } from "@/components/shared/Footer";
 import { Header } from "@/components/shared/Header";
+import { StickyMobileCta } from "@/components/shared/StickyMobileCta";
+import { buildStructuredData } from "@/config/structured-data";
 
 export default function Home() {
+  const structuredData = buildStructuredData();
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <div className="sticky top-0 z-40">
         <TolTopBanner />
         <Header />
@@ -42,6 +50,7 @@ export default function Home() {
         <TolFinalDecision />
       </main>
       <Footer />
+      <StickyMobileCta />
     </>
   );
 }

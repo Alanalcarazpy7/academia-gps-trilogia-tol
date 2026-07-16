@@ -4,7 +4,7 @@ export const navigationItems = [
     href: "#inicio",
   },
   {
-    label: "Metodología",
+    label: "Metodologia",
     href: "#metodologia",
   },
   {
@@ -12,7 +12,11 @@ export const navigationItems = [
     href: "#programas",
   },
   {
-    label: "Inversión",
+    label: "Testimonios",
+    href: "#testimonios",
+  },
+  {
+    label: "Inversion",
     href: "#inversion",
   },
   {

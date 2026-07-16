@@ -17,7 +17,7 @@ type ButtonProps = {
   Pick<ButtonHTMLAttributes<HTMLButtonElement>, "type" | "disabled">;
 
 const baseClasses =
-  "inline-flex items-center justify-center whitespace-nowrap rounded-full text-center font-bold transition-[background-color,border-color,color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 active:scale-[0.98]";
+  "inline-flex min-w-0 items-center justify-center rounded-full text-center text-balance font-bold leading-tight transition-[background-color,border-color,color,box-shadow,transform] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 active:scale-[0.98]";
 
 const sizeClasses: Record<ButtonSize, string> = {
   sm: "min-h-10 px-4 py-2 text-xs",

@@ -8,8 +8,11 @@ import { getPrimaryPaymentCta } from "@/config/payment-links";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 
+type NavigationHref = (typeof navigationItems)[number]["href"];
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState<NavigationHref>(navigationItems[0].href);
   const paymentCta = getPrimaryPaymentCta();
 
   useEffect(() => {
@@ -22,6 +25,34 @@ export function Header() {
     document.addEventListener("keydown", handleKeyDown);
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isMenuOpen]);
+
+  useEffect(() => {
+    const sections = navigationItems
+      .map((item) => document.querySelector<HTMLElement>(item.href))
+      .filter((section): section is HTMLElement => Boolean(section));
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visibleEntry = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visibleEntry?.target.id) {
+          const href = `#${visibleEntry.target.id}` as NavigationHref;
+          setActiveHref(href);
+        }
+      },
+      {
+        rootMargin: "-28% 0px -58% 0px",
+        threshold: [0.08, 0.18, 0.32, 0.5],
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="header-premium-surface relative shadow-[0_14px_32px_rgba(0,20,35,0.28)]">
@@ -50,8 +81,8 @@ export function Header() {
           aria-label="Navegación principal"
           className="hidden items-center gap-0.5 text-[12px] font-extrabold text-white/78 xl:flex"
         >
-          {navigationItems.map((item, index) => {
-            const isActive = index === 0;
+          {navigationItems.map((item) => {
+            const isActive = activeHref === item.href;
 
             return (
               <a
@@ -63,6 +94,7 @@ export function Header() {
                 ].join(" ")}
                 href={item.href}
                 key={item.href}
+                onClick={() => setActiveHref(item.href)}
               >
                 {isActive ? (
                   <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-brand-yellow shadow-[0_0_6px_rgba(230,198,25,0.8)]" aria-hidden="true" />
@@ -76,7 +108,7 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 lg:flex">
+        <div className="hidden items-center gap-3 xl:flex">
           <Button
             className="btn-gold-glow group min-w-36 gap-2 px-4"
             href={paymentCta.href}
@@ -97,7 +129,7 @@ export function Header() {
           aria-controls="mobile-navigation"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-          className="group grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_24px_rgba(0,20,35,0.18)] backdrop-blur-md transition-[border-color,box-shadow,transform,background-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-white/18 active:scale-[0.98] lg:hidden"
+          className="group relative z-50 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_24px_rgba(0,20,35,0.18)] backdrop-blur-md transition-[border-color,box-shadow,transform,background-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-white/18 active:scale-[0.98] xl:hidden"
           onClick={() => setIsMenuOpen((current) => !current)}
           type="button"
         >
@@ -126,7 +158,7 @@ export function Header() {
         {isMenuOpen ? (
           <div
             aria-hidden="true"
-            className="fixed inset-0 z-10 bg-brand-blue/25 backdrop-blur-sm transition-opacity duration-300 lg:hidden"
+            className="fixed inset-0 z-40 bg-brand-blue/35 backdrop-blur-sm transition-opacity duration-300 xl:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         ) : null}
@@ -134,7 +166,7 @@ export function Header() {
         <div
           id="mobile-navigation"
           className={[
-            "absolute left-4 right-4 top-[calc(100%+0.75rem)] z-20 origin-top rounded-[24px] border border-brand-blue/10 bg-white p-2 shadow-[0_24px_70px_rgba(0,72,119,0.16)] transition-[opacity,transform,visibility] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] lg:hidden",
+            "fixed left-4 right-4 top-[6.45rem] z-50 origin-top rounded-[24px] border border-brand-blue/10 bg-white p-2 shadow-[0_24px_70px_rgba(0,72,119,0.22)] transition-[opacity,transform,visibility] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] xl:hidden",
             isMenuOpen
               ? "visible translate-y-0 opacity-100"
               : "invisible -translate-y-2 opacity-0",
@@ -161,17 +193,20 @@ export function Header() {
           </div>
 
           <nav aria-label="Navegación móvil" className="grid gap-1">
-            {navigationItems.map((item, index) => (
+            {navigationItems.map((item) => (
               <a
                 className={[
                   "rounded-2xl px-4 py-3 text-sm font-extrabold transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-teal",
-                  index === 0
+                  activeHref === item.href
                     ? "bg-brand-cream text-brand-blue"
                     : "text-brand-blue/74 hover:bg-brand-cream/70 hover:text-brand-teal",
                 ].join(" ")}
                 href={item.href}
                 key={item.href}
-                onClick={() => setIsMenuOpen(false)}
+                onClick={() => {
+                  setActiveHref(item.href);
+                  setIsMenuOpen(false);
+                }}
               >
                 {item.label}
               </a>
