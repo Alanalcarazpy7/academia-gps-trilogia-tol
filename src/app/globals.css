@@ -417,15 +417,27 @@ img {
 
 .reveal-on-scroll {
   opacity: 0;
-  transform: translateY(18px);
+  transform: translateY(22px) scale(0.975);
+  filter: blur(3px);
   transition:
-    opacity 620ms var(--ease-premium-out),
-    transform 620ms var(--ease-premium-out);
+    opacity 680ms var(--ease-premium-out),
+    transform 680ms var(--ease-premium-out),
+    filter 680ms var(--ease-premium-out);
 }
 
 .reveal-on-scroll.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
 }
 
 .video-card-premium {
