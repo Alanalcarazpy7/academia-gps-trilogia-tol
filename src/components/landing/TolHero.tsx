@@ -20,12 +20,12 @@ export function TolHero() {
       aria-labelledby="hero-title"
     >
       <Container className="relative grid grid-cols-1 gap-7 pb-10 pt-6 sm:py-8 lg:min-h-[min(calc(100svh-100px),840px)] lg:grid-cols-[minmax(0,0.96fr)_minmax(420px,0.86fr)] lg:items-center lg:gap-x-12 lg:py-8 xl:gap-x-16">
-        <div className="animate-hero-stage max-w-[760px]">
-          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[0.24em] text-brand-blue/45">
+        <div className="max-w-[760px]">
+          <p className="animate-hero-badge mb-2 text-[10px] font-extrabold uppercase tracking-[0.24em] text-brand-blue/45">
             {siteConfig.heroWordmarkLabel}
           </p>
 
-          <div className="group/tol-logo relative mb-3 inline-flex max-w-full items-center overflow-hidden rounded-[20px] border border-white/78 bg-white/58 px-3 py-2.5 shadow-[0_12px_34px_rgba(0,72,119,0.075),inset_0_1px_0_rgba(255,255,255,0.86)] backdrop-blur-xl transition-[box-shadow,transform,border-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 hover:border-brand-yellow/32 hover:shadow-[0_16px_42px_rgba(0,72,119,0.105),inset_0_1px_0_rgba(255,255,255,0.95)]">
+          <div className="group/tol-logo animate-hero-badge relative mb-3 inline-flex max-w-full items-center overflow-hidden rounded-[20px] border border-white/78 bg-white/58 px-3 py-2.5 shadow-[0_12px_34px_rgba(0,72,119,0.075),inset_0_1px_0_rgba(255,255,255,0.86)] backdrop-blur-xl transition-[box-shadow,transform,border-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:-translate-y-0.5 hover:border-brand-yellow/32 hover:shadow-[0_16px_42px_rgba(0,72,119,0.105),inset_0_1px_0_rgba(255,255,255,0.95)]">
             <span className="pointer-events-none absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-brand-yellow/58 to-transparent" />
             <Image
               src={brand.assets.trilogiaTolLogo}
@@ -36,23 +36,23 @@ export function TolHero() {
             />
           </div>
 
-          <p className="mb-3 text-[10px] font-extrabold uppercase tracking-[0.2em] text-brand-teal sm:text-[11px]">
+          <p className="animate-hero-title mb-3 text-[10px] font-extrabold uppercase tracking-[0.2em] text-brand-teal sm:text-[11px]">
             {siteConfig.heroKicker}
           </p>
 
           <h1
             id="hero-title"
-            className="max-w-[820px] text-balance font-heading text-[clamp(1.9rem,7vw,2.4rem)] font-extrabold leading-[1.08] text-brand-blue sm:text-[clamp(2.1rem,3.6vw,2.6rem)] lg:text-[clamp(2.2rem,2.4vw,2.75rem)]"
+            className="animate-hero-title max-w-[820px] text-balance font-heading text-[clamp(1.9rem,7vw,2.4rem)] font-extrabold leading-[1.08] text-brand-blue sm:text-[clamp(2.1rem,3.6vw,2.6rem)] lg:text-[clamp(2.2rem,2.4vw,2.75rem)]"
           >
             <span className="text-brand-blue/80">{siteConfig.headlineLead}</span>{" "}
             <span className="text-brand-blue">{siteConfig.headlineEmphasis}</span>
           </h1>
 
-          <p className="mt-4 max-w-[620px] text-pretty text-[1rem] font-semibold leading-7 text-brand-blue/74 sm:text-[1.05rem] lg:mt-4">
+          <p className="animate-hero-support mt-4 max-w-[620px] text-pretty text-[1rem] font-semibold leading-7 text-brand-blue/74 sm:text-[1.05rem] lg:mt-4">
             {siteConfig.supportLine}
           </p>
 
-          <div className="mt-5 flex flex-wrap items-center gap-2.5">
+          <div className="animate-hero-pills mt-5 flex flex-wrap items-center gap-2.5">
             {visibleBenefits.map((benefit) => (
               <span
                 className="rounded-full border border-brand-blue/10 bg-white/70 px-3.5 py-2 text-[11px] font-extrabold text-brand-blue/70 shadow-[0_8px_18px_rgba(0,72,119,0.05)]"
@@ -63,7 +63,7 @@ export function TolHero() {
             ))}
           </div>
 
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="animate-hero-pills mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
             <span
               className="pill-offer w-max"
               aria-label={siteConfig.offer.value}
@@ -72,7 +72,7 @@ export function TolHero() {
             </span>
           </div>
 
-          <div className="mt-3 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="animate-hero-cta mt-3 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button
               className="btn-glow-primary group min-h-14 w-full gap-3 px-5 text-[0.96rem] sm:w-auto sm:min-w-62"
               href={paymentCta.href}
@@ -107,7 +107,7 @@ export function TolHero() {
             </Button>
           </div>
 
-          <div className="mt-3 flex max-w-[610px] flex-col gap-2.5 sm:flex-row sm:items-center">
+          <div className="animate-hero-social mt-3 flex max-w-[610px] flex-col gap-2.5 sm:flex-row sm:items-center">
             <div className="flex -space-x-3" aria-hidden="true">
               {siteConfig.socialProof.avatars.map((avatar, index) => (
                 <Image

@@ -13,11 +13,11 @@ export function TolAuthority() {
       aria-labelledby="authority-title"
     >
       <Container className="relative z-[1] grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1fr)] lg:gap-16">
-        <Reveal>
+        <Reveal variant="left">
           <TolAuthorityPhotos />
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal delay={100} variant="right">
           <div className="mx-auto max-w-[560px] lg:mx-0">
             <span className="section-eyebrow !border-brand-green/30 !bg-brand-green/8 !text-brand-blue">
               {authorityProfile.eyebrow}

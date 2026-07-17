@@ -28,30 +28,60 @@ export function Header() {
 
   useEffect(() => {
     const sections = navigationItems
-      .map((item) => document.querySelector<HTMLElement>(item.href))
-      .filter((section): section is HTMLElement => Boolean(section));
+      .map((item) => ({
+        href: item.href,
+        element: document.querySelector<HTMLElement>(item.href),
+      }))
+      .filter((section): section is { href: NavigationHref; element: HTMLElement } => Boolean(section.element));
 
     if (!sections.length) return;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visibleEntry = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    let frame = 0;
 
-        if (visibleEntry?.target.id) {
-          const href = `#${visibleEntry.target.id}` as NavigationHref;
-          setActiveHref(href);
+    const updateActiveSection = () => {
+      frame = 0;
+
+      const readingLine = window.scrollY + Math.min(window.innerHeight * 0.42, 360);
+      let currentHref = sections[0].href;
+
+      const ranges = sections.map((section, index) => {
+        const top = section.element.getBoundingClientRect().top + window.scrollY;
+        const nextSection = sections[index + 1];
+        const bottom = nextSection
+          ? nextSection.element.getBoundingClientRect().top + window.scrollY
+          : Number.POSITIVE_INFINITY;
+
+        return {
+          href: section.href,
+          top,
+          bottom,
+        };
+      });
+
+      for (const section of ranges) {
+        if (readingLine >= section.top && readingLine < section.bottom) {
+          currentHref = section.href;
+          break;
         }
-      },
-      {
-        rootMargin: "-28% 0px -58% 0px",
-        threshold: [0.08, 0.18, 0.32, 0.5],
-      },
-    );
+      }
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+      setActiveHref((current) => (current === currentHref ? current : currentHref));
+    };
+
+    const requestUpdate = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", requestUpdate, { passive: true });
+    window.addEventListener("resize", requestUpdate);
+
+    return () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", requestUpdate);
+      window.removeEventListener("resize", requestUpdate);
+    };
   }, []);
 
   return (
@@ -79,7 +109,7 @@ export function Header() {
 
         <nav
           aria-label="Navegación principal"
-          className="hidden items-center gap-0.5 text-[12px] font-extrabold text-white/78 xl:flex"
+          className="hidden items-center gap-0.5 text-[9px] font-extrabold text-white/78 md:flex lg:text-[10px] xl:text-[12px]"
         >
           {navigationItems.map((item) => {
             const isActive = activeHref === item.href;
@@ -87,7 +117,7 @@ export function Header() {
             return (
               <a
                 className={[
-                  "group/nav relative flex items-center gap-1.5 whitespace-nowrap rounded-full px-3 py-1.5 transition-[background-color,color,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-yellow",
+                  "group/nav relative flex items-center gap-1 whitespace-nowrap rounded-full px-1.5 py-1.5 transition-[background-color,color,box-shadow] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-yellow lg:gap-1.5 lg:px-2 xl:px-3",
                   isActive
                     ? "bg-gradient-to-b from-white to-[#f2eee4] text-brand-blue shadow-[inset_0_1px_0_rgba(255,255,255,0.9),inset_0_-1px_1px_rgba(0,20,35,0.06),0_4px_10px_rgba(0,0,0,0.18)]"
                     : "hover:bg-white/10 hover:text-white",
@@ -108,9 +138,16 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="flex flex-1 items-center justify-center md:hidden">
+          <span className="header-mobile-badge">
+            <span aria-hidden="true" />
+            50% OFF
+          </span>
+        </div>
+
+        <div className="hidden items-center gap-2 md:flex xl:gap-3">
           <Button
-            className="btn-gold-glow group min-w-36 gap-2 px-4"
+            className="btn-gold-glow group min-w-[7.9rem] gap-1.5 px-3 text-[10px] lg:min-w-[8.6rem] lg:text-[11px] xl:min-w-36 xl:gap-2 xl:px-4 xl:text-[12px]"
             href={paymentCta.href}
             isPlaceholder={paymentCta.isPlaceholder}
             size="sm"
@@ -118,7 +155,7 @@ export function Header() {
             <span>Reservar mi plaza</span>
             <span
               aria-hidden="true"
-              className="grid h-6 w-6 place-items-center rounded-full bg-brand-blue/14 text-sm transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5"
+              className="grid h-5 w-5 place-items-center rounded-full bg-brand-blue/14 text-xs transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5 xl:h-6 xl:w-6 xl:text-sm"
             >
               →
             </span>
@@ -129,7 +166,7 @@ export function Header() {
           aria-controls="mobile-navigation"
           aria-expanded={isMenuOpen}
           aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
-          className="group relative z-50 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_24px_rgba(0,20,35,0.18)] backdrop-blur-md transition-[border-color,box-shadow,transform,background-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-white/18 active:scale-[0.98] xl:hidden"
+          className="group relative z-50 grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/12 text-white shadow-[0_10px_24px_rgba(0,20,35,0.18)] backdrop-blur-md transition-[border-color,box-shadow,transform,background-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:bg-white/18 active:scale-[0.98] md:hidden"
           onClick={() => setIsMenuOpen((current) => !current)}
           type="button"
         >
@@ -158,7 +195,7 @@ export function Header() {
         {isMenuOpen ? (
           <div
             aria-hidden="true"
-            className="fixed inset-0 z-40 bg-brand-blue/35 backdrop-blur-sm transition-opacity duration-300 xl:hidden"
+            className="fixed inset-0 z-40 bg-brand-blue/35 backdrop-blur-sm transition-opacity duration-300 md:hidden"
             onClick={() => setIsMenuOpen(false)}
           />
         ) : null}
@@ -166,7 +203,7 @@ export function Header() {
         <div
           id="mobile-navigation"
           className={[
-            "fixed left-4 right-4 top-[6.45rem] z-50 origin-top rounded-[24px] border border-brand-blue/10 bg-white p-2 shadow-[0_24px_70px_rgba(0,72,119,0.22)] transition-[opacity,transform,visibility] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] xl:hidden",
+            "fixed left-4 right-4 top-[6.45rem] z-50 origin-top rounded-[24px] border border-brand-blue/10 bg-white p-2 shadow-[0_24px_70px_rgba(0,72,119,0.22)] transition-[opacity,transform,visibility] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] md:hidden",
             isMenuOpen
               ? "visible translate-y-0 opacity-100"
               : "invisible -translate-y-2 opacity-0",

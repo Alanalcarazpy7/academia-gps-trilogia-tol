@@ -31,13 +31,13 @@ export function TolTransformation() {
         </Reveal>
 
         <div className="story-pivot-row mt-8 sm:mt-10">
-          <Reveal delay={80}>
+          <Reveal delay={80} variant="pop">
             <p className="story-pivot-pill">{transformationStory.pivot}</p>
           </Reveal>
         </div>
 
         <div className="story-diptych mx-auto mt-6 max-w-[980px] sm:mt-8">
-          <Reveal delay={130}>
+          <Reveal delay={130} variant="left">
             <div className="story-problem-card">
               <span className="story-card-tag">Lo que vivís hoy</span>
               {transformationStory.paragraphs.map((paragraph) => (
@@ -54,7 +54,7 @@ export function TolTransformation() {
             </div>
           </Reveal>
 
-          <Reveal delay={190}>
+          <Reveal delay={190} variant="right">
             <div className="vision-card story-shift-card px-7 py-8 sm:px-8 sm:py-9">
               <span className="story-card-tag story-card-tag-accent">Lo que es posible</span>
               <p className="mt-4 text-pretty text-[0.98rem] font-semibold leading-7 text-brand-blue/85">

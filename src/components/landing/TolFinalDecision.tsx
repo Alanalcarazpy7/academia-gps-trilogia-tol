@@ -17,7 +17,7 @@ export function TolFinalDecision() {
       aria-labelledby="decision-title"
     >
       <Container className="relative z-[1] text-center">
-        <Reveal className="mx-auto max-w-[680px]" as="div">
+        <Reveal className="mx-auto max-w-[680px]" as="div" variant="up-strong">
           <span className="section-eyebrow !border-brand-yellow/30 !bg-brand-yellow/10 !text-brand-yellow">
             {finalDecision.eyebrow}
           </span>
@@ -29,23 +29,25 @@ export function TolFinalDecision() {
           </h2>
         </Reveal>
 
-        <Reveal delay={90}>
-          <div className="decision-versus mt-9 sm:mt-10">
+        <div className="decision-versus mt-9 sm:mt-10">
+          <Reveal delay={90} variant="left">
             <div className="decision-option decision-option-a justify-center">
               <span>{finalDecision.optionA}</span>
             </div>
-            <div className="decision-arrow" aria-hidden="true">
-              <svg viewBox="0 0 20 24" width="20" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M10 2v18M4 14l6 6 6-6" />
-              </svg>
-            </div>
+          </Reveal>
+          <div className="decision-arrow" aria-hidden="true">
+            <svg viewBox="0 0 20 24" width="20" height="24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M10 2v18M4 14l6 6 6-6" />
+            </svg>
+          </div>
+          <Reveal delay={170} variant="pop">
             <div className="decision-option justify-center">
               <p className="decision-option-b text-balance">
                 <em>{finalDecision.optionB}</em>
               </p>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         <Reveal delay={150}>
           <p className="mx-auto mt-7 max-w-[560px] text-pretty text-[1rem] font-medium leading-7 text-white/64">
@@ -53,7 +55,7 @@ export function TolFinalDecision() {
           </p>
         </Reveal>
 
-        <Reveal delay={200}>
+        <Reveal delay={200} variant="scale">
           <div className="mt-9 flex flex-col items-center gap-4 sm:mt-10">
             <span className="decision-cta-wrap">
               <Button

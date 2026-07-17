@@ -29,7 +29,7 @@ export function TolEconomicPotential() {
       aria-labelledby="economic-title"
     >
       <Container className="relative z-[1] grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.86fr_1fr] lg:gap-16">
-        <Reveal>
+        <Reveal variant="left">
           <div className="max-w-[600px]">
             <span className="section-eyebrow !border-brand-blue/14 !bg-brand-blue/6 !text-brand-blue">
               {economicPotential.eyebrow}
@@ -46,7 +46,7 @@ export function TolEconomicPotential() {
 
             <div className="mt-7 grid gap-2.5">
               {economicPotential.metrics.map((metric, index) => (
-                <Reveal delay={70 + index * 60} key={metric.label}>
+                <Reveal delay={70 + index * 60} variant="left" key={metric.label}>
                   <div className="money-insight">
                     <span className="money-insight-index">
                       {String(index + 1).padStart(2, "0")}
@@ -81,7 +81,7 @@ export function TolEconomicPotential() {
           </div>
         </Reveal>
 
-        <Reveal delay={140}>
+        <Reveal delay={140} variant="scale">
           <aside className="money-panel px-6 py-6 sm:px-7 sm:py-7" aria-label="Tablero financiero">
             <div className="flex items-center justify-between">
               <div className="money-panel-dots" aria-hidden="true">

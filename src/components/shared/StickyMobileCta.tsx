@@ -43,14 +43,18 @@ export function StickyMobileCta() {
     >
       <div className="sticky-mobile-cta-price">
         <span>50% OFF</span>
-        <strong>Pre-lanzamiento</strong>
+        <strong>
+          <span className="sticky-price-full">Pre-lanzamiento</span>
+          <span className="sticky-price-short">Pre-lanz.</span>
+        </strong>
       </div>
       <Button
         className="btn-glow-primary group min-h-12 w-full gap-2 whitespace-normal! px-4 text-[0.86rem]"
         href={paymentCta.href}
         isPlaceholder={paymentCta.isPlaceholder}
       >
-        <span>{siteConfig.heroPrimaryCtaLabel}</span>
+        <span className="sticky-cta-label-full">{siteConfig.heroPrimaryCtaLabel}</span>
+        <span className="sticky-cta-label-short">Reservar plaza</span>
         <span
           aria-hidden="true"
           className="grid h-6 w-6 shrink-0 place-items-center rounded-full bg-white/14 text-base leading-none transition-transform duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:translate-x-0.5"

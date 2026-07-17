@@ -51,7 +51,7 @@ export function TolOffer() {
 
         <div className="offer-pricing-grid mx-auto mt-8 max-w-[900px] sm:mt-10">
           {offer.tiers.map((tier, index) => (
-            <Reveal delay={90 + index * 70} key={tier.id}>
+            <Reveal delay={90 + index * 70} variant="scale" key={tier.id}>
               <div className={`offer-price-card h-full${tier.featured ? " is-featured" : ""}`}>
                 {tier.featured ? (
                   <span className="offer-price-ribbon">Recomendado</span>
@@ -99,23 +99,25 @@ export function TolOffer() {
             </p>
             <div className="offer-bonus-grid mt-4">
               {offer.bonuses.map((bonus, index) => (
-                <div className="offer-bonus-card" key={bonus.title}>
-                  <span className="offer-bonus-icon" aria-hidden="true">
-                    {index === 0 ? "▶" : "⚙"}
-                  </span>
-                  <h3 className="mt-3.5 font-heading text-[1.02rem] font-extrabold text-white">
-                    {bonus.title}
-                  </h3>
-                  <p className="mt-2 text-[0.88rem] font-medium leading-6 text-white/62">
-                    {bonus.detail}
-                  </p>
-                </div>
+                <Reveal delay={index * 90} variant="pop" key={bonus.title}>
+                  <div className="offer-bonus-card">
+                    <span className="offer-bonus-icon" aria-hidden="true">
+                      {index === 0 ? "▶" : "⚙"}
+                    </span>
+                    <h3 className="mt-3.5 font-heading text-[1.02rem] font-extrabold text-white">
+                      {bonus.title}
+                    </h3>
+                    <p className="mt-2 text-[0.88rem] font-medium leading-6 text-white/62">
+                      {bonus.detail}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </div>
           </div>
         </Reveal>
 
-        <Reveal delay={330}>
+        <Reveal delay={330} variant="up-strong">
           <div className="offer-financing-panel mx-auto mt-9 max-w-[900px] sm:mt-10">
             <p className="font-heading text-[1.05rem] font-extrabold text-white">
               {offer.financing.label}

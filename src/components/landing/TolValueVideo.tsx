@@ -63,7 +63,7 @@ export function TolValueVideo() {
 
         <div className="mx-auto mt-10 grid max-w-[960px] gap-5 sm:mt-12 sm:grid-cols-3">
           {valueProposition.pillars.map((pillar, index) => (
-            <Reveal delay={90 + index * 70} key={pillar.label}>
+            <Reveal delay={90 + index * 70} variant="pop" key={pillar.label}>
               <div className="pillar-card h-full px-6 py-7">
                 <span className="grid h-12 w-12 place-items-center rounded-2xl bg-brand-yellow/14 text-brand-yellow">
                   <span className="h-6 w-6">{pillarIcons[index]}</span>

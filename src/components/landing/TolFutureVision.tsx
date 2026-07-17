@@ -92,7 +92,7 @@ export function TolFutureVision() {
 
         <div className="future-row">
           {futureVision.items.map((item, index) => (
-            <Reveal delay={70 + index * 60} key={item.tag}>
+            <Reveal delay={70 + index * 60} variant="pop" key={item.tag}>
               <MomentCard
                 accent={cardAccents[index % cardAccents.length]}
                 icon={icons[index % icons.length]}

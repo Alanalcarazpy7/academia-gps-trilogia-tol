@@ -52,7 +52,7 @@ export function VideoPlayer({
               alt={label}
               fill
               sizes={sizes ?? (isVertical ? "(max-width: 640px) 74vw, 420px" : "(max-width: 900px) 92vw, 600px")}
-              className="object-cover"
+              className={["object-cover", isVertical ? "object-[50%_14%]" : "object-[50%_28%]"].join(" ")}
             />
             <span className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/5 to-transparent" />
             <span className="absolute inset-0 grid place-items-center">

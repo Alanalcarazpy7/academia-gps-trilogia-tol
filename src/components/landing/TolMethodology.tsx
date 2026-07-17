@@ -36,7 +36,7 @@ export function TolMethodology() {
             </div>
           </Reveal>
 
-          <Reveal delay={120}>
+          <Reveal delay={120} variant="tilt">
             <aside className="route-guidance-card">
               <span>GPS</span>
               <strong>Del concepto a la decisión</strong>
@@ -51,7 +51,7 @@ export function TolMethodology() {
         <div className="route-track">
           <div className="route-line" aria-hidden="true" />
           {gpsMethodology.steps.map((step, index) => (
-            <Reveal delay={110 + index * 70} key={step.label}>
+            <Reveal delay={110 + index * 70} variant="up-strong" key={step.label}>
               <article className="route-card">
                 <span className="route-node" aria-hidden="true">
                   {String(index + 1).padStart(2, "0")}

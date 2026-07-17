@@ -27,7 +27,11 @@ export function TolPainPoints() {
 
         <div className="mx-auto mt-10 grid max-w-[980px] gap-3.5 sm:mt-12 sm:grid-cols-2">
           {painPoints.items.map((item, index) => (
-            <Reveal delay={70 + index * 45} key={item}>
+            <Reveal
+              delay={70 + index * 45}
+              variant={index % 2 === 0 ? "left" : "right"}
+              key={item}
+            >
               <div className="pain-item h-full">
                 <span className="pain-item-index">
                   {String(index + 1).padStart(2, "0")}

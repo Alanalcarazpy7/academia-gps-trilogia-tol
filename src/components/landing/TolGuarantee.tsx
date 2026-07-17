@@ -16,7 +16,7 @@ export function TolGuarantee() {
     >
       <Container className="relative z-[1]">
         <div className="guarantee-layout">
-          <Reveal>
+          <Reveal variant="scale">
             <div className="guarantee-seal-wrap">
               <div className="guarantee-seal">
                 <span className="guarantee-seal-ring" aria-hidden="true" />
@@ -48,7 +48,7 @@ export function TolGuarantee() {
           </Reveal>
 
           <div>
-            <Reveal delay={80}>
+            <Reveal delay={80} variant="right">
               <span className="section-eyebrow !border-brand-green/24 !bg-brand-green/10 !text-brand-green">
                 {guarantee.eyebrow}
               </span>
@@ -63,18 +63,18 @@ export function TolGuarantee() {
               </p>
             </Reveal>
 
-            <Reveal delay={140}>
-              <div className="mt-6 max-w-[520px]">
-                {guarantee.points.map((point, index) => (
-                  <div className="guarantee-point" key={point}>
+            <div className="mt-6 max-w-[520px]">
+              {guarantee.points.map((point, index) => (
+                <Reveal delay={140 + index * 70} variant="left" key={point}>
+                  <div className="guarantee-point">
                     <span className="guarantee-point-index">{index + 1}</span>
                     <p className="text-[0.92rem] font-semibold leading-6 text-brand-blue/78">
                       {point}
                     </p>
                   </div>
-                ))}
-              </div>
-            </Reveal>
+                </Reveal>
+              ))}
+            </div>
 
             <Reveal delay={200}>
               <div className="guarantee-closing mt-6 max-w-[520px]">

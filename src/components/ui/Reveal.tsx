@@ -3,14 +3,23 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
+type RevealVariant = "up" | "up-strong" | "left" | "right" | "scale" | "pop" | "tilt";
+
 type RevealProps = {
   children: ReactNode;
   delay?: number;
   className?: string;
   as?: "div" | "span";
+  variant?: RevealVariant;
 };
 
-export function Reveal({ children, delay = 0, className = "", as = "div" }: RevealProps) {
+export function Reveal({
+  children,
+  delay = 0,
+  className = "",
+  as = "div",
+  variant = "up",
+}: RevealProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [isReady, setIsReady] = useState(false);
@@ -54,11 +63,12 @@ export function Reveal({ children, delay = 0, className = "", as = "div" }: Reve
   const Component = as;
 
   const revealStateClass = isVisible ? "is-visible" : isReady ? "is-waiting" : "";
+  const variantClass = variant === "up" ? "" : `reveal-${variant}`;
 
   return (
     <Component
       ref={ref as never}
-      className={["reveal-on-scroll", revealStateClass, className].join(" ").trim()}
+      className={["reveal-on-scroll", variantClass, revealStateClass, className].join(" ").trim()}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
     >
       {children}

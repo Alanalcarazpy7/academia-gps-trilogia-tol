@@ -13,7 +13,7 @@ export function TolMarketOpportunity() {
     >
       <Container className="relative z-[1]">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(420px,0.95fr)_minmax(0,0.9fr)] lg:gap-14">
-          <Reveal>
+          <Reveal variant="scale">
             <div className="market-radar mx-auto max-w-[560px]">
               <span className="market-radar-ring ring-1" />
               <span className="market-radar-ring ring-2" />
@@ -54,7 +54,7 @@ export function TolMarketOpportunity() {
 
               <div className="mt-8 grid gap-3">
                 {marketOpportunity.signals.map((signal, index) => (
-                  <Reveal delay={180 + index * 55} key={signal.label}>
+                  <Reveal delay={180 + index * 55} variant="right" key={signal.label}>
                     <div className="market-signal-card">
                       <span className="font-heading text-sm font-extrabold text-brand-yellow">
                         {String(index + 1).padStart(2, "0")}

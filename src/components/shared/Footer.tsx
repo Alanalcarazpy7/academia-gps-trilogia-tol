@@ -3,6 +3,7 @@ import { brand } from "@/config/brand";
 import { getPrimaryWhatsappCta } from "@/config/contacts";
 import { siteConfig } from "@/config/site";
 import { Container } from "@/components/ui/Container";
+import { Reveal } from "@/components/ui/Reveal";
 
 export function Footer() {
   const whatsappCta = getPrimaryWhatsappCta();
@@ -11,7 +12,7 @@ export function Footer() {
   return (
     <footer className="site-footer relative isolate overflow-hidden py-14 sm:py-16">
       <Container className="relative z-[1]">
-        <div className="footer-grid">
+        <Reveal variant="up" as="div" className="footer-grid">
           <div className="footer-col">
             <a className="footer-logo-badge" href="#inicio">
               <Image
@@ -60,7 +61,7 @@ export function Footer() {
               </p>
             </div>
           </div>
-        </div>
+        </Reveal>
 
         <div className="footer-divider flex flex-col-reverse items-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
           <p className="text-[0.78rem] font-medium text-white/40">{footer.legal}</p>

@@ -149,7 +149,7 @@ export const siteConfig = {
     supportLine:
       "La rentabilidad no aparece trabajando más horas. Aparece cuando sabés qué cuesta abrir la puerta, qué margen deja cada servicio y qué arancel sostiene el crecimiento.",
     boardLabel: "Tablero de dirección",
-    boardNote: "Dato a confirmar con números reales",
+    boardNote: "Ejemplo ilustrativo del tablero que vas a construir en TOL-FI.",
     metrics: [
       {
         label: "Costos reales visibles",
@@ -316,7 +316,7 @@ export const siteConfig = {
     eyebrow: "Testimonios de alumnos",
     headline: "Colegas que ya dirigen con criterio, no con intuición",
     supportLine:
-      "Espacio reservado para los testimonios reales de la primera edición. Estructura lista para reemplazar textos, nombres y fotos.",
+      "Profesionales de la salud que ya aplican la Metodología GPS en su clínica.",
     trustItems: [
       "Profesionales de la salud",
       "Implementación guiada",

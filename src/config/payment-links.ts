@@ -1,7 +1,7 @@
 export const paymentLinks = {
-  fullPrelaunch: "",
+  fullPrelaunch: "https://pago.pagopar.com/85uq9",
   fullLaunch: "",
-  installmentsPrelaunch: "",
+  installmentsPrelaunch: "https://pago.pagopar.com/85urd",
   installmentsLaunch: "",
 } as const;
 

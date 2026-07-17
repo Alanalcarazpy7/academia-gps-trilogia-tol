@@ -52,7 +52,7 @@ export function TolPrograms() {
     >
       <Container className="relative z-[1]">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.05fr_0.65fr] lg:items-end lg:gap-12">
-          <Reveal>
+          <Reveal variant="left">
             <div className="max-w-[680px]">
               <span className="section-eyebrow">{programsShowcase.eyebrow}</span>
               <h2
@@ -67,7 +67,7 @@ export function TolPrograms() {
             </div>
           </Reveal>
 
-          <Reveal delay={100}>
+          <Reveal delay={100} variant="right">
             <div className="catalog-includes">
               <span>{programsShowcase.overviewLabel}</span>
               <div className="catalog-includes-grid">

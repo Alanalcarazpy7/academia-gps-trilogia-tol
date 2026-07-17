@@ -30,7 +30,7 @@ export function TolTestimonials() {
           &#8220;
         </span>
 
-        <Reveal className="mx-auto max-w-[680px] text-center" as="div">
+        <Reveal className="mx-auto max-w-[680px] text-center" as="div" variant="up-strong">
           <span className="section-eyebrow !border-brand-blue/14 !bg-brand-blue/6 !text-brand-blue">
             {testimonials.eyebrow}
           </span>

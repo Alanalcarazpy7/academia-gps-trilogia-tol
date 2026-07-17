@@ -35,7 +35,7 @@ export function TolFaq() {
           </p>
         </Reveal>
 
-        <Reveal delay={100}>
+        <Reveal delay={100} variant="up-strong">
           <div className="faq-list mx-auto mt-10 max-w-[760px] sm:mt-12">
             {faq.items.map((item, index) => {
               const isOpen = openIndex === index;

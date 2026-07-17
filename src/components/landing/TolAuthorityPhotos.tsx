@@ -13,7 +13,7 @@ export function TolAuthorityPhotos() {
             alt={siteConfig.assets.heroImageAlt}
             width={1280}
             height={1706}
-            className="h-[340px] w-full object-cover object-[52%_28%] transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.03] sm:h-[440px] lg:h-[540px] xl:h-[580px]"
+            className="h-[340px] w-full object-cover object-[52%_18%] transition-transform duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[1.03] sm:h-[440px] lg:h-[540px] lg:object-[52%_42%] xl:h-[580px]"
             sizes="(max-width: 768px) 88vw, (max-width: 1200px) 44vw, 560px"
             preload
           />
@@ -50,7 +50,7 @@ export function TolAuthorityPhotos() {
         </span>
       </div>
 
-      <div className="thumb-float absolute -left-4 bottom-16 hidden w-36 -translate-x-2 -rotate-2 rounded-[22px] border border-white/90 bg-white p-1.5 shadow-[0_20px_46px_rgba(0,72,119,0.18)] sm:block lg:bottom-20 lg:-left-8 lg:w-40 lg:-translate-x-4">
+      <div className="thumb-float absolute -left-4 bottom-16 hidden w-36 -translate-x-2 -rotate-2 rounded-[22px] border border-white/90 bg-white p-1.5 shadow-[0_20px_46px_rgba(0,72,119,0.18)] sm:block lg:bottom-[4.5rem] lg:left-0 lg:w-36 lg:translate-x-0 xl:bottom-20 xl:-left-8 xl:w-40 xl:-translate-x-4">
         <Image
           src="/images/dra-nidia/dra-nidia-tablet.jpeg"
           alt="Dra. Nidia Carolina revisando indicadores de su clínica en una tablet."

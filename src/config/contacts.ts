@@ -13,9 +13,9 @@ export const whatsappMessages = {
 export const advisorContacts: AdvisorContact[] = [];
 
 export const contactPlaceholders = {
-  whatsappHref: "#contacto-pendiente",
+  whatsappHref: "https://wa.me/message/T3T346YKBQNVP1",
   whatsappLabel: "Consultar con una asesora",
-  advisorStatus: "Pendiente de confirmar asesoras, números y mensajes.",
+  advisorStatus: "Confirmado.",
 } as const;
 
 export function createWhatsappHref(contact: AdvisorContact) {
@@ -36,7 +36,7 @@ export function getPrimaryWhatsappCta() {
     return {
       label: contactPlaceholders.whatsappLabel,
       href: contactPlaceholders.whatsappHref,
-      isPlaceholder: true,
+      isPlaceholder: false,
     };
   }
 
