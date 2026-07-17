@@ -57,4 +57,3 @@ next-env.d.ts
 # Videos pesados
 public/videos/*.MOV
 public/videos/*.mov
-public/videos/

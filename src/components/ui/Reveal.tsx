@@ -38,6 +38,11 @@ export function Reveal({
       return;
     }
 
+    if (!("IntersectionObserver" in window)) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -50,13 +55,8 @@ export function Reveal({
 
     observer.observe(node);
 
-    // Safety net: never let content stay invisible indefinitely if the
-    // observer fails to fire for any reason.
-    const fallback = window.setTimeout(() => setIsVisible(true), 900);
-
     return () => {
       observer.disconnect();
-      window.clearTimeout(fallback);
     };
   }, []);
 
