@@ -433,9 +433,9 @@ export const siteConfig = {
   },
   guarantee: {
     eyebrow: "Garantía Academia GPS",
-    headline: "Tu inversión está protegida durante 30 días",
+    headline: "Garantía de satisfacción 100%",
     supportLine:
-      "Estamos tan comprometidos con tu transformación que, si sentís que no es para vos, el riesgo lo asumimos nosotros.",
+      "Tu inversión está totalmente segura. Si dentro de los primeros 30 días sentís que el contenido no se adapta a tu realidad, te devolvemos el 100% de tu dinero, sin preguntas ni complicaciones.",
     points: [
       "Accedés al programa completo desde el primer día.",
       "Probás las primeras clases y el material a tu ritmo.",

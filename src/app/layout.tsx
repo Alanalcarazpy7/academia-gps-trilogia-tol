@@ -71,6 +71,7 @@ export default function RootLayout({
   return (
     <html
       lang="es-PY"
+      suppressHydrationWarning
       className={`${poppins.variable} ${montserrat.variable} h-full scroll-smooth antialiased`}
     >
       <body className="min-h-full bg-background text-foreground">{children}</body>

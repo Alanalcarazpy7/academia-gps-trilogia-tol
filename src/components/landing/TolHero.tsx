@@ -140,6 +140,7 @@ export function TolHero() {
             poster={siteConfig.presentationVideo.verticalPoster}
             label={siteConfig.presentationVideo.label}
             orientation="vertical"
+            posterLoading="eager"
             sizes="(max-width: 768px) 78vw, (max-width: 1200px) 32vw, 400px"
           />
           <p className="mt-3 text-center text-[0.82rem] font-semibold text-brand-blue/60">

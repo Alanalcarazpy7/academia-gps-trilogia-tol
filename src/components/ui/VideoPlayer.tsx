@@ -8,6 +8,7 @@ type VideoPlayerProps = {
   poster: string;
   label: string;
   orientation?: "horizontal" | "vertical";
+  posterLoading?: "eager" | "lazy";
   sizes?: string;
   className?: string;
 };
@@ -17,6 +18,7 @@ export function VideoPlayer({
   poster,
   label,
   orientation = "horizontal",
+  posterLoading,
   sizes,
   className = "",
 }: VideoPlayerProps) {
@@ -51,6 +53,7 @@ export function VideoPlayer({
               src={poster}
               alt={label}
               fill
+              loading={posterLoading}
               sizes={sizes ?? (isVertical ? "(max-width: 640px) 74vw, 420px" : "(max-width: 900px) 92vw, 600px")}
               className={["object-cover", isVertical ? "object-[50%_14%]" : "object-[50%_28%]"].join(" ")}
             />
