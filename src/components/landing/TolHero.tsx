@@ -97,7 +97,7 @@ export function TolHero() {
             >
               <svg
                 aria-hidden="true"
-                className="h-4.5 w-4.5 shrink-0"
+                className="h-[1.65rem] w-[1.65rem] shrink-0"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
