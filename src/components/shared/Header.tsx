@@ -138,14 +138,56 @@ export function Header() {
           })}
         </nav>
 
-        <div className="flex flex-1 items-center justify-center md:hidden">
+        <div className="flex flex-1 items-center justify-center gap-1.5 md:hidden">
           <span className="header-mobile-badge">
             <span aria-hidden="true" />
             50% OFF
           </span>
+
+          <a
+            aria-label="Acceso Alumnos"
+            className="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/25 bg-white/10 text-white transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-white/45 hover:bg-white/18 active:scale-[0.96]"
+            href="/campus"
+          >
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              <path d="M10 17l5-5-5-5" />
+              <path d="M15 12H3" />
+            </svg>
+          </a>
         </div>
 
         <div className="hidden items-center gap-2 md:flex xl:gap-3">
+          <a
+            className="group inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full border border-white/25 px-3 py-2 text-[10px] font-extrabold text-white/85 transition-[background-color,border-color,color] duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] hover:border-white/45 hover:bg-white/10 hover:text-white lg:text-[11px]"
+            href="/campus"
+          >
+            <svg
+              aria-hidden="true"
+              className="h-3.5 w-3.5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              <path d="M10 17l5-5-5-5" />
+              <path d="M15 12H3" />
+            </svg>
+            <span>Acceso Alumnos</span>
+          </a>
+
           <Button
             className="btn-gold-glow group min-w-[7.9rem] gap-1.5 px-3 text-[10px] lg:min-w-[8.6rem] lg:text-[11px] xl:min-w-36 xl:gap-2 xl:px-4 xl:text-[12px]"
             href={paymentCta.href}
@@ -264,6 +306,28 @@ export function Header() {
               →
             </span>
           </Button>
+
+          <a
+            className="mt-2 flex w-full items-center justify-center gap-2 rounded-2xl border border-brand-blue/14 px-4 py-3 text-sm font-extrabold text-brand-blue/74 transition-colors duration-200 hover:bg-brand-cream/70 hover:text-brand-teal"
+            href="/campus"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <svg
+              aria-hidden="true"
+              className="h-4 w-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              viewBox="0 0 24 24"
+            >
+              <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+              <path d="M10 17l5-5-5-5" />
+              <path d="M15 12H3" />
+            </svg>
+            Acceso Alumnos
+          </a>
         </div>
       </Container>
     </header>
