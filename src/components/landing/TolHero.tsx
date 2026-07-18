@@ -89,7 +89,7 @@ export function TolHero() {
             </Button>
 
             <Button
-              className="btn-outline-whatsapp min-h-14 gap-2.5 border-brand-teal/55 bg-white/78 px-5 text-brand-teal shadow-none hover:border-brand-teal hover:text-brand-blue"
+              className="btn-whatsapp-solid min-h-14 gap-2.5 px-5"
               href={whatsappCta.href}
               isPlaceholder={whatsappCta.isPlaceholder}
               size="lg"

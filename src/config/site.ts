@@ -343,7 +343,7 @@ export const siteConfig = {
       {
         name: "Dr. Martín",
         role: "Clínica Estética",
-        context: "Consultorio privado",
+        context: "",
         rating: 5,
         quote: "Dejé de improvisar y empecé a dirigir. La diferencia se nota mes a mes.",
         avatar: "/images/social-proof/avatar-profesional-03.jpeg",

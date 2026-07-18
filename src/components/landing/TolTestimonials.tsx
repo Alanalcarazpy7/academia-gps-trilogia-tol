@@ -88,7 +88,7 @@ export function TolTestimonials() {
                             {item.name}
                           </p>
                           <p className="text-[0.76rem] font-semibold text-brand-blue/54">
-                            {item.role} · {item.context}
+                            {item.context ? `${item.role} · ${item.context}` : item.role}
                           </p>
                         </div>
                       </div>

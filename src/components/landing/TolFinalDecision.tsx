@@ -76,7 +76,7 @@ export function TolFinalDecision() {
 
             <Button
               variant="ghost"
-              className="btn-outline-offer min-h-12 gap-2.5 px-6 text-[0.9rem]"
+              className="btn-whatsapp-outline min-h-12 gap-2.5 px-6 text-[0.9rem]"
               href={whatsappCta.href}
               isPlaceholder={whatsappCta.isPlaceholder}
             >
