@@ -5867,6 +5867,67 @@ img {
   transform: translateY(-2px);
 }
 
+.footer-social-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.footer-social-link {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 2.6rem;
+  width: 2.6rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.14);
+  background: rgb(255 255 255 / 0.05);
+  color: rgb(255 255 255 / 0.7);
+  overflow: hidden;
+  transition:
+    border-color 300ms var(--ease-premium-out),
+    color 300ms var(--ease-premium-out),
+    transform 300ms var(--ease-premium-out),
+    box-shadow 300ms var(--ease-premium-out);
+}
+
+.footer-social-link svg {
+  position: relative;
+  z-index: 1;
+  height: 1.15rem;
+  width: 1.15rem;
+  transition: transform 300ms var(--ease-premium-out);
+}
+
+.footer-social-link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--brand-teal), var(--brand-blue));
+  opacity: 0;
+  transition: opacity 300ms var(--ease-premium-out);
+}
+
+.footer-social-link:hover {
+  border-color: transparent;
+  color: white;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 14px 28px rgb(0 72 119 / 0.32);
+}
+
+.footer-social-link:hover::before {
+  opacity: 1;
+}
+
+.footer-social-link:hover svg {
+  transform: scale(1.08);
+}
+
+.footer-social-link:active {
+  transform: translateY(-1px) scale(0.97);
+}
+
 .footer-whatsapp-icon {
   display: grid;
   flex-shrink: 0;
@@ -6076,6 +6137,28 @@ img {
 .countdown-inline {
   font-variant-numeric: tabular-nums;
   font-weight: 800;
+}
+
+.countdown-inline-highlight {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid rgb(230 198 25 / 0.4);
+  background: rgb(230 198 25 / 0.14);
+  padding: 0.22rem 0.65rem;
+  font-size: 0.86rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: var(--brand-yellow);
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 0 0 1px rgb(230 198 25 / 0.08) inset;
+}
+
+@media (min-width: 640px) {
+  .countdown-inline-highlight {
+    font-size: 0.92rem;
+    padding: 0.24rem 0.75rem;
+  }
 }
 
 /* Página de gracias */

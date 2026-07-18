@@ -29,9 +29,10 @@ export function TolMethodology() {
               </p>
 
               <div className="route-phase-row mt-6" aria-label="Fases de trabajo">
+                <span>Claridad</span>
                 <span>Diagnóstico</span>
-                <span>Implementación</span>
-                <span>Seguimiento</span>
+                <span>Acción</span>
+                <span>Resultados</span>
               </div>
             </div>
           </Reveal>
@@ -39,11 +40,8 @@ export function TolMethodology() {
           <Reveal delay={120} variant="tilt">
             <aside className="route-guidance-card">
               <span>GPS</span>
-              <strong>Del concepto a la decisión</strong>
-              <p>
-                La metodología baja cada idea a herramientas, criterio y
-                seguimiento para que no quede solo como capacitación.
-              </p>
+              <strong>{gpsMethodology.guidanceTitle}</strong>
+              <p>{gpsMethodology.guidanceText}</p>
             </aside>
           </Reveal>
         </div>

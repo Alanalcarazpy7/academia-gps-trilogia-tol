@@ -59,6 +59,32 @@ export function Footer() {
               <p className="mt-3 text-[0.8rem] font-medium leading-6 text-white/40">
                 {siteConfig.trustLine}
               </p>
+
+              <span className="footer-heading mt-5 block">{footer.socialLabel}</span>
+              <div className="footer-social-row mt-3">
+                {footer.socialLinks.map((social) => (
+                  <a
+                    className="footer-social-link"
+                    href={social.href}
+                    key={social.label}
+                    aria-label={social.label}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    {social.label === "Instagram" ? (
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="5" />
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M17.5 6.5h.01" />
+                      </svg>
+                    ) : (
+                      <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M13.5 21v-7.5h2.5l.4-3H13.5V8.4c0-.87.24-1.46 1.49-1.46h1.6V4.35c-.28-.04-1.22-.12-2.33-.12-2.3 0-3.87 1.4-3.87 3.98v2.2H8v3h2.4V21h3.1Z" />
+                      </svg>
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </Reveal>

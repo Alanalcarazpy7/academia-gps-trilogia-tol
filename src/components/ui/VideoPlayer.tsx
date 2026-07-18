@@ -70,9 +70,6 @@ export function VideoPlayer({
                 </svg>
               </span>
             </span>
-            <span className="absolute bottom-3 left-3 rounded-full bg-black/55 px-2.5 py-1 text-[10px] font-bold text-white backdrop-blur-sm sm:bottom-4 sm:left-4">
-              {label}
-            </span>
           </button>
         )}
       </div>

@@ -20,10 +20,10 @@ export function TolMarketOpportunity() {
               <span className="market-radar-ring ring-3" />
               <div className="market-clinic-node">
                 <span className="text-[10px] font-extrabold uppercase tracking-[0.18em] text-brand-yellow">
-                  Clinica
+                  Clínica
                 </span>
                 <span className="mt-1 block font-heading text-lg font-extrabold text-white">
-                  Direccion profesional
+                  Dirección profesional
                 </span>
               </div>
               {marketOpportunity.signals.map((signal, index) => (

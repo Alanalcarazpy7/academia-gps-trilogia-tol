@@ -22,7 +22,7 @@ const accentTextColors = {
 const programOutcomes = {
   "tol-fi": "Vas a salir con tu tablero de costos, aranceles y margen listo para operar.",
   "tol-mark": "Vas a salir con tu mapa de comunicación y experiencia del paciente definido.",
-  "tol-coach": "Vas a salir con tu matriz de roles y plan de liderazgo para tu equipo.",
+  "tol-coach": "Vas a obtener herramientas de liderazgo y plan de formación de equipos.",
 } as const;
 
 const programIncludes = [

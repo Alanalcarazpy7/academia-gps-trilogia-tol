@@ -78,15 +78,21 @@ export function CountdownChips({
 export function CountdownInline({
   target,
   showSeconds = false,
+  highlight = false,
 }: {
   target: string;
   showSeconds?: boolean;
+  highlight?: boolean;
 }) {
   const time = useCountdown(target, { showSeconds });
   if (!time || time.expired) return null;
 
   return (
-    <span className="countdown-inline" role="timer" aria-live="off">
+    <span
+      className={highlight ? "countdown-inline-highlight" : "countdown-inline"}
+      role="timer"
+      aria-live="off"
+    >
       {time.days}d {pad(time.hours)}h {pad(time.minutes)}m
       {showSeconds ? ` ${pad(time.seconds)}s` : ""}
     </span>

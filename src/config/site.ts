@@ -38,7 +38,7 @@ export const siteConfig = {
   ],
   authority: {
     name: "Dra. Nidia Carolina",
-    role: "Fundadora de Academia GPS",
+    role: "Creadora y Dictante de la Trilogía TOL",
   },
   socialProof: {
     label: "Profesionales de la salud ya están conociendo la metodología GPS",
@@ -112,7 +112,7 @@ export const siteConfig = {
   },
   painPoints: {
     eyebrow: "¿Este programa es para ti?",
-    headline: "Reconocés alguna de estas situaciones en tu clínica",
+    headline: "¿Reconocés algunas de estas situaciones en tu clínica?",
     supportLine:
       "Diseñado para profesionales de la salud que se animaron a emprender su propia clínica y sienten que:",
     items: [
@@ -145,15 +145,15 @@ export const siteConfig = {
   },
   economicPotential: {
     eyebrow: "Potencial económico",
-    headline: "Cuánto dinero perdés cuando la clínica se dirige por intuición",
+    headline: "¿Cuánto dinero perdés cuando la clínica se dirige por intuición?",
     supportLine:
-      "La rentabilidad no aparece trabajando más horas. Aparece cuando sabés qué cuesta abrir la puerta, qué margen deja cada servicio y qué arancel sostiene el crecimiento.",
+      "La rentabilidad no aparece trabajando más horas. Aparece cuando sabés cuánto cuesta mantener funcionando tu clínica, qué margen deja cada servicio y qué arancel asegura el crecimiento.",
     boardLabel: "Tablero de dirección",
     boardNote: "Ejemplo ilustrativo del tablero que vas a construir en TOL-FI.",
     metrics: [
       {
-        label: "Costos reales visibles",
-        detail: "Separar gastos fijos, variables e insumos para dejar de decidir a ciegas.",
+        label: "Costos reales",
+        detail: "Estructura de costos clara y real para dejar de decidir a ciegas.",
       },
       {
         label: "Margen por prestación",
@@ -174,7 +174,7 @@ export const siteConfig = {
   },
   marketOpportunity: {
     eyebrow: "Oportunidad de mercado",
-    headline: "La clínica que se profesionaliza compite con otra claridad",
+    headline: "Sólo una clínica que se profesionaliza puede competir y crecer de forma sostenible.",
     supportLine:
       "El paciente compara más, los costos suben y la competencia comunica mejor. La gestión ya no es un extra: es parte de la experiencia que vendés.",
     signals: [
@@ -198,29 +198,36 @@ export const siteConfig = {
   },
   gpsMethodology: {
     eyebrow: "Metodología GPS",
-    headline: "Un método para pasar de la idea a la decisión",
+    headline: "Un método para pasar de la idea a la acción",
     supportLine:
       "La metodología GPS combina criterio ejecutivo, implementación guiada y seguimiento para que cada concepto termine aplicado dentro de la clínica.",
+    guidanceTitle: "Del concepto a la implementación",
+    guidanceText:
+      "Nuestra metodología convierte el aprendizaje en acciones concretas, para que tu formación se refleje en resultados reales y no quede solo como información recibida.",
     steps: [
       {
         label: "Aprender",
         outcome: "Claridad",
-        detail: "Conceptos claros, aplicados al lenguaje de una clínica o consultorio.",
+        detail:
+          "Comprendé los conceptos esenciales explicados en el contexto de una clínica, en lenguaje de salud y ejemplos reales.",
       },
       {
-        label: "Reflexionar",
+        label: "Diagnosticar",
         outcome: "Diagnóstico",
-        detail: "Leer tu realidad antes de copiar soluciones que no encajan con tu etapa.",
+        detail:
+          "Analizá la realidad de tu clínica para tomar decisiones acordes a tu situación, en lugar de copiar soluciones que no se adaptan a vos.",
       },
       {
         label: "Implementar",
         outcome: "Acción",
-        detail: "Herramientas, plantillas y decisiones bajadas a la operación.",
+        detail:
+          "Llevá el aprendizaje a la práctica mediante herramientas, plantillas y planes de acción aplicables desde el primer día.",
       },
       {
         label: "Acompañar",
-        outcome: "Seguimiento",
-        detail: "Sesiones en vivo y seguimiento para sostener el avance.",
+        outcome: "Resultados",
+        detail:
+          "Consolidá los cambios con apoyo en sesiones en vivo para resolver dudas, mantener el foco y asegurar la implementación.",
       },
     ],
   },
@@ -228,7 +235,7 @@ export const siteConfig = {
     eyebrow: "Los tres programas",
     headline: "Tres áreas, un sistema para dirigir mejor tu clínica",
     supportLine:
-      "TOL-FI ordena los números, TOL-Mark mejora la comunicación y la experiencia del paciente, y TOL-Coach fortalece liderazgo y equipo.",
+      "TOL-FI ordena los números, TOL-Mark atrae pacientes correctos y mejora la experiencia y TOL-Coach fortalece tu liderazgo y consolida al equipo.",
     overviewLabel: "Sistema integral con contenido y acompañamiento",
     programs: [
       {
@@ -245,7 +252,7 @@ export const siteConfig = {
           "Organización financiera",
         ],
         promise:
-          "Para dejar de decidir desde la caja del día y empezar a dirigir con números claros.",
+          "Para conocer tus números y tomar decisiones más inteligentes.",
       },
       {
         id: "tol-mark",
@@ -325,32 +332,32 @@ export const siteConfig = {
     ],
     items: [
       {
-        name: "Dra. Valentina R.",
+        name: "Dra. Valentina",
         role: "Odontóloga",
-        context: "Clínica propia · Asunción",
+        context: "Clínica propia",
         rating: 5,
         quote:
           "Por primera vez sé exactamente cuánto me deja cada tratamiento. Armé mi tablero financiero y hoy fijo aranceles con números reales.",
         avatar: "/images/social-proof/avatar-profesional-01.jpeg",
       },
       {
-        name: "Dr. Martín F.",
-        role: "Fisioterapeuta",
+        name: "Dr. Martín",
+        role: "Clínica Estética",
         context: "Consultorio privado",
         rating: 5,
         quote: "Dejé de improvisar y empecé a dirigir. La diferencia se nota mes a mes.",
-        avatar: "/images/social-proof/avatar-profesional-02.avif",
+        avatar: "/images/social-proof/avatar-profesional-03.jpeg",
       },
       {
-        name: "Dra. Camila S.",
+        name: "Dra. Camila",
         role: "Dermatóloga",
         context: "Clínica de 4 profesionales",
         rating: 5,
         quote: "Mi equipo hoy trabaja con procesos, no a mi lado todo el día.",
-        avatar: "/images/social-proof/avatar-profesional-03.jpeg",
+        avatar: "/images/social-proof/avatar-profesional-02.avif",
       },
       {
-        name: "Dr. Ezequiel B.",
+        name: "Dr. Ezequiel",
         role: "Odontopediatra",
         context: "Consultorio propio",
         rating: 5,
@@ -358,7 +365,7 @@ export const siteConfig = {
         avatar: "/images/social-proof/avatar-profesional-04.jpg",
       },
       {
-        name: "Dra. Renata P.",
+        name: "Lic. Renata",
         role: "Nutricionista clínica",
         context: "Centro de salud integral",
         rating: 5,
@@ -437,7 +444,7 @@ export const siteConfig = {
     supportLine:
       "Tu inversión está totalmente segura. Si dentro de los primeros 30 días sentís que el contenido no se adapta a tu realidad, te devolvemos el 100% de tu dinero, sin preguntas ni complicaciones.",
     points: [
-      "Accedés al programa completo desde el primer día.",
+      "Accedés al programa.",
       "Probás las primeras clases y el material a tu ritmo.",
       "Si no aporta valor a tu clínica, te devolvemos el 100%.",
     ],
@@ -509,6 +516,17 @@ export const siteConfig = {
       { label: "Preguntas frecuentes", href: "#preguntas-frecuentes" },
     ],
     contactLabel: "Contacto",
+    socialLabel: "Seguinos",
+    socialLinks: [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/academia.gps?igsh=and1cWpnYWsxNjBj",
+      },
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/share/1GE2HgMhk8/?mibextid=wwXIfr",
+      },
+    ],
     legal: "© 2026 Academia GPS. Todos los derechos reservados.",
     developedByLabel: "Desarrollado por",
     developedByName: "SolvaTech",

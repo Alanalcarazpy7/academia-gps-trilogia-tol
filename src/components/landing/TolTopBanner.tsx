@@ -10,14 +10,14 @@ export function TolTopBanner() {
         <p className="flex w-full items-center justify-center gap-1.5 whitespace-nowrap text-[10px] leading-none sm:hidden">
           <span className="text-brand-yellow">{siteConfig.topBanner.savings}</span>
           <span className="text-white/42">·</span>
-          <CountdownInline target={siteConfig.prelaunchDeadlineIso} />
+          <CountdownInline target={siteConfig.prelaunchDeadlineIso} highlight />
         </p>
         <p className="hidden min-w-0 items-center justify-center sm:flex sm:text-xs">
           <span>{siteConfig.topBanner.label}</span>
           <span className="mx-2 text-white/42">·</span>
           <span className="text-brand-yellow">{siteConfig.topBanner.savings}</span>
           <span className="mx-2 text-white/42">·</span>
-          <CountdownInline target={siteConfig.prelaunchDeadlineIso} />
+          <CountdownInline target={siteConfig.prelaunchDeadlineIso} highlight />
         </p>
       </Container>
     </div>

@@ -15,7 +15,7 @@ const boardRows = [
 const barRows = [
   { label: "Ventas", value: "78%", fill: "78%" },
   { label: "Costos", value: "46%", fill: "46%" },
-  { label: "Margen", value: "62%", fill: "62%" },
+  { label: "Margen", value: "35%", fill: "35%" },
 ] as const;
 
 export function TolEconomicPotential() {
