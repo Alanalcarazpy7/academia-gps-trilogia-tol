@@ -8,7 +8,7 @@ function priceFromLabel(price: string) {
 }
 
 export function buildStructuredData() {
-  const prelaunchTier = siteConfig.pricingOffer.tiers[0];
+  const launchTier = siteConfig.pricingOffer.tiers[0];
 
   return {
     "@context": "https://schema.org",
@@ -36,10 +36,10 @@ export function buildStructuredData() {
           "@type": "Offer",
           category: "Formacion ejecutiva",
           priceCurrency: "USD",
-          price: priceFromLabel(prelaunchTier.price),
+          price: priceFromLabel(launchTier.price),
           availability: "https://schema.org/InStock",
           url: baseUrl,
-          validThrough: siteConfig.prelaunchDeadlineIso,
+          validThrough: siteConfig.launchDeadlineIso,
         },
       },
       {

@@ -44,8 +44,8 @@ export function StickyMobileCta() {
       <div className="sticky-mobile-cta-price">
         <span>50% OFF</span>
         <strong>
-          <span className="sticky-price-full">Pre-lanzamiento</span>
-          <span className="sticky-price-short">Pre-lanz.</span>
+          <span className="sticky-price-full">Lanzamiento</span>
+          <span className="sticky-price-short">Lanz.</span>
         </strong>
       </div>
       <Button

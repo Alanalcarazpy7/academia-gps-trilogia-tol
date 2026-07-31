@@ -12,22 +12,21 @@ export const siteConfig = {
   description:
     "Una formación guiada para profesionales de la salud que quieren ordenar sus números, atraer mejores pacientes y liderar con claridad.",
   topBanner: {
-    label: "Pre-lanzamiento exclusivo",
+    label: "Lanzamiento oficial",
     savings: "50% de ahorro",
-    deadline: "hasta el 31 de julio de 2026",
+    deadline: "hasta el 15 de agosto de 2026",
     ctaLabel: "Reservar plaza",
   },
-  prelaunchDeadlineIso: "2026-07-31T23:59:59-03:00",
-  launchDeadlineIso: "2026-08-14T23:59:59-03:00",
+  launchDeadlineIso: "2026-08-15T23:59:59-03:00",
   heroKicker: "Formación Ejecutiva para Profesionales de la Salud",
   heroPrimaryCtaLabel: "Asegurar mi plaza con 50% OFF",
   heroPrimaryCtaBadge: "50% OFF",
   heroWhatsappCtaLabel: "Hablar por WhatsApp",
-  offerPill: "50% de ahorro · hasta el 31 de julio",
+  offerPill: "50% de ahorro · hasta el 15 de agosto",
   trustLine: "Pago seguro por Pagopar · Cupos limitados · Respuesta por WhatsApp",
   offer: {
-    label: "Pre-lanzamiento exclusivo",
-    value: "50% de ahorro hasta el 31 de julio de 2026",
+    label: "Lanzamiento oficial",
+    value: "50% de ahorro hasta el 15 de agosto de 2026",
     includes: "Incluye 3 programas + 4 masterclasses en vivo",
   },
   heroBenefits: [
@@ -375,28 +374,20 @@ export const siteConfig = {
     ],
   },
   pricingOffer: {
-    eyebrow: "Oferta de pre-lanzamiento",
+    eyebrow: "Oferta de lanzamiento",
     headline: "Inscribite hoy a la Trilogía TOL con una oferta inigualable",
     supportLine:
-      "3 programas de implementación guiada + 4 masterclasses en vivo de regalo. Solo durante el pre-lanzamiento.",
+      "3 programas de implementación guiada + 4 masterclasses en vivo de regalo. Solo durante el lanzamiento.",
     officialPrice: "USD 2.799",
     officialPriceLabel: "Precio oficial",
     tiers: [
-      {
-        id: "prelaunch",
-        label: "Precio pre-lanzamiento",
-        price: "USD 1.399",
-        savings: "Ahorrás USD 1.400",
-        deadline: "Disponible hasta el 31 de julio de 2026",
-        featured: true,
-      },
       {
         id: "launch",
         label: "Precio de lanzamiento",
         price: "USD 1.599",
         savings: "Ahorrás USD 1.200",
-        deadline: "Disponible hasta el 14 de agosto de 2026",
-        featured: false,
+        deadline: "Disponible hasta el 15 de agosto de 2026",
+        featured: true,
       },
     ],
     bonusLabel: "Exclusivo por ser la 1ª edición del paquete",
@@ -423,16 +414,10 @@ export const siteConfig = {
       supportLine: "Facilitamos tu inversión con nuestro programa de financiación en 10 cuotas.",
       plans: [
         {
-          id: "prelaunch",
-          label: "Cuota pre-lanzamiento",
-          price: "USD 199 / mes",
-          detail: "Pagando la 1ª cuota hasta el 31/07/2026",
-        },
-        {
           id: "launch",
           label: "Cuota lanzamiento",
           price: "USD 233 / mes",
-          detail: "Pagando la 1ª cuota hasta el 14/08/2026",
+          detail: "Pagando la 1ª cuota hasta el 15/08/2026",
         },
       ],
       ctaLabel: "Quiero el paquete completo en 10 cuotas",
@@ -503,7 +488,7 @@ export const siteConfig = {
     body: "Únete hoy a la Trilogía TOL® y comenzá a dirigir tu clínica con claridad, orden y visión.",
     ctaLabel: "Sí, quiero transformar mi clínica hoy",
     whatsappLabel: "Hablar por WhatsApp",
-    trustLine: "Oferta disponible hasta el 31 de julio · Pago seguro · Cupos limitados",
+    trustLine: "Oferta disponible hasta el 15 de agosto · Pago seguro · Cupos limitados",
   },
   footer: {
     tagline: "Formación ejecutiva para profesionales de la salud que dirigen su propia clínica.",

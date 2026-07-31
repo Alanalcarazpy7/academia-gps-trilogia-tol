@@ -43,13 +43,17 @@ export function TolOffer() {
         <Reveal delay={60}>
           <div className="mt-6 flex flex-col items-center gap-2">
             <span className="text-[0.72rem] font-extrabold uppercase tracking-[0.14em] text-brand-yellow/85">
-              El precio de pre-lanzamiento termina en
+              El precio de lanzamiento termina en
             </span>
-            <CountdownChips target={siteConfig.prelaunchDeadlineIso} />
+            <CountdownChips target={siteConfig.launchDeadlineIso} />
           </div>
         </Reveal>
 
-        <div className="offer-pricing-grid mx-auto mt-8 max-w-[900px] sm:mt-10">
+        <div
+          className={`offer-pricing-grid mx-auto mt-8 max-w-[900px] sm:mt-10${
+            offer.tiers.length === 1 ? " is-single" : ""
+          }`}
+        >
           {offer.tiers.map((tier, index) => (
             <Reveal delay={90 + index * 70} variant="scale" key={tier.id}>
               <div className={`offer-price-card h-full${tier.featured ? " is-featured" : ""}`}>

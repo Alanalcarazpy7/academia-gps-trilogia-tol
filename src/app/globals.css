@@ -5017,6 +5017,17 @@ img {
   }
 }
 
+.offer-pricing-grid.is-single {
+  grid-template-columns: minmax(0, 420px);
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .offer-pricing-grid.is-single {
+    grid-template-columns: minmax(0, 420px);
+  }
+}
+
 .offer-price-card {
   position: relative;
   overflow: hidden;
