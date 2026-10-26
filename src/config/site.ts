@@ -12,7 +12,7 @@ export const siteConfig = {
   description:
     "Una formación guiada para profesionales de la salud que quieren ordenar sus números, atraer mejores pacientes y liderar con claridad.",
   topBanner: {
-    label: "Lanzamiento oficial",
+    label: "Consulta Planes de Pagos o Promociones Vigentes",
     savings: "50% de ahorro",
     deadline: "hasta el 15 de agosto de 2026",
     ctaLabel: "Reservar plaza",
