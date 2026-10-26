@@ -1,56 +1,40 @@
-import { TolAuthority } from "@/components/landing/TolAuthority";
-import { TolEconomicPotential } from "@/components/landing/TolEconomicPotential";
-import { TolFaq } from "@/components/landing/TolFaq";
-import { TolFinalDecision } from "@/components/landing/TolFinalDecision";
-import { TolFutureVision } from "@/components/landing/TolFutureVision";
-import { TolGuarantee } from "@/components/landing/TolGuarantee";
-import { TolHero } from "@/components/landing/TolHero";
-import { TolMarketOpportunity } from "@/components/landing/TolMarketOpportunity";
-import { TolMethodology } from "@/components/landing/TolMethodology";
-import { TolOffer } from "@/components/landing/TolOffer";
-import { TolPainPoints } from "@/components/landing/TolPainPoints";
-import { TolPrograms } from "@/components/landing/TolPrograms";
-import { TolTestimonials } from "@/components/landing/TolTestimonials";
-import { TolTopBanner } from "@/components/landing/TolTopBanner";
-import { TolTransformation } from "@/components/landing/TolTransformation";
-import { TolValueVideo } from "@/components/landing/TolValueVideo";
-import { Footer } from "@/components/shared/Footer";
+import {
+  AcademyFooter,
+  AcademyLanding,
+} from "@/components/edition-2027/AcademyLanding";
+import { Cta } from "@/components/edition-2027/Elements";
 import { Header } from "@/components/shared/Header";
-import { StickyMobileCta } from "@/components/shared/StickyMobileCta";
+import { academy } from "@/config/academy";
 import { buildStructuredData } from "@/config/structured-data";
+import "@/components/edition-2027/edition.css";
 
 export default function Home() {
   const structuredData = buildStructuredData();
 
   return (
-    <>
+    <div className="gps-v2">
+      <a className="gps-skip-link" href="#contenido-principal">
+        Saltar al contenido
+      </a>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
       />
-      <div className="sticky top-0 z-40">
-        <TolTopBanner />
-        <Header />
-      </div>
-      <main>
-        <TolHero />
-        <TolValueVideo />
-        <TolAuthority />
-        <TolPainPoints />
-        <TolTransformation />
-        <TolEconomicPotential />
-        <TolMarketOpportunity />
-        <TolMethodology />
-        <TolPrograms />
-        <TolFutureVision />
-        <TolTestimonials />
-        <TolOffer />
-        <TolGuarantee />
-        <TolFaq />
-        <TolFinalDecision />
-      </main>
-      <Footer />
-      <StickyMobileCta />
-    </>
+      <Header />
+      <AcademyLanding />
+      <AcademyFooter />
+      <aside
+        className="gps-mobile-cta"
+        aria-label="Inscripción a la Trilogía TOL"
+      >
+        <div>
+          <small>Edición {academy.edition}</small>
+          <strong>Trilogía TOL 2.0</strong>
+        </div>
+        <Cta>Ver inversión</Cta>
+      </aside>
+    </div>
   );
 }

@@ -3,7 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import type { ReactNode } from "react";
 
-type RevealVariant = "up" | "up-strong" | "left" | "right" | "scale" | "pop" | "tilt";
+type RevealVariant =
+  | "up"
+  | "up-strong"
+  | "left"
+  | "right"
+  | "scale"
+  | "pop"
+  | "tilt";
 
 type RevealProps = {
   children: ReactNode;
@@ -28,47 +35,54 @@ export function Reveal({
     const node = ref.current;
     if (!node) return;
 
-    setIsReady(true);
+    let observer: IntersectionObserver | undefined;
+    // Browser measurements and state updates run at the next animation frame.
+    // This also keeps the server-rendered content readable before enhancement.
+    const frame = window.requestAnimationFrame(() => {
+      setIsReady(true);
+      const rect = node.getBoundingClientRect();
+      if (
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+        (rect.top < window.innerHeight && rect.bottom > 0) ||
+        !("IntersectionObserver" in window)
+      ) {
+        setIsVisible(true);
+        return;
+      }
 
-    // Reveal immediately if it's already in view on mount (e.g. short pages,
-    // fast navigation, or if the observer callback is ever delayed).
-    const rect = node.getBoundingClientRect();
-    if (rect.top < window.innerHeight && rect.bottom > 0) {
-      setIsVisible(true);
-      return;
-    }
-
-    if (!("IntersectionObserver" in window)) {
-      setIsVisible(true);
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.05, rootMargin: "0px 0px -10px 0px" },
-    );
-
-    observer.observe(node);
+      observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+            observer?.disconnect();
+          }
+        },
+        { threshold: 0.05, rootMargin: "0px 0px -10px 0px" },
+      );
+      observer.observe(node);
+    });
 
     return () => {
-      observer.disconnect();
+      window.cancelAnimationFrame(frame);
+      observer?.disconnect();
     };
   }, []);
 
   const Component = as;
 
-  const revealStateClass = isVisible ? "is-visible" : isReady ? "is-waiting" : "";
+  const revealStateClass = isVisible
+    ? "is-visible"
+    : isReady
+      ? "is-waiting"
+      : "";
   const variantClass = variant === "up" ? "" : `reveal-${variant}`;
 
   return (
     <Component
       ref={ref as never}
-      className={["reveal-on-scroll", variantClass, revealStateClass, className].join(" ").trim()}
+      className={["reveal-on-scroll", variantClass, revealStateClass, className]
+        .join(" ")
+        .trim()}
       style={{ transitionDelay: isVisible ? `${delay}ms` : "0ms" }}
     >
       {children}

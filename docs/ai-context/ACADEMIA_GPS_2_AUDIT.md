@@ -2,7 +2,9 @@
 
 Fecha de revisión: 26 de octubre de 2026, America/Asuncion.
 
-El respaldo y la rama de desarrollo están preparados. El rediseño está pendiente de identificar los nuevos mockups y confirmar las condiciones comerciales. Esta preparación no constituye una versión 2.0 terminada.
+Este documento conserva los resultados de la auditoría inicial. La implementación posterior, las confirmaciones del usuario y sus pruebas se describen en [la entrega de Academia GPS 2.0](./ACADEMIA_GPS_2_DELIVERY.md).
+
+Estado al cerrar la auditoría inicial: el respaldo y la rama de desarrollo estaban preparados, y el rediseño estaba pendiente de identificar los nuevos mockups y confirmar las condiciones comerciales.
 
 ## Estado encontrado
 
@@ -24,6 +26,10 @@ El respaldo y la rama de desarrollo están preparados. El rediseño está pendie
 | `backup/academia-gps-v1` | `872f052564b9890126bf552e36938f7e5b8c888f` |
 | `academia-gps-v1.0-before-redesign` | Etiqueta anotada cuyo commit es el mismo `872f052` |
 | `origin/main`, al auditar | Producción existente en `e51d38e`, que incluye Analytics |
+| `backup/academia-gps-production-2026-10-26` | Respaldo adicional en `e51d38e2d2210476cd2ef65ce05c997927d0843f` |
+| `academia-gps-production-2026-10-26` | Etiqueta adicional cuyo commit es exactamente el mismo `e51d38e` |
+
+Las dos referencias adicionales se crearon a petición del usuario después de volver a consultar los despliegues de producción de Vercel en GitHub y comprobar la respuesta del dominio real. Se subieron al remoto con un push atómico, sin `force`, y se comprobaron mediante `git ls-remote`. No reemplazan ni modifican el respaldo local original de `872f052`.
 
 La rama y la etiqueta de respaldo conservan exactamente el estado local original más sus dos modificaciones legítimas: 117 archivos rastreados. Se subieron ambas referencias al mismo remoto con refspecs explícitos y sin `force`. Se comprobaron sus SHA mediante `git ls-remote`.
 
@@ -45,9 +51,11 @@ Se creó `feature/academia-gps-2.0` desde `backup/academia-gps-v1`. Se integró 
 
 No se modificaron `main`, `develop`, DNS, dominios, variables de entorno, redirecciones o ajustes de producción. No se ejecutó un despliegue de producción.
 
-Vercel registró el push de la rama de respaldo como `Preview`, en el mismo proyecto. El despliegue de la rama feature debe comprobarse también como `Preview`; su URL depende del commit y se obtiene del estado de Vercel en GitHub. No se debe promover esa vista previa a producción durante la preparación.
+Vercel registró tanto el push de la rama de respaldo como el de la preparación inicial de feature (`33d554b`) como `Preview`. Ese Preview inicial respondió con autenticación de Vercel y `X-Robots-Tag: noindex`. Cada despliegue posterior debe comprobarse por su commit; su URL se obtiene del estado de Vercel en GitHub. No se debe promover la vista previa a producción durante la preparación.
 
 ## Material disponible y faltantes
+
+Esta sección corresponde al inventario inicial. Después se recibieron los archivos de `source-assets/academia-gps-2.0/`; su uso y las decisiones de contenido están documentados en la entrega posterior.
 
 Fuentes existentes en `source-assets/documentos`:
 

@@ -48,7 +48,7 @@ export default async function Image() {
               maxWidth: 980,
             }}
           >
-            La Trilogia TOL
+            Trilogía TOL 2.0
           </div>
           <div
             style={{
@@ -60,8 +60,8 @@ export default async function Image() {
               lineHeight: 1.35,
             }}
           >
-            Formacion ejecutiva en finanzas, marketing y liderazgo para dirigir
-            tu clinica con vision empresarial.
+            De profesional de la salud a CEO de tu clínica.
+            Finanzas, marketing y liderazgo · Edición 2027.
           </div>
         </div>
 

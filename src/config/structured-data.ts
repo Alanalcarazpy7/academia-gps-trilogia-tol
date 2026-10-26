@@ -1,51 +1,47 @@
 import { seoConfig } from "./seo";
-import { siteConfig } from "./site";
+import { academy } from "./academy";
 
 const baseUrl = seoConfig.metadataBaseUrl;
 
-function priceFromLabel(price: string) {
-  return price.replace(/[^\d.]/g, "");
-}
-
 export function buildStructuredData() {
-  const launchTier = siteConfig.pricingOffer.tiers[0];
-
   return {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "Organization",
         "@id": `${baseUrl}/#organization`,
-        name: siteConfig.parentBrand,
+        name: academy.name,
         url: baseUrl,
-        logo: `${baseUrl}/brand/academia-gps-logo.svg`,
+        logo: `${baseUrl}${academy.assets.logo}`,
       },
       {
         "@type": "Course",
         "@id": `${baseUrl}/#course`,
-        name: siteConfig.heroWordmark,
+        name: academy.product,
         description: seoConfig.description,
-        courseMode: "Online",
-        educationalCredentialAwarded: "Formacion ejecutiva",
+        hasCourseInstance: {
+          "@type": "CourseInstance",
+          courseMode: "Online",
+          startDate: academy.inauguralClass.iso,
+        },
         provider: {
           "@type": "Organization",
-          name: siteConfig.parentBrand,
+          name: academy.name,
           sameAs: baseUrl,
         },
-        offers: {
+        offers: academy.tiers.map((tier) => ({
           "@type": "Offer",
-          category: "Formacion ejecutiva",
-          priceCurrency: "USD",
-          price: priceFromLabel(launchTier.price),
-          availability: "https://schema.org/InStock",
-          url: baseUrl,
-          validThrough: siteConfig.launchDeadlineIso,
-        },
+          name: `${tier.name} · ${tier.month} · Pago contado`,
+          priceCurrency: academy.currency,
+          price: tier.cash,
+          availability: "https://schema.org/PreOrder",
+          url: `${baseUrl}/#inversion`,
+        })),
       },
       {
         "@type": "FAQPage",
         "@id": `${baseUrl}/#faq`,
-        mainEntity: siteConfig.faq.items.map((item) => ({
+        mainEntity: academy.faqs.map((item) => ({
           "@type": "Question",
           name: item.question,
           acceptedAnswer: {

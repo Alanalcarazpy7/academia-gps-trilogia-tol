@@ -4,19 +4,15 @@ export const navigationItems = [
     href: "#inicio",
   },
   {
-    label: "Metodologia",
-    href: "#metodologia",
-  },
-  {
     label: "Programas",
     href: "#programas",
   },
   {
-    label: "Testimonios",
-    href: "#testimonios",
+    label: "Beneficios",
+    href: "#beneficios",
   },
   {
-    label: "Inversion",
+    label: "Inversión",
     href: "#inversion",
   },
   {
