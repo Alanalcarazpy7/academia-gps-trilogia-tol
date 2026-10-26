@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { seoConfig } from "@/config/seo";
 import "./globals.css";
 
@@ -74,7 +75,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${poppins.variable} ${montserrat.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-background text-foreground">{children}</body>
+      <body className="min-h-full bg-background text-foreground">
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
