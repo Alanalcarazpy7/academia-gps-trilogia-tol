@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import { Button } from "@/components/ui/Button";
 
 export type IconName =
   | "finance"
@@ -128,14 +127,14 @@ export function Cta({
   external?: boolean;
 }) {
   return (
-    <Button
+    <a
       href={href}
       className={`gps-button ${gold ? "gps-button--gold" : ""} ${className}`}
       {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
     >
       <span>{children}</span>
       <Icon name="arrow" />
-    </Button>
+    </a>
   );
 }
 

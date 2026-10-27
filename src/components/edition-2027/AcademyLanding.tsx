@@ -1,12 +1,14 @@
 import Image from "next/image";
 import { academy } from "@/config/academy";
 import { getPrimaryWhatsappCta } from "@/config/contacts";
+import { getProgramWhatsappHref } from "@/config/program-contacts";
 import { Container } from "@/components/ui/Container";
-import { VideoPlayer } from "@/components/ui/VideoPlayer";
 import { Reveal } from "@/components/ui/Reveal";
 import { CheckList, Cta, Eyebrow, Icon } from "./Elements";
 import { Investment } from "./Investment";
 import { DisclosureLink } from "./DisclosureLink";
+import { PainPointBackdrop, PainPointIcon } from "./PainPointArtwork";
+import { PresentationVideo } from "./PresentationVideo";
 
 function Hero() {
   return (
@@ -17,53 +19,78 @@ function Hero() {
             {academy.product} · Edición {academy.edition}
           </Eyebrow>
           <h1 id="hero-title">
-            {academy.hero.title}
-            <br />
+            <span>{academy.hero.title}</span>{" "}
             <em>{academy.hero.emphasis}</em>
           </h1>
           <p className="gps-hero-subtitle">{academy.hero.subtitle}</p>
           <p className="gps-hero-connection">{academy.hero.connection}</p>
-          <Cta>{academy.hero.cta}</Cta>
+          <Cta>¡{academy.hero.cta}!</Cta>
           <dl className="gps-hero-facts">
             <div>
               <dt>
-                <Icon name="book" />
+                <span className="gps-hero-fact-icon">
+                  <svg
+                    viewBox="0 0 32 32"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m2 11 14-7 14 7-14 7-14-7Z" />
+                    <path d="M7 14v9c5 4 13 4 18 0v-9M29 12v12M27 27l2-3 2 3" />
+                  </svg>
+                </span>
                 {academy.programs.length} TOL
               </dt>
-              <dd>Talleres online</dd>
+              <dd>Talleres Online</dd>
             </div>
             <div>
               <dt>
-                <Icon name="calendar" />
+                <span className="gps-hero-fact-icon">
+                  <Icon name="calendar" />
+                </span>
                 {academy.liveSessions}
               </dt>
               <dd>Encuentros en vivo</dd>
             </div>
             <div>
               <dt>
-                <Icon name="growth" />
+                <span className="gps-hero-fact-icon">
+                  <Icon name="growth" />
+                </span>
                 {academy.trainingMonths} meses
               </dt>
               <dd>De formación</dd>
             </div>
           </dl>
+          <p className="gps-hero-motto">{academy.hero.handwritten}</p>
+        </div>
+      </Container>
+      <div className="gps-hero-visual">
+        <div className="gps-hero-scene" aria-hidden="true">
+          <Image
+            src="/images/edition-2027/hero-clinica-background.webp"
+            alt=""
+            fill
+            sizes="100vw"
+            loading="eager"
+            unoptimized
+          />
         </div>
         <div className="gps-hero-portrait">
           <Image
-            src={academy.assets.portrait}
+            src="/images/edition-2027/dra-nidia-hero-transparent.webp"
             alt="Dra. Nidia Carolina, directora de Academia GPS"
-            width={1000}
-            height={1501}
-            sizes="(max-width: 767px) 100vw, 46vw"
+            width={771}
+            height={1413}
+            sizes="(max-width: 639px) 86vw, (max-width: 1023px) 460px, (min-width: 1762px) 740px, 42vw"
             preload
+            unoptimized
           />
-          <span className="gps-portrait-note">{academy.hero.handwritten}</span>
-          <div className="gps-portrait-caption">
-            <span>Dirección académica</span>
-            <strong>{academy.director.name}</strong>
-          </div>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }
@@ -71,12 +98,15 @@ function Hero() {
 function PainPoints() {
   return (
     <section className="gps-section gps-pains" aria-labelledby="pain-title">
-      <Container>
+      <PainPointBackdrop />
+      <Container className="gps-pains-layout">
         <div className="gps-centered-heading">
-          <Eyebrow>¿Te identificás?</Eyebrow>
+          <Eyebrow>
+            <span className="gps-sr-only">¿Te identificás?</span>
+          </Eyebrow>
           <h2 id="pain-title">
-            Tu clínica necesita algo más que{" "}
-            <em>excelencia técnica profesional.</em>
+            Tu clínica necesita <em>algo más</em> que excelencia técnica profesional
+            para ser exitosa.
           </h2>
           <p>
             Trabajás mucho, pero ¿tenés claridad sobre la rentabilidad, la
@@ -86,10 +116,8 @@ function PainPoints() {
         <div className="gps-pain-grid">
           {academy.painPoints.map((point) => (
             <article key={point.title} className="gps-pain-card">
-              <span className="gps-icon-disc">
-                <Icon name={point.icon} />
-              </span>
-              <div>
+              <PainPointIcon kind={point.icon} />
+              <div className="gps-pain-copy">
                 <h3>{point.title}</h3>
                 <p>{point.text}</p>
               </div>
@@ -130,17 +158,37 @@ function Programs() {
               >
                 <div className="gps-program-top">
                   <span className="gps-program-mark">
-                    <Image src={program.logo} alt={`Símbolo de ${program.name}`} width={140} height={144} sizes="58px" />
+                    <Image
+                      src={program.logo}
+                      alt={`Símbolo de ${program.name}`}
+                      width={140}
+                      height={144}
+                      sizes="72px"
+                    />
                   </span>
-                  <span className="gps-program-tag">{program.name}</span>
+                  <div className="gps-program-title">
+                    <span className="gps-program-tag">{program.name}</span>
+                    <h3>{program.title}</h3>
+                  </div>
                 </div>
-                <h3>{program.title}</h3>
                 <p>{program.description}</p>
                 <CheckList items={program.topics} />
-                <div className="gps-program-outcome">
+                <a
+                  className="gps-program-outcome"
+                  href={getProgramWhatsappHref(program)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Consultar sobre ${program.name} por WhatsApp (abre una nueva pestaña)`}
+                >
                   <Icon name={program.icon} />
-                  <strong>{program.outcome}</strong>
-                </div>
+                  <span className="gps-program-outcome-copy">
+                    <strong>{program.outcome}</strong>
+                    <span>Consultar {program.name} por WhatsApp</span>
+                  </span>
+                  <span className="gps-program-arrow">
+                    <Icon name="arrow" />
+                  </span>
+                </a>
               </article>
             </Reveal>
           ))}
@@ -174,7 +222,9 @@ function Experience() {
         </p>
         <div className="gps-experience-grid">
           <article className="gps-includes-card">
-            <h3>Lo que incluye tu inscripción</h3>
+            <h3>
+              <Icon name="book" /> Lo que incluye tu inscripción
+            </h3>
             <CheckList
               items={[
                 ...access,
@@ -246,40 +296,45 @@ function Presentation() {
       className="gps-section gps-presentation"
       aria-labelledby="presentation-title"
     >
-      <Container>
+      <Container className="gps-presentation-layout">
         <div className="gps-presentation-grid">
           <div className="gps-video-story">
-            <Eyebrow light>Conocé el programa</Eyebrow>
-            <h2 id="presentation-title">
-              Descubrí cómo funciona
-              <br />
-              <em>la Trilogía TOL.</em>
-            </h2>
-            <p>
-              La Dra. Nidia Carolina te explica en qué consiste la Trilogía,
-              cómo se integran sus tres formaciones y cómo aplicar este método
-              en la dirección de tu clínica.
-            </p>
-            <VideoPlayer
+            <div className="gps-presentation-heading">
+              <Eyebrow light>Conocé el programa</Eyebrow>
+              <h2 id="presentation-title">
+                Descubrí cómo funciona
+                <br />
+                <em>la Trilogía TOL.</em>
+              </h2>
+              <p>
+                Conocé la Trilogía de la mano de su directora: tres formaciones
+                que integran finanzas, marketing y liderazgo para dirigir tu clínica.
+              </p>
+            </div>
+            <PresentationVideo
               src={academy.assets.video}
               poster={academy.assets.videoPoster}
               label="Presentación de la Trilogía TOL 2.0 por la Dra. Nidia Carolina"
-              sizes="(max-width: 767px) 90vw, 55vw"
             />
           </div>
           <article className="gps-director-card">
-            <Image
-              src={academy.assets.portrait}
-              alt="Retrato de la Dra. Nidia Carolina"
-              width={1000}
-              height={1501}
-              sizes="(max-width: 767px) 90vw, 32vw"
-              className="gps-director-portrait"
-            />
-            <div>
+            <div className="gps-director-photo">
+              <Image
+                src="/images/edition-2027/dra-nidia-hero-transparent.webp"
+                alt="Dra. Nidia Carolina, directora de Academia GPS"
+                width={771}
+                height={1413}
+                sizes="(max-width: 639px) 175px, 186px"
+                unoptimized
+                className="gps-director-portrait"
+              />
+            </div>
+            <div className="gps-director-copy">
               <Eyebrow>Dirección académica</Eyebrow>
               <h3>{academy.director.name}</h3>
-              <p>{academy.director.biography}</p>
+              <p>
+                Odontóloga, estratega y fundadora de GPS Consultora y Academia GPS.
+              </p>
               <DisclosureLink
                 className="gps-text-link"
                 targetId="perfil-profesional"
@@ -294,6 +349,7 @@ function Presentation() {
             La experiencia detrás del programa <span aria-hidden="true">+</span>
           </summary>
           <div>
+            <p>{academy.director.biography}</p>
             <p>
               La Trilogía TOL es la evolución de la formación en Gerencia en
               Salud desarrollada e impartida por la Dra. Nidia Carolina durante
@@ -332,12 +388,20 @@ function Outcomes() {
           </p>
         </div>
         <div className="gps-outcome-grid">
-          {academy.outcomes.map((outcome) => (
-            <article key={outcome.title}>
-              <Icon name={outcome.icon} />
-              <h3>{outcome.title}</h3>
-              <p>{outcome.text}</p>
-            </article>
+          {academy.outcomes.map((outcome, index) => (
+            <Reveal
+              key={outcome.title}
+              className="gps-polish-reveal"
+              delay={(index % 3) * 60}
+            >
+              <article>
+                <span className="gps-outcome-icon">
+                  <Icon name={outcome.icon} />
+                </span>
+                <h3>{outcome.title}</h3>
+                <p>{outcome.text}</p>
+              </article>
+            </Reveal>
           ))}
         </div>
       </Container>
@@ -489,7 +553,7 @@ function Faq() {
             <br />
             <em>necesitás saber.</em>
           </h2>
-          <p>Las respuestas para dar tu próximo paso con claridad.</p>
+          <p>Acceso, clases, pagos y garantía: resolvé tus dudas antes de inscribirte.</p>
         </div>
         <div className="gps-faq-list">
           {academy.faqs.map((faq, index) => (
@@ -545,69 +609,28 @@ export function AcademyLanding() {
       <Hero />
       <PainPoints />
       <Programs />
-      <Experience />
+      <Reveal className="gps-polish-reveal">
+        <Experience />
+      </Reveal>
       <Presentation />
       <Outcomes />
-      <Investment />
-      <Enrollment />
-      <Guarantee />
-      <Faq />
-      <FinalCta />
+      <Reveal className="gps-polish-reveal">
+        <Investment />
+      </Reveal>
+      <Reveal className="gps-polish-reveal">
+        <Enrollment />
+      </Reveal>
+      <Reveal className="gps-polish-reveal">
+        <Guarantee />
+      </Reveal>
+      <Reveal className="gps-polish-reveal">
+        <Faq />
+      </Reveal>
+      <Reveal className="gps-polish-reveal">
+        <FinalCta />
+      </Reveal>
     </main>
   );
 }
 
-export function AcademyFooter() {
-  const whatsapp = getPrimaryWhatsappCta();
-  return (
-    <footer className="gps-footer">
-      <Container>
-        <div className="gps-footer-main">
-          <a href="#inicio" aria-label="Academia GPS, volver al inicio">
-            <Image
-              src={academy.assets.logo}
-              alt="Academia GPS · Aprendizajes que transforman"
-              width={640}
-              height={316}
-              sizes="160px"
-            />
-          </a>
-          <p>
-            Formación ejecutiva para profesionales de la salud.
-            <br />
-            Finanzas, marketing y liderazgo para dirigir tu clínica.
-          </p>
-          <nav aria-label="Contacto y redes sociales">
-            <a href={whatsapp.href} target="_blank" rel="noopener noreferrer">
-              WhatsApp ↗
-            </a>
-            {academy.social.map((social) => (
-              <a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {social.label} ↗
-              </a>
-            ))}
-          </nav>
-        </div>
-        <div className="gps-footer-bottom">
-          <span>© {new Date().getFullYear()} Academia GPS.</span>
-          <DisclosureLink targetId="condiciones-garantia">
-            Política de garantía
-          </DisclosureLink>
-          <a href="/campus">Acceso alumnos</a>
-          <a
-            href="https://solvatech.com.py/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Desarrollado por SolvaTech ↗
-          </a>
-        </div>
-      </Container>
-    </footer>
-  );
-}
+export { AcademyFooter } from "./AcademyFooter";

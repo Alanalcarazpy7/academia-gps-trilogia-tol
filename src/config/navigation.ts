@@ -4,7 +4,7 @@ export const navigationItems = [
     href: "#inicio",
   },
   {
-    label: "Programas",
+    label: "Programa",
     href: "#programas",
   },
   {

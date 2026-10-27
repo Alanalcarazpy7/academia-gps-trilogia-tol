@@ -109,7 +109,7 @@ export function Header() {
             alt="Academia GPS · Aprendizajes que transforman"
             width={640}
             height={316}
-            sizes="(max-width: 767px) 126px, 145px"
+            sizes="(min-width: 1360px) 144px, (min-width: 640px) 128px, 116px"
           />
         </a>
         <nav aria-label="Navegación principal" className="gps-desktop-nav">
@@ -126,7 +126,18 @@ export function Header() {
         </nav>
         <div className="gps-header-actions">
           <a href="/campus" className="gps-campus-link">
-            Acceso alumnos <span aria-hidden="true">↗</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M14 4h5a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-5M3 12h12m-4-4 4 4-4 4" />
+            </svg>
+            <span>Acceso al Campus</span>
           </a>
           <Cta gold className="gps-header-cta">
             Quiero inscribirme
@@ -139,9 +150,13 @@ export function Header() {
           aria-expanded={isMenuOpen}
           aria-controls="mobile-navigation"
           aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          data-open={isMenuOpen}
           onClick={() => setIsMenuOpen((open) => !open)}
         >
-          <span aria-hidden="true">{isMenuOpen ? "×" : "☰"}</span>
+          <span className="gps-menu-bars" aria-hidden="true">
+            <span />
+            <span />
+          </span>
         </button>
         {isMenuOpen && (
           <button
@@ -173,7 +188,17 @@ export function Header() {
             </a>
           ))}
           <a href="/campus" onClick={() => setIsMenuOpen(false)}>
-            Acceso alumnos <span aria-hidden="true">↗</span>
+            Acceso al Campus <span aria-hidden="true">↗</span>
+          </a>
+          <a
+            className="gps-mobile-enroll"
+            href="#inversion"
+            onClick={() => {
+              setActiveHref("#inversion");
+              setIsMenuOpen(false);
+            }}
+          >
+            Quiero inscribirme <span aria-hidden="true">→</span>
           </a>
         </nav>
       </Container>

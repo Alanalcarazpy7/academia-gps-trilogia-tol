@@ -27,8 +27,8 @@ export const academy = {
   assets: {
     logo: "/brand/edition-2027/academia-gps.webp",
     portrait: "/images/edition-2027/dra-nidia-carolina.webp",
-    video: "/videos/tol-2027-presentacion.mp4",
-    videoPoster: "/images/edition-2027/presentacion-poster.webp",
+    video: "/videos/tol-2027-presentacion-original.mov",
+    videoPoster: "/images/edition-2027/presentacion-poster-hd.webp",
   },
   hero: {
     title: "De Profesional de la Salud a",
@@ -48,7 +48,7 @@ export const academy = {
     },
     {
       icon: "marketing",
-      title: "¿Cómo llegan tus pacientes?",
+      title: "¿Sabés cómo atraer y captar más pacientes?",
       text: "Construí estrategias para atraer, captar y fidelizar.",
     },
     {

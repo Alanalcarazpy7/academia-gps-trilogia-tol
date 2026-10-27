@@ -57,3 +57,6 @@ next-env.d.ts
 # Videos pesados
 public/videos/*.MOV
 public/videos/*.mov
+
+# Copia Full HD compatible para revisión local; no publicar el video en Git.
+/public/videos/tol-2027-presentacion-1080p-sdr.mp4
