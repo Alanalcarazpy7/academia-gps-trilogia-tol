@@ -58,5 +58,8 @@ next-env.d.ts
 public/videos/*.MOV
 public/videos/*.mov
 
+# Excepción autorizada: video de presentación original servido por Vercel.
+!/public/videos/tol-2027-presentacion-original.mov
+
 # Copia Full HD compatible para revisión local; no publicar el video en Git.
 /public/videos/tol-2027-presentacion-1080p-sdr.mp4
