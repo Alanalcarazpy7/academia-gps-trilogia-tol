@@ -46,8 +46,10 @@ export function GoogleAnalytics({ mode }: { mode: GoogleAnalyticsMode }) {
     const { debug } = getAnalyticsSession(mode, window.location.href);
     const session = debug ? "debug" : "production";
     window.dataLayer ??= [];
-    window.gtag ??= function gtag(...args: unknown[]) {
-      window.dataLayer?.push(args);
+    window.gtag ??= function gtag() {
+      // Google expects native Arguments commands, not ordinary arrays.
+      // eslint-disable-next-line prefer-rest-params -- Preserve the gtag.js command protocol.
+      window.dataLayer?.push(arguments);
     };
 
     if (window.gpsAnalyticsSession !== session) {
