@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { googleAnalyticsMode } from "@/config/analytics";
 import { isPreviewDeployment, seoConfig } from "@/config/seo";
 import "./globals.css";
 
@@ -78,6 +80,9 @@ export default function RootLayout({
     >
       <body className="min-h-full bg-background text-foreground">
         {children}
+        {googleAnalyticsMode !== "disabled" && (
+          <GoogleAnalytics mode={googleAnalyticsMode} />
+        )}
         <Analytics />
       </body>
     </html>

@@ -8,7 +8,7 @@ export const seoConfig = {
   title: "Trilogía TOL 2.0 | Dirección de Clínicas · Academia GPS",
   description:
     "De profesional de la salud a CEO de tu clínica. Formación online en finanzas, marketing y liderazgo con acompañamiento. Trilogía TOL 2.0, edición 2027.",
-  metadataBaseUrl: "https://academiagps.com",
+  metadataBaseUrl: "https://www.academiagps.com",
   canonicalPath: "/",
   canonicalPendingConfirmation: false,
   keywords: [
