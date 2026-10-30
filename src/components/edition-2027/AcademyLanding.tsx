@@ -7,7 +7,7 @@ import { CheckList, Cta, Eyebrow, Icon } from "./Elements";
 import { Investment } from "./Investment";
 import { PainPointBackdrop, PainPointIcon } from "./PainPointArtwork";
 import { PresentationVideo } from "./PresentationVideo";
-import { PlanDashboardArtwork, SatisfactionSeal } from "./ProgramArtwork";
+import { SatisfactionSeal } from "./ProgramArtwork";
 
 function Hero() {
   return (
@@ -238,9 +238,17 @@ function Experience() {
             />
           </article>
           <article className="gps-plan-card">
-            <div className="gps-plan-visual">
-              <PlanDashboardArtwork />
-            </div>
+            <figure className="gps-plan-visual">
+              <div className="gps-plan-photo-frame">
+                <Image
+                  src={academy.assets.planPhoto}
+                  alt="Computadora con el tablero del Plan CEO Anual, agenda y teléfono sobre un escritorio"
+                  width={1373}
+                  height={1145}
+                  unoptimized
+                />
+              </div>
+            </figure>
             <div>
               <Icon name="plan" />
               <h3>Plan CEO Anual</h3>

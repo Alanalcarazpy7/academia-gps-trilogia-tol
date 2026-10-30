@@ -9,7 +9,7 @@ import {
   getPrimaryPaymentCta,
 } from "@/config/payment-links";
 import { Container } from "@/components/ui/Container";
-import { CheckList, Cta, Eyebrow, Icon } from "./Elements";
+import { Cta, Eyebrow, Icon } from "./Elements";
 
 export function Investment() {
   const [selected, setSelected] = useState(0);
@@ -135,19 +135,28 @@ export function Investment() {
             <div className="gps-bonus-grid">
               <div>
                 <h4>Lo que recibís con la categoría {item.name}</h4>
-                <CheckList items={academy.bonuses.slice(0, item.bonusCount)} />
+                <ul className="gps-bonus-list">
+                  {academy.bonuses.slice(0, item.bonusCount).map((bonus) => (
+                    <li key={bonus.number} className="gps-bonus-item">
+                      <span className="gps-bonus-number">Bonus {bonus.number}</span>
+                      <span className="gps-bonus-format">{bonus.format}</span>
+                      <h5>{bonus.title}</h5>
+                      <p>{bonus.description}</p>
+                      <small>{bonus.availability}</small>
+                    </li>
+                  ))}
+                </ul>
               </div>
               <aside className="gps-extra-bonus">
                 <Icon name="gift" />
                 <div>
-                  <span>Bonus extra de lanzamiento</span>
+                  <span>Bonus 5 · {academy.extraBonus.title}</span>
                   <h4>
-                    {academy.extraBonus.hours} hora de asesoría estratégica
-                    individual
+                    {academy.extraBonus.hours} hora con la {academy.director.name}
                   </h4>
-                  <p>
-                    Con la Dra. Nidia Carolina, para los primeros{" "}
-                    {academy.extraBonus.places} inscriptos confirmados.
+                  <p>{academy.extraBonus.description}</p>
+                  <p className="gps-extra-bonus-limit">
+                    Exclusiva para los primeros {academy.extraBonus.places} inscriptos confirmados.
                   </p>
                 </div>
               </aside>

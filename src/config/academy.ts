@@ -30,6 +30,7 @@ export const academy = {
     portrait: "/images/edition-2027/dra-nidia-carolina.webp",
     video: "/videos/tol-2027-presentacion-original.mov",
     videoPoster: "/images/edition-2027/presentacion-poster-hd.webp",
+    planPhoto: "/images/edition-2027/plan-ceo-referencia.webp",
   },
   hero: {
     title: "De Profesional de la Salud a",
@@ -175,10 +176,35 @@ export const academy = {
     },
   ],
   bonuses: [
-    "Masterclass ABC de las Clínicas Exitosas y Rentables",
-    "Masterclass Cómo comunicar tus Precios y Presupuestos",
-    "Agenda del CEO GPS: decisiones semanales para una clínica rentable",
-    "Workshop práctico GPS Makeover WhatsApp",
+    {
+      number: 1,
+      format: "Masterclass",
+      title: "ABC de las Clínicas Rentables y Exitosas",
+      description: "Los fundamentos que toda clínica necesita para crecer con dirección.",
+      availability: "Para todos: noviembre, diciembre, enero y febrero.",
+    },
+    {
+      number: 2,
+      format: "Masterclass",
+      title: "Cómo comunicar tus precios y dar presupuestos",
+      description: "Con seguridad, claridad y estrategia.",
+      availability: "Exclusivo de noviembre, diciembre y enero.",
+    },
+    {
+      number: 3,
+      format: "Masterclass",
+      title: "Planifica tu Año, Dirige tu Clínica",
+      description: "Diseña tu Plan Estratégico 2027 para una Clínica Rentable.",
+      availability: "Exclusivo de noviembre y diciembre.",
+    },
+    {
+      number: 4,
+      format: "Workshop práctico",
+      title: "Optimiza el WhatsApp de tu Clínica",
+      description:
+        "Convierte el WhatsApp de tu clínica en una herramienta para atender mejor, una vitrina profesional y optimizar tu posicionamiento.",
+      availability: "Exclusivo de noviembre.",
+    },
   ],
   tiers: [
     {
@@ -225,9 +251,9 @@ export const academy = {
   extraBonus: {
     hours: 1,
     places: 10,
-    title: "Asesoría estratégica individual",
+    title: "Asesoría Estratégica",
     description:
-      "Con la Dra. Nidia Carolina, exclusiva para los primeros inscriptos confirmados.",
+      "Un espacio individual para que converses conmigo sobre lo que tu clínica necesita en este momento.",
   },
   financingConditions:
     "En cuotas: débito automático de tarjeta de crédito o formulario de compromiso de pagos para transferencias mensuales.",

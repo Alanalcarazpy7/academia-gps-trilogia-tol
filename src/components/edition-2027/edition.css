@@ -2913,13 +2913,8 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   display: grid;
   place-items: center;
   width: 100%;
-  max-width: 350px;
-  margin-inline: auto;
-}
-.gps-v2 .gps-plan-dashboard {
-  display: block;
-  width: 100%;
-  height: auto;
+  max-width: 380px;
+  margin: 0 auto;
 }
 .gps-plan-card > div:last-child > svg {
   width: 28px;
@@ -3248,5 +3243,101 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-final .gps-button {
     padding-inline: 22px;
     font-size: 14px;
+  }
+}
+
+/* Fotografía original del Plan CEO y bonos confirmados por la clienta. */
+.gps-plan-photo-frame {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid #d8ded4;
+  border-radius: 13px;
+  background: #eee8df;
+  box-shadow: 0 7px 20px rgb(16 47 67 / 9%);
+}
+.gps-plan-photo-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.gps-bonus-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 17px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.gps-bonus-item {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e0e5d8;
+  border-radius: 12px;
+  background: #fbfaf5;
+}
+.gps-bonus-item:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+.gps-bonus-number {
+  display: inline-block;
+  margin-bottom: 14px;
+  padding: 4px 10px;
+  border: 1px solid #e1c995;
+  border-radius: 100px;
+  background: #f7edd6;
+  color: #78551c;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.gps-bonus-format {
+  display: block;
+  margin-bottom: 5px;
+  color: #006970;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.gps-bonus-item h5 {
+  margin: 0;
+  color: #143950;
+  font-family: var(--font-poppins), Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+.gps-bonus-item p {
+  margin-top: 10px;
+  color: #365468;
+  font-size: 13px;
+  line-height: 1.75;
+}
+.gps-bonus-item small {
+  display: block;
+  margin-top: 12px;
+  color: #00666b;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.65;
+}
+.gps-extra-bonus .gps-extra-bonus-limit {
+  margin-top: 15px;
+  padding-top: 12px;
+  border-top: 1px solid #dcc79f;
+  color: #76551f;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+@media (max-width: 1099px) {
+  .gps-bonus-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (max-width: 479px) {
+  .gps-bonus-item {
+    padding: 18px;
   }
 }
