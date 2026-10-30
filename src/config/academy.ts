@@ -1,11 +1,11 @@
 // Fuente: edición 2027 y correcciones de la clienta recibidas el 30/10/2026.
-// Estos datos están autorizados para Preview; requieren aprobación antes de publicar.
+// Publicación de la versión 2.0 autorizada por el propietario el 30/10/2026.
 export const academy = {
   name: "Academia GPS",
   tagline: "Aprendizajes que transforman",
   product: "Trilogía TOL 2.0",
   edition: 2027,
-  commercialApproved: false,
+  commercialApproved: true,
   currency: "USD",
   officialCashPrice: 1499,
   officialInstallmentPrice: 199,
