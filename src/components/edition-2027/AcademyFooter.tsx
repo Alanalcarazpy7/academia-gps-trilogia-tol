@@ -2,7 +2,6 @@ import Image from "next/image";
 import { academy } from "@/config/academy";
 import { getPrimaryWhatsappCta } from "@/config/contacts";
 import { Container } from "@/components/ui/Container";
-import { DisclosureLink } from "./DisclosureLink";
 import { Cta, Icon } from "./Elements";
 
 const exploreLinks = [
@@ -58,13 +57,7 @@ export function AcademyFooter() {
 
           <div className="gps-footer-column gps-footer-contact">
             <h2>Estamos para acompañarte</h2>
-            <Cta href={whatsapp.href} external>Consultar inscripciones</Cta>
-            <a className="gps-footer-phone" href={`tel:+${academy.contact.phone}`}>
-              {academy.contact.displayPhone}
-            </a>
-            <a className="gps-footer-campus" href="/campus">
-              <Icon name="book" /> Acceso al Campus <Icon name="arrow" />
-            </a>
+            <Cta href={whatsapp.href} external>Quiero consultar mis dudas</Cta>
             <nav className="gps-footer-socials" aria-label="Redes sociales de Academia GPS">
               {academy.social.map((social) => (
                 <a key={social.label} href={social.href} target="_blank" rel="noopener noreferrer">
@@ -89,7 +82,6 @@ export function AcademyFooter() {
         <div className="gps-footer-bottom">
           <div className="gps-footer-legal">
             <p>© {new Date().getFullYear()} Academia GPS. Todos los derechos reservados.</p>
-            <DisclosureLink targetId="condiciones-garantia">Condiciones de garantía</DisclosureLink>
           </div>
           <a
             className="gps-developer-credit"

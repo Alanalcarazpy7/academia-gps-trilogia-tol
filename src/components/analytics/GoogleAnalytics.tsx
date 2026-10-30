@@ -105,7 +105,7 @@ export function GoogleAnalytics({ mode }: { mode: GoogleAnalyticsMode }) {
         playedVideos.has(video)
       ) return;
       playedVideos.add(video);
-      send({ name: "presentation_video_start", parameters: { section_id: "directora" } });
+      send({ name: "presentation_video_start", parameters: getAnalyticsContext(video) });
     }
 
     document.addEventListener("click", handleClick);

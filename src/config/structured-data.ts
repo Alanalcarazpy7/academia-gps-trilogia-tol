@@ -59,7 +59,7 @@ export function buildStructuredData() {
         },
         offers: academy.tiers.map((tier) => ({
           "@type": "Offer",
-          name: `${tier.name} · ${tier.month} · Pago contado`,
+          name: `${tier.name} · ${tier.month} ${tier.year} · Pago contado`,
           priceCurrency: academy.currency,
           price: tier.cash,
           availability: "https://schema.org/PreOrder",

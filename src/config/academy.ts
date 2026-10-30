@@ -1,4 +1,4 @@
-// Fuente: textos y esquema visual de la edición 2027 recibidos el 26/10/2026.
+// Fuente: edición 2027 y correcciones de la clienta recibidas el 30/10/2026.
 // Estos datos están autorizados para Preview; requieren aprobación antes de publicar.
 export const academy = {
   name: "Academia GPS",
@@ -19,6 +19,7 @@ export const academy = {
   inauguralClass: {
     iso: "2027-02-15T19:00:00-03:00",
     dateLabel: "Lunes 15 de febrero de 2027",
+    shortDateLabel: "15 de febrero de 2027",
     timeLabel: "19:00 h · Paraguay",
   },
   accessEndLabel: "15 de febrero de 2028",
@@ -115,7 +116,7 @@ export const academy = {
   ],
   includes: [
     "Todas las clases en vivo quedan grabadas",
-    "Entrevista inicial individual al inscribirte",
+    "Entrevista inicial individual",
     "Diagnóstico GPS 360°",
     "Kit CEO GPS: herramientas y plantillas",
     "Comunidad privada de WhatsApp",
@@ -124,23 +125,20 @@ export const academy = {
   methodology: [
     {
       title: "Aprender",
-      text: "Conceptos de negocio en el lenguaje de tu clínica.",
+      text: "Conceptos de negocios en nuestro lenguaje y con ejemplos del área de la salud.",
     },
     {
       title: "Diagnosticar",
-      text: "Una mirada clara sobre tu situación actual.",
+      text: "Una mirada clara sobre la situación actual de tu clínica.",
     },
     {
       title: "Implementar",
-      text: "Herramientas y planes para pasar a la acción.",
-    },
-    {
-      title: "Acompañar",
-      text: "Sesiones en vivo para resolver dudas y avanzar.",
+      text: "Cada teoría va acompañada de herramientas y plantillas para pasar a la acción.",
     },
   ],
   director: {
     name: "Dra. Nidia Carolina",
+    instagramUrl: "https://www.instagram.com/p/Dac2fSAGGJj/?rpxt=MXU5YjNrNmJocXoyZw==",
     biography:
       "Odontóloga de formación, estratega y directora de clínicas por transformación. Fundadora y CEO de GPS Consultora y Academia GPS, con trayectoria clínica, empresarial y docente internacional.",
   },
@@ -148,12 +146,12 @@ export const academy = {
     {
       icon: "finance",
       title: "Finanzas bajo control",
-      text: "Conocé tus costos reales, definí aranceles rentables y tomá decisiones con números claros.",
+      text: "Conocé tus costos reales, definí aranceles rentables y manejá tu clínica con indicadores de gestión.",
     },
     {
       icon: "marketing",
       title: "Marketing que atrae",
-      text: "Posicioná tu clínica, comunicá tu valor y atraé a los pacientes que necesitás.",
+      text: "Posicioná tu clínica, comunicá su valor e implementá un sistema de captación constante de pacientes.",
     },
     {
       icon: "team",
@@ -163,17 +161,17 @@ export const academy = {
     {
       icon: "plan",
       title: "Procesos y organización",
-      text: "Optimizá el tiempo y mejorá la experiencia del paciente.",
+      text: "Implementá una experiencia que enamora y fideliza.",
     },
     {
       icon: "growth",
       title: "Crecimiento sostenible",
-      text: "Trabajá con un plan de acción, indicadores y metas para tu clínica.",
+      text: "Trabajá con un plan de acción que te permita crecer realmente.",
     },
     {
-      icon: "heart",
-      title: "Más equilibrio",
-      text: "Dirigí con mayor seguridad y más tiempo para lo que disfrutás.",
+      icon: "shield",
+      title: "CEO",
+      text: "Dirigí realmente tu clínica y no sólo trabajes en ella.",
     },
   ],
   bonuses: [
@@ -187,6 +185,7 @@ export const academy = {
       id: "elite",
       name: "Élite",
       month: "Noviembre",
+      year: 2026,
       cash: 899,
       installment: 139,
       bonusCount: 4,
@@ -196,6 +195,7 @@ export const academy = {
       id: "vip",
       name: "VIP",
       month: "Diciembre",
+      year: 2026,
       cash: 1049,
       installment: 149,
       bonusCount: 3,
@@ -205,6 +205,7 @@ export const academy = {
       id: "plus",
       name: "Plus",
       month: "Enero",
+      year: 2027,
       cash: 1199,
       installment: 169,
       bonusCount: 2,
@@ -214,6 +215,7 @@ export const academy = {
       id: "standard",
       name: "Estándar",
       month: "Febrero",
+      year: 2027,
       cash: 1499,
       installment: 199,
       bonusCount: 1,
@@ -230,7 +232,7 @@ export const academy = {
   financingConditions:
     "En cuotas: débito automático de tarjeta de crédito o formulario de compromiso de pagos para transferencias mensuales.",
   tierCondition:
-    "La categoría se define por el mes de la primera cuota abonada.",
+    "El mes de tu inscripción define la categoría a la que accedés.",
   enrollment: [
     {
       title: "Elegís tu modalidad",

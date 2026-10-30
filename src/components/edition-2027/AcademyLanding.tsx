@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { academy } from "@/config/academy";
 import { getPrimaryWhatsappCta } from "@/config/contacts";
-import { getProgramWhatsappHref } from "@/config/program-contacts";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { CheckList, Cta, Eyebrow, Icon } from "./Elements";
 import { Investment } from "./Investment";
-import { DisclosureLink } from "./DisclosureLink";
 import { PainPointBackdrop, PainPointIcon } from "./PainPointArtwork";
 import { PresentationVideo } from "./PresentationVideo";
+import { PlanDashboardArtwork, SatisfactionSeal } from "./ProgramArtwork";
 
 function Hero() {
   return (
@@ -149,6 +148,13 @@ function Programs() {
             una verdadera empresa de salud.
           </p>
         </div>
+        <div className="gps-program-video">
+          <PresentationVideo
+            src={academy.assets.video}
+            poster={academy.assets.videoPoster}
+            label="Presentación de la Trilogía TOL 2.0 por la Dra. Nidia Carolina"
+          />
+        </div>
         <div className="gps-program-grid">
           {academy.programs.map((program, index) => (
             <Reveal key={program.id} delay={index * 75}>
@@ -173,25 +179,21 @@ function Programs() {
                 </div>
                 <p>{program.description}</p>
                 <CheckList items={program.topics} />
-                <a
-                  className="gps-program-outcome"
-                  href={getProgramWhatsappHref(program)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Consultar sobre ${program.name} por WhatsApp (abre una nueva pestaña)`}
-                >
+                <div className="gps-program-outcome">
                   <Icon name={program.icon} />
                   <span className="gps-program-outcome-copy">
                     <strong>{program.outcome}</strong>
-                    <span>Consultar {program.name} por WhatsApp</span>
                   </span>
-                  <span className="gps-program-arrow">
-                    <Icon name="arrow" />
-                  </span>
-                </a>
+                </div>
               </article>
             </Reveal>
           ))}
+        </div>
+        <div id="directora" className="gps-program-author">
+          <p>Creadora y dictante de la Trilogía TOL: <strong>{academy.director.name}</strong></p>
+          <a href={academy.director.instagramUrl} target="_blank" rel="noopener noreferrer">
+            Conocé más de la Dra. Nidia <Icon name="arrow" />
+          </a>
         </div>
       </Container>
     </section>
@@ -236,34 +238,28 @@ function Experience() {
             />
           </article>
           <article className="gps-plan-card">
-            <div className="gps-plan-cover">
-              <span>Tu clínica. Tu dirección.</span>
-              <Icon name="growth" />
-              <h3>
-                Plan CEO
-                <br />
-                GPS Anual
-              </h3>
-              <span>Academia GPS</span>
+            <div className="gps-plan-visual">
+              <PlanDashboardArtwork />
             </div>
             <div>
               <Icon name="plan" />
-              <h3>
-                Un plan para dirigir
-                <br />
-                tu próximo año.
-              </h3>
+              <h3>Plan CEO Anual</h3>
               <p>
-                Tu Plan de Dirección Anual para tu Clínica con objetivos, metas,
+                Plan de Dirección Anual para tu Clínica con objetivos, metas,
                 indicadores y ciclos de ejecución.
               </p>
+              <div className="gps-training-start">
+                <strong>¡Tu formación inicia al inscribirte!</strong>
+                <p>Tenés acceso inmediato a las formaciones.</p>
+              </div>
               <div className="gps-class-date">
                 <Icon name="calendar" />
                 <div>
-                  <strong>Clase inaugural en vivo</strong>
-                  <time dateTime={academy.inauguralClass.iso}>
-                    {academy.inauguralClass.dateLabel}
-                  </time>
+                  <p>
+                    Y el <time dateTime={academy.inauguralClass.iso}>
+                      {academy.inauguralClass.shortDateLabel}
+                    </time> iniciamos las clases en vivo de acompañamiento grupal.
+                  </p>
                   <span>{academy.inauguralClass.timeLabel}</span>
                 </div>
               </div>
@@ -284,84 +280,6 @@ function Experience() {
             ))}
           </ol>
         </div>
-      </Container>
-    </section>
-  );
-}
-
-function Presentation() {
-  return (
-    <section
-      id="directora"
-      className="gps-section gps-presentation"
-      aria-labelledby="presentation-title"
-    >
-      <Container className="gps-presentation-layout">
-        <div className="gps-presentation-grid">
-          <div className="gps-video-story">
-            <div className="gps-presentation-heading">
-              <Eyebrow light>Conocé el programa</Eyebrow>
-              <h2 id="presentation-title">
-                Descubrí cómo funciona
-                <br />
-                <em>la Trilogía TOL.</em>
-              </h2>
-              <p>
-                Conocé la Trilogía de la mano de su directora: tres formaciones
-                que integran finanzas, marketing y liderazgo para dirigir tu clínica.
-              </p>
-            </div>
-            <PresentationVideo
-              src={academy.assets.video}
-              poster={academy.assets.videoPoster}
-              label="Presentación de la Trilogía TOL 2.0 por la Dra. Nidia Carolina"
-            />
-          </div>
-          <article className="gps-director-card">
-            <div className="gps-director-photo">
-              <Image
-                src="/images/edition-2027/dra-nidia-hero-transparent.webp"
-                alt="Dra. Nidia Carolina, directora de Academia GPS"
-                width={771}
-                height={1413}
-                sizes="(max-width: 639px) 175px, 186px"
-                unoptimized
-                className="gps-director-portrait"
-              />
-            </div>
-            <div className="gps-director-copy">
-              <Eyebrow>Dirección académica</Eyebrow>
-              <h3>{academy.director.name}</h3>
-              <p>
-                Odontóloga, estratega y fundadora de GPS Consultora y Academia GPS.
-              </p>
-              <DisclosureLink
-                className="gps-text-link"
-                targetId="perfil-profesional"
-              >
-                Ver trayectoria profesional <Icon name="arrow" />
-              </DisclosureLink>
-            </div>
-          </article>
-        </div>
-        <details id="perfil-profesional" className="gps-bio-details">
-          <summary>
-            La experiencia detrás del programa <span aria-hidden="true">+</span>
-          </summary>
-          <div>
-            <p>{academy.director.biography}</p>
-            <p>
-              La Trilogía TOL es la evolución de la formación en Gerencia en
-              Salud desarrollada e impartida por la Dra. Nidia Carolina durante
-              más de diez años en modalidad presencial.
-            </p>
-            <p>
-              Su especialización en Neuroeducación Virtual incorpora
-              metodologías, herramientas digitales y recursos de aprendizaje
-              para llevar los conocimientos a la gestión de la clínica.
-            </p>
-          </div>
-        </details>
       </Container>
     </section>
   );
@@ -445,59 +363,30 @@ function Enrollment() {
 }
 
 function Guarantee() {
-  const whatsapp = getPrimaryWhatsappCta();
   return (
     <section
       id="garantia"
       className="gps-section gps-guarantee"
       aria-labelledby="guarantee-title"
     >
-      <Container>
+      <Container className="gps-guarantee-container">
         <div className="gps-guarantee-layout">
-          <div className="gps-guarantee-seal">
-            <Icon name="shield" />
-            <span>Garantía de satisfacción</span>
-            <strong>
-              100<small>%</small>
-            </strong>
-            <span>{academy.guaranteeDays} días corridos desde tu acceso</span>
+          <div className="gps-guarantee-badge">
+            <SatisfactionSeal />
           </div>
           <div>
-            <Eyebrow>Tu tranquilidad también importa</Eyebrow>
+            <Eyebrow>Tu tranquilidad importa</Eyebrow>
             <h2 id="guarantee-title">
               El riesgo corre
               <br />
               <em>por nuestra cuenta.</em>
             </h2>
             <p>
-              Si durante los primeros {academy.guaranteeDays} días corridos
-              desde tu acceso a la plataforma sentís que el contenido no se
+              Accedé al contenido y, si en los {academy.guaranteeDays} días
+              sentís que el contenido no se
               adapta a tu realidad, podés solicitar la devolución del 100% del
               importe abonado.
             </p>
-            <ol className="gps-guarantee-steps">
-              <li>
-                <span>01</span>
-                <strong>Accedés</strong>
-                <p>Recibís tus claves y explorás el programa.</p>
-              </li>
-              <li>
-                <span>02</span>
-                <strong>Probás</strong>
-                <p>Conocés las clases y materiales a tu ritmo.</p>
-              </li>
-              <li>
-                <span>03</span>
-                <strong>Decidís</strong>
-                <p>Si no es para vos, solicitás la devolución.</p>
-              </li>
-            </ol>
-            <DisclosureLink
-              className="gps-text-link"
-              targetId="condiciones-garantia"
-            >
-              Conocer las condiciones completas <Icon name="arrow" />
-            </DisclosureLink>
           </div>
         </div>
         <details id="condiciones-garantia" className="gps-guarantee-policy">
@@ -528,9 +417,6 @@ function Guarantee() {
               recepción de la solicitud, sin perjuicio de los tiempos
               adicionales de acreditación.
             </p>
-            <a href={whatsapp.href} target="_blank" rel="noopener noreferrer">
-              Contactar a Academia GPS · {academy.contact.displayPhone}
-            </a>
           </div>
         </details>
       </Container>
@@ -581,23 +467,20 @@ function FinalCta() {
   return (
     <section className="gps-section gps-final" aria-labelledby="final-title">
       <Container>
-        <Eyebrow light>Tu próximo paso</Eyebrow>
+        <Eyebrow light>Es momento de dar el paso</Eyebrow>
         <h2 id="final-title">
-          Tu clínica merece una
-          <br />
-          <em>Dirección Estratégica.</em>
+          Tu clínica no puede depender siempre de que vos hagas todo.
         </h2>
         <p>
-          Ser CEO de tu clínica no depende de su tamaño.
-          <br />
-          Depende de cómo la dirigís.
+          Aprendé a dirigir tus finanzas, tener un marketing y equipo efectivo
+          para construir una clínica rentable, organizada y lista para seguir creciendo.
+        </p>
+        <p className="gps-final-invitation">
+          Convertite en el CEO que tu clínica necesita con la Trilogía TOL 2.0.
         </p>
         <Cta href={whatsapp.href} gold external>
-          {academy.hero.cta}
+          ¡Quiero inscribirme y convertirme en CEO de mi clínica!
         </Cta>
-        <a className="gps-final-link" href="#programas">
-          Volver a conocer el programa <Icon name="arrow" />
-        </a>
       </Container>
     </section>
   );
@@ -612,7 +495,6 @@ export function AcademyLanding() {
       <Reveal className="gps-polish-reveal">
         <Experience />
       </Reveal>
-      <Presentation />
       <Outcomes />
       <Reveal className="gps-polish-reveal">
         <Investment />

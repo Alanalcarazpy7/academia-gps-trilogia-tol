@@ -89,10 +89,10 @@ export function Investment() {
               onClick={() => setSelected(index)}
               onKeyDown={(event) => navigateTabs(event, index)}
             >
-              <span>{item.month}</span>
+              <span>{item.month} {item.year}</span>
               <strong>{item.name}</strong>
               <small>
-                {item.bonusCount} {item.bonusCount === 1 ? "bono" : "bonos"}
+                {item.bonusCount} bonus
               </small>
             </button>
           ))}
@@ -111,25 +111,22 @@ export function Investment() {
               <div className="gps-tier-name">
                 <Icon name="gift" />
                 <div>
-                  <span>Categoría</span>
+                  <span>{item.month} {item.year}</span>
                   <h3>{item.name}</h3>
-                  <p>{item.month}</p>
+                  <p>{item.bonusCount} bonus</p>
                 </div>
               </div>
               <div className="gps-cash-price">
                 <span>Inversión al contado</span>
                 <strong>{formatUsd(item.cash)}</strong>
-                <small>Un único pago</small>
+                <small>Pago único</small>
               </div>
               <div className="gps-financed-price">
+                <span>Inversión en cuotas</span>
                 <strong>
-                  O {academy.installmentCount} cuotas de{" "}
                   {formatUsd(item.installment)}
                 </strong>
-                <p>
-                  Total financiado:{" "}
-                  {formatUsd(item.installment * academy.installmentCount)}
-                </p>
+                <small>× {academy.installmentCount} cuotas mensuales</small>
               </div>
               <Cta href={whatsapp.href} gold external>
                 Quiero los beneficios de {item.name}
@@ -157,38 +154,14 @@ export function Investment() {
             </div>
           </div>
         ))}
-        <p className="gps-price-conditions">
-          Precios en dólares estadounidenses. {academy.financingConditions}
-          <br />
-          {academy.tierCondition}
-        </p>
+        <ul className="gps-price-conditions">
+          <li>Precios en dólares americanos.</li>
+          <li>{academy.tierCondition}</li>
+          <li>Cada formación por separado = {formatUsd(academy.individualProgramPrice)}.</li>
+        </ul>
         <div className="gps-payment-options">
-          <p>
-            Cada formación por separado:{" "}
-            <strong>{formatUsd(academy.individualProgramPrice)}</strong>.
-          </p>
-          <details>
-            <summary>
-              ¿Ya coordinaste tu inscripción? Enlaces de pago{" "}
-              <span aria-hidden="true">+</span>
-            </summary>
-            <div>
-              <p>
-                Confirmá tu categoría y el importe con Academia GPS antes de
-                realizar el pago.
-              </p>
-              <a href={cash.href} target="_blank" rel="noopener noreferrer">
-                Pago contado en Pagopar ↗
-              </a>
-              <a
-                href={installments.href}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Pago en cuotas en Pagopar ↗
-              </a>
-            </div>
-          </details>
+          <Cta href={cash.href} gold external>Quiero pagar contado</Cta>
+          <Cta href={installments.href} external>Quiero pagar en cuotas</Cta>
         </div>
         <p className="gps-sr-only" aria-live="polite">
           Categoría seleccionada: {tier.name}, {formatUsd(tier.cash)} al

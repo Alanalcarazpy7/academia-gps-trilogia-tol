@@ -298,119 +298,6 @@
 .gps-includes-card .gps-check-list li {
   font-size: 13px;
 }
-.gps-plan-card {
-  display: grid;
-  grid-template-columns: 0.8fr 1fr;
-  align-items: center;
-  gap: 25px;
-  padding: 28px;
-  border-radius: 16px;
-  background: #f0eee6;
-}
-.gps-plan-cover {
-  background: #084c51;
-  color: #f8edce;
-  border-radius: 3px 10px 10px 3px;
-  border-left: 7px solid #bd9145;
-  padding: 32px 19px;
-  box-shadow:
-    7px 8px 0 #f9f5eb,
-    10px 12px 20px #102f4324;
-  transform: rotate(-5deg);
-  aspect-ratio: 0.72;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.gps-plan-cover > span {
-  font-size: 7px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-}
-.gps-plan-cover svg {
-  width: 50px;
-  height: 50px;
-  color: #dbb46e;
-}
-.gps-plan-cover h3 {
-  font-size: 26px;
-  color: #fff;
-}
-.gps-plan-card > div:last-child > svg {
-  width: 32px;
-  height: 32px;
-  color: var(--gps-teal);
-  margin-bottom: 16px;
-}
-.gps-plan-card > div:last-child h3 {
-  font-size: 25px;
-}
-.gps-plan-card > div:last-child > p {
-  margin-top: 15px;
-  font-size: 12px;
-  color: var(--gps-muted);
-}
-.gps-class-date {
-  display: flex;
-  gap: 11px;
-  border-top: 1px solid #bd91454a;
-  padding-top: 17px;
-  margin-top: 20px;
-}
-.gps-class-date svg {
-  color: var(--gps-teal);
-}
-.gps-class-date strong {
-  font-size: 11px;
-  display: block;
-}
-.gps-class-date time,
-.gps-class-date span {
-  display: block;
-  font-size: 10px;
-  margin-top: 4px;
-}
-.gps-methodology {
-  padding-top: 44px;
-}
-.gps-methodology > p {
-  font:
-    24px Georgia,
-    serif;
-  margin-bottom: 24px;
-}
-.gps-methodology ol {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-.gps-methodology li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  border-top: 1px solid var(--gps-line);
-  padding-top: 18px;
-}
-.gps-methodology li > span {
-  font:
-    24px Georgia,
-    serif;
-  color: var(--gps-gold);
-  line-height: 1;
-}
-.gps-methodology h3 {
-  font-family: inherit;
-  font-size: 12px;
-  font-weight: 600;
-}
-.gps-methodology li p {
-  font-size: 11px;
-  color: var(--gps-muted);
-  margin-top: 8px;
-}
 .gps-v2 .video-group {
   margin: 0;
 }
@@ -435,40 +322,12 @@
 .gps-v2 .video-play-button::after {
   display: none;
 }
-.gps-bio-details {
-  border-bottom: 1px solid var(--gps-line);
-  margin-top: 22px;
-}
 .gps-v2 summary {
   cursor: pointer;
   list-style: none;
 }
 .gps-v2 summary::-webkit-details-marker {
   display: none;
-}
-.gps-bio-details summary,
-.gps-guarantee-policy summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  padding: 17px 0;
-  font-size: 13px;
-  font-weight: 600;
-}
-.gps-bio-details summary > span,
-.gps-guarantee-policy summary > span {
-  font-size: 23px;
-  font-weight: 400;
-  color: var(--gps-teal);
-}
-.gps-bio-details > div {
-  padding: 0 0 23px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px;
-  font-size: 13px;
-  color: var(--gps-muted);
 }
 .gps-outcomes {
   background: #eef3ee;
@@ -691,47 +550,6 @@
   margin-top: 8px;
   color: var(--gps-muted);
 }
-.gps-price-conditions {
-  font-size: 10px;
-  text-align: center;
-  color: var(--gps-muted);
-  max-width: 870px;
-  margin: 22px auto 0 !important;
-  line-height: 1.9;
-}
-.gps-payment-options {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 30px;
-  border-top: 1px solid var(--gps-line);
-  padding-top: 24px;
-  margin-top: 26px;
-  font-size: 12px;
-}
-.gps-payment-options details {
-  max-width: 480px;
-  flex: 1;
-}
-.gps-payment-options summary {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 15px;
-  color: var(--gps-teal);
-  font-weight: 600;
-}
-.gps-payment-options details > div {
-  padding-top: 15px;
-}
-.gps-payment-options details a {
-  display: inline-block;
-  margin-top: 12px;
-  margin-right: 22px;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  color: var(--gps-teal);
-}
 .gps-enrollment {
   background: #fff;
 }
@@ -781,110 +599,6 @@
 .gps-enrollment-contact > p {
   font-size: 13px;
   color: var(--gps-muted);
-}
-.gps-guarantee {
-  background: #e8efea;
-}
-.gps-guarantee-layout {
-  display: grid;
-  grid-template-columns: 0.7fr 1.5fr;
-  align-items: center;
-  gap: 80px;
-}
-.gps-guarantee-seal {
-  width: 100%;
-  max-width: 290px;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--gps-deep);
-  color: #eed099;
-  margin: auto;
-  outline: 1px solid #ae8d51;
-  outline-offset: 9px;
-  padding: 35px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 1px solid #c7a569;
-  box-shadow: 0 0 0 4px #d4b478 inset;
-}
-.gps-guarantee-seal > svg {
-  width: 32px;
-  height: 32px;
-  margin-bottom: 12px;
-}
-.gps-guarantee-seal > span {
-  font-size: 10px;
-  letter-spacing: 0.06em;
-}
-.gps-guarantee-seal > strong {
-  font:
-    80px/1.3 Georgia,
-    serif;
-  letter-spacing: -0.055em;
-}
-.gps-guarantee-seal strong small {
-  font-size: 0.52em;
-}
-.gps-guarantee-layout > div > p:not(.gps-eyebrow) {
-  font-size: 13px;
-  color: #415d61;
-  margin-top: 20px;
-  max-width: 640px;
-}
-.gps-guarantee-steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 0;
-  margin: 28px 0;
-  list-style: none;
-  gap: 28px;
-}
-.gps-guarantee-steps li > span {
-  display: block;
-  color: var(--gps-teal);
-  font-size: 11px;
-  font-weight: 600;
-  margin-bottom: 7px;
-}
-.gps-guarantee-steps li > strong {
-  font:
-    20px Georgia,
-    serif;
-}
-.gps-guarantee-steps p {
-  font-size: 11px;
-  margin-top: 7px;
-  color: #415d61;
-}
-.gps-guarantee-policy {
-  margin-top: 40px;
-  border-top: 1px solid #006b7026;
-  border-bottom: 1px solid #006b7026;
-}
-.gps-guarantee-policy > div {
-  padding: 10px 0 25px;
-  font-size: 13px;
-  max-width: 850px;
-}
-.gps-guarantee-policy section {
-  margin-top: 20px;
-}
-.gps-guarantee-policy h3 {
-  font-size: 21px;
-  margin-bottom: 8px;
-}
-.gps-guarantee-policy p + p {
-  margin-top: 15px;
-}
-.gps-guarantee-policy > div > a {
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: underline;
-  text-underline-offset: 5px;
-  color: var(--gps-teal);
 }
 .gps-faq {
   background: var(--gps-cream);
@@ -975,19 +689,6 @@
 .gps-final .gps-button {
   margin-top: 30px;
 }
-.gps-final-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 21px;
-  font-size: 11px;
-  color: #d5dfdf;
-}
-.gps-final-link svg {
-  width: 15px;
-  height: 15px;
-}
 .gps-mobile-cta {
   display: none;
 }
@@ -1013,12 +714,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-experience-grid {
     grid-template-columns: 1fr 1fr;
   }
-  .gps-plan-card {
-    grid-template-columns: 1fr;
-  }
-  .gps-plan-cover {
-    display: none;
-  }
   .gps-investment-heading {
     grid-template-columns: 1fr;
   }
@@ -1035,15 +730,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-enrollment-steps li {
     flex-direction: column;
     padding: 24px;
-  }
-  .gps-guarantee-layout {
-    gap: 45px;
-  }
-  .gps-guarantee-seal {
-    padding: 25px;
-  }
-  .gps-guarantee-seal > strong {
-    font-size: 62px;
   }
   .gps-faq-layout {
     gap: 45px;
@@ -1095,37 +781,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   }
   .gps-includes-card .gps-check-list li {
     font-size: 12px;
-  }
-  .gps-plan-card {
-    padding: 28px 25px;
-    grid-template-columns: 1fr;
-  }
-  .gps-plan-card > div:last-child h3 {
-    font-size: 30px;
-  }
-  .gps-plan-card > div:last-child > p {
-    font-size: 13px;
-  }
-  .gps-class-date time,
-  .gps-class-date span {
-    font-size: 12px;
-  }
-  .gps-methodology {
-    padding-top: 34px;
-  }
-  .gps-methodology > p {
-    font-size: 23px;
-  }
-  .gps-methodology ol {
-    grid-template-columns: 1fr 1fr;
-    gap: 25px 18px;
-  }
-  .gps-methodology li {
-    gap: 10px;
-  }
-  .gps-bio-details > div {
-    grid-template-columns: 1fr;
-    gap: 15px;
   }
   .gps-outcome-grid {
     grid-template-columns: 1fr 1fr;
@@ -1225,16 +880,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-extra-bonus {
     padding: 20px;
   }
-  .gps-price-conditions {
-    font-size: 10px;
-  }
-  .gps-payment-options {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .gps-payment-options details {
-    width: 100%;
-  }
   .gps-enrollment-steps {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -1253,35 +898,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
     align-items: flex-start;
     gap: 19px;
     margin-top: 25px;
-  }
-  .gps-guarantee-layout {
-    grid-template-columns: 1fr;
-    gap: 45px;
-  }
-  .gps-guarantee-seal {
-    max-width: 225px;
-    padding: 25px;
-  }
-  .gps-guarantee-seal > strong {
-    font-size: 65px;
-  }
-  .gps-guarantee-seal > span {
-    font-size: 8px;
-  }
-  .gps-guarantee-layout > div > p:not(.gps-eyebrow) {
-    font-size: 13px;
-  }
-  .gps-guarantee-steps {
-    gap: 18px;
-  }
-  .gps-guarantee-steps li > strong {
-    font-size: 18px;
-  }
-  .gps-guarantee-steps p {
-    font-size: 10px;
-  }
-  .gps-guarantee-policy {
-    margin-top: 27px;
   }
   .gps-faq-layout {
     grid-template-columns: 1fr;
@@ -1497,8 +1113,7 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 .gps-hero-copy .gps-button:hover {
   transform: none;
 }
-.gps-header :where(a, button):focus-visible,
-.gps-hero :where(a, button):focus-visible {
+.gps-header :where(a, button):focus-visible, .gps-hero :where(a, button):focus-visible {
   outline: 3px solid var(--hero-teal);
   outline-offset: 5px;
 }
@@ -2427,46 +2042,12 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   line-height: 1.45;
   letter-spacing: -.02em;
 }
-.gps-program-outcome-copy > span {
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 1.5;
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-.gps-program-arrow {
-  display: grid;
-  place-items: center;
-  flex: 0 0 29px;
-  width: 29px;
-  height: 29px;
-  border: 1px solid currentColor;
-  border-radius: 50%;
-}
-.gps-program-arrow svg {
-  width: 19px;
-  height: 19px;
-  transition: translate 160ms ease-out;
-}
 .gps-program-card.gps-tone-gold .gps-program-outcome {
   color: #172c40;
   background: linear-gradient(135deg, #e4b65d, #c68d2e);
 }
 .gps-program-card.gps-tone-gold .gps-program-tag {
   color: #7b541b;
-}
-.gps-program-card .gps-program-outcome:focus-visible {
-  outline: 3px solid #006b70;
-  outline-offset: 4px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .gps-program-outcome:hover {
-    box-shadow: inset 0 0 0 1px currentColor, 0 4px 12px rgb(8 36 65 / 14%);
-  }
-  .gps-program-outcome:hover .gps-program-arrow svg {
-    translate: 2px 0;
-  }
 }
 
 @media (min-width: 1024px) and (max-width: 1099px) {
@@ -2537,9 +2118,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-program-outcome strong {
     font-size: 14px;
   }
-  .gps-program-outcome-copy > span {
-    font-size: 12px;
-  }
 }
 
 @media (max-width: 359px) {
@@ -2560,16 +2138,9 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gps-program-outcome,
-  .gps-program-arrow svg {
+  .gps-program-outcome {
     transition: none;
   }
-}
-.gps-bio-details {
-  margin-top: 16px;
-}
-.gps-bio-details summary {
-  padding-block: 13px;
 }
 
 /* Legibilidad de las secciones posteriores, sin cambiar condiciones ni precios. */
@@ -2577,7 +2148,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 .gps-outcomes,
 .gps-investment,
 .gps-enrollment,
-.gps-guarantee,
 .gps-faq {
   --gps-muted: #365468;
 }
@@ -2598,8 +2168,7 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   font-size: 15px;
   line-height: 1.8;
 }
-.gps-includes-card,
-.gps-plan-card {
+.gps-includes-card {
   height: 100%;
   border: 1px solid #e0e6da;
   border-radius: 18px;
@@ -2627,49 +2196,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   color: #173b53;
   font-size: 14px;
   line-height: 1.7;
-}
-.gps-plan-card > div:last-child h3 {
-  color: #082d50;
-  font-size: 27px;
-}
-.gps-plan-card > div:last-child > p {
-  font-size: 14px;
-  line-height: 1.8;
-}
-.gps-plan-cover > span {
-  font-size: 10px;
-  line-height: 1.6;
-}
-.gps-class-date {
-  gap: 13px;
-}
-.gps-class-date strong {
-  font-size: 13px;
-}
-.gps-class-date time,
-.gps-class-date span {
-  font-size: 12px;
-  line-height: 1.6;
-}
-.gps-methodology > p {
-  color: #082d50;
-  font-size: 27px;
-}
-.gps-methodology li {
-  border-top: 2px solid #a9c8c0;
-}
-.gps-methodology li > span {
-  color: #976b27;
-  font-size: 27px;
-}
-.gps-methodology h3 {
-  color: #082d50;
-  font-size: 16px;
-  font-weight: 600;
-}
-.gps-methodology li p {
-  font-size: 14px;
-  line-height: 1.75;
 }
 .gps-outcome-grid {
   gap: 22px;
@@ -2777,17 +2303,9 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 .gps-extra-bonus span {
   font-size: 12px;
 }
-.gps-extra-bonus p,
-.gps-price-conditions {
+.gps-extra-bonus p {
   font-size: 13px;
   line-height: 1.8;
-}
-.gps-payment-options {
-  font-size: 14px;
-  line-height: 1.8;
-}
-.gps-payment-options summary {
-  min-height: 44px;
 }
 .gps-enrollment-steps li {
   border: 1px solid #e0e5d9;
@@ -2808,41 +2326,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 .gps-enrollment-steps p {
   font-size: 14px;
   line-height: 1.8;
-}
-.gps-guarantee-seal > svg {
-  width: 43px;
-  height: 43px;
-}
-.gps-guarantee-seal > span {
-  font-size: 12px;
-  line-height: 1.65;
-  letter-spacing: .025em;
-}
-.gps-guarantee-layout > div > p:not(.gps-eyebrow) {
-  color: #2e514f;
-  font-size: 15px;
-  line-height: 1.85;
-}
-.gps-guarantee-steps li > span {
-  font-size: 13px;
-}
-.gps-guarantee-steps li > strong {
-  color: #123b44;
-  font-size: 23px;
-}
-.gps-guarantee-steps p {
-  color: #2e514f;
-  font-size: 14px;
-  line-height: 1.8;
-}
-.gps-guarantee-policy summary {
-  min-height: 54px;
-  color: #123b44;
-  font-size: 14px;
-}
-.gps-guarantee-policy > div {
-  font-size: 14px;
-  line-height: 1.85;
 }
 .gps-faq-list details {
   margin-bottom: 12px;
@@ -2895,10 +2378,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   padding-inline: 30px;
   font-size: 15px;
 }
-.gps-final-link {
-  min-height: 44px;
-  font-size: 14px;
-}
 
 /* Movimiento breve, sin bucles ni bloqueo de la navegación por teclado. */
 .gps-v2 .gps-polish-reveal {
@@ -2919,19 +2398,16 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   transition: none;
 }
 .gps-includes-card,
-.gps-plan-card,
 .gps-outcome-grid article,
 .gps-enrollment-steps li {
   transition: border-color 180ms ease, box-shadow 180ms ease, transform 200ms cubic-bezier(.23, 1, .32, 1);
 }
-.gps-outcome-icon,
-.gps-plan-cover {
+.gps-outcome-icon {
   transition: transform 220ms cubic-bezier(.23, 1, .32, 1);
 }
 
 @media (hover: hover) and (pointer: fine) {
   .gps-includes-card:hover,
-  .gps-plan-card:hover,
   .gps-outcome-grid article:hover,
   .gps-enrollment-steps li:hover {
     border-color: #9dbdb0;
@@ -2940,9 +2416,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   }
   .gps-outcome-grid article:hover .gps-outcome-icon {
     transform: translateY(-2px);
-  }
-  .gps-plan-card:hover .gps-plan-cover {
-    transform: rotate(-2deg);
   }
   .gps-faq-list summary:hover {
     color: #006b70;
@@ -2953,15 +2426,8 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
     transform: scale(.98);
   }
 }
-.gps-v2 :where(.gps-experience, .gps-investment, .gps-enrollment, .gps-guarantee, .gps-faq, .gps-final) :focus-visible,
-.gps-faq-list summary:focus-visible .gps-faq-plus {
+.gps-v2 :where(.gps-experience, .gps-investment, .gps-enrollment, .gps-guarantee, .gps-faq, .gps-final) :focus-visible, .gps-faq-list summary:focus-visible .gps-faq-plus {
   transition: none;
-}
-
-@media (max-width: 1023px) {
-  .gps-plan-card {
-    height: auto;
-  }
 }
 @media (max-width: 639px) {
   .gps-price-tabs {
@@ -3008,15 +2474,11 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
     transition: none !important;
   }
   .gps-includes-card,
-  .gps-plan-card,
   .gps-outcome-grid article,
   .gps-enrollment-steps li,
   .gps-outcome-icon {
     transition: none !important;
     transform: none !important;
-  }
-  .gps-plan-cover {
-    transition: none !important;
   }
 }
 
@@ -3140,32 +2602,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 .gps-footer .gps-button:hover {
   transform: none;
 }
-.gps-footer-phone {
-  display: inline-flex;
-  align-items: center;
-  min-height: 44px;
-  color: #c1e9de;
-  font-size: 14px;
-  font-weight: 500;
-}
-.gps-footer-campus {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  min-height: 45px;
-  margin-top: 4px;
-  padding: 8px 12px;
-  border: 1px solid #75978c;
-  border-radius: 9px;
-  color: #f0f5ec;
-  font-size: 13px;
-  font-weight: 500;
-}
-.gps-footer-campus svg {
-  width: 18px;
-  height: 18px;
-}
 .gps-footer-column .gps-footer-socials {
   flex-direction: row;
   flex-wrap: wrap;
@@ -3272,7 +2708,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
 
 @media (hover: hover) and (pointer: fine) {
   .gps-footer-column nav a:hover,
-  .gps-footer-phone:hover,
   .gps-footer-legal > a:hover {
     color: #f3d392;
   }
@@ -3282,10 +2717,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   .gps-footer .gps-button:hover {
     background: #09838a;
     transform: translateY(-2px);
-  }
-  .gps-footer-campus:hover {
-    border-color: #a7d7c5;
-    background: #164954;
   }
   .gps-developer-credit:hover {
     border-color: #8be4d4;
@@ -3357,57 +2788,6 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
     transition: none !important;
   }
 }
-
-/* Programa: titulo, descripcion y video reunidos en el panel verde. */
-.gps-presentation {
-  padding-block: 32px;
-  background: #fff;
-}
-.gps-presentation-layout {
-  max-width: 1280px;
-  padding-inline: clamp(24px, 3.5vw, 48px);
-}
-.gps-presentation-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
-  align-items: start;
-  gap: 24px;
-}
-.gps-video-story {
-  min-width: 0;
-  padding: 28px;
-  border: 1px solid rgb(255 255 255 / 10%);
-  border-radius: 22px;
-  background: #063c45;
-  color: #fff;
-}
-.gps-presentation-heading {
-  margin-bottom: 23px;
-}
-.gps-presentation-heading .gps-eyebrow {
-  margin-bottom: 16px !important;
-  color: #e7c786;
-  font-size: 11px;
-}
-.gps-presentation-heading .gps-eyebrow::before {
-  margin-bottom: 12px;
-}
-.gps-presentation-heading h2 {
-  color: #fffdf7;
-  font-size: clamp(29px, 2.7vw, 37px);
-  line-height: 1.14;
-  letter-spacing: -.04em;
-}
-.gps-presentation-heading h2 em {
-  color: #e6c78e;
-}
-.gps-presentation-heading > p {
-  max-width: 620px;
-  margin-top: 18px;
-  color: #e4efed;
-  font-size: 14px;
-  line-height: 1.8;
-}
 .gps-presentation-video-screen {
   position: relative;
   aspect-ratio: 16 / 9;
@@ -3476,113 +2856,397 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   text-underline-offset: 4px;
   cursor: pointer;
 }
-.gps-director-card {
-  min-width: 0;
-  overflow: hidden;
-  border: 1px solid #dce5dc;
-  border-radius: 22px;
-  background: #f2f5ef;
+
+/* Correcciones de la clienta, 30/10/2026: se conserva la portada aprobada. */
+.gps-program-video {
+  max-width: 960px;
+  margin: 0 auto 38px;
 }
-.gps-director-photo {
+.gps-program-video .gps-presentation-video-screen {
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgb(0 20 28 / 18%);
+}
+.gps-program-card .gps-program-outcome {
+  min-height: 78px;
+  cursor: default;
+  transition: none;
+}
+.gps-program-author {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-top: 32px;
+  color: #e4eeea;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.gps-program-author strong {
+  color: #fffdf4;
+  font-weight: 600;
+}
+.gps-program-author a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  color: #efd090;
+  text-underline-offset: 5px;
+  text-decoration: underline;
+}
+.gps-program-author a svg {
+  width: 18px;
+  height: 18px;
+}
+.gps-plan-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  height: 100%;
+  padding: 28px;
+  border: 1px solid #dbe3d8;
+  border-radius: 18px;
+  background: #f0f2ea;
+  transition: border-color 180ms ease, box-shadow 180ms ease;
+}
+.gps-plan-visual {
   display: grid;
   place-items: center;
-  padding: 18px 18px 0;
-  background: radial-gradient(ellipse at 50% 30%, #fffaf0, #e6eee7);
+  width: 100%;
+  max-width: 350px;
+  margin-inline: auto;
 }
-.gps-director-portrait {
-  position: static;
+.gps-v2 .gps-plan-dashboard {
   display: block;
-  width: auto;
-  max-width: 100%;
-  height: 340px;
-  object-fit: contain;
-  object-position: center;
+  width: 100%;
+  height: auto;
 }
-.gps-director-copy {
-  padding: 23px 25px;
+.gps-plan-card > div:last-child > svg {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 12px;
+  color: #006b70;
 }
-.gps-director-card .gps-eyebrow {
-  margin-bottom: 11px !important;
-  color: #00646b;
-  font-size: 10px;
-  letter-spacing: .14em;
-}
-.gps-director-card .gps-eyebrow::before {
-  display: none;
-}
-.gps-director-card h3 {
+.gps-plan-card > div:last-child h3 {
   color: #082d50;
-  font-size: 27px;
-  line-height: 1.2;
-  letter-spacing: -.035em;
+  font-size: 28px;
 }
-.gps-director-card p:not(.gps-eyebrow) {
-  margin-block: 15px 17px;
-  color: #28485c;
+.gps-plan-card > div:last-child > p {
+  margin-top: 13px;
+  color: #365468;
   font-size: 14px;
   line-height: 1.8;
 }
-.gps-director-card .gps-text-link {
-  min-height: 44px;
-  gap: 12px;
-  color: #00646b;
+.gps-training-start {
+  margin-top: 20px;
+  padding: 15px 17px;
+  border-left: 3px solid #b58a3e;
+  border-radius: 0 9px 9px 0;
+  background: #fffdf6;
+  color: #12434b;
+}
+.gps-training-start strong {
+  display: block;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.gps-training-start p {
+  margin-top: 5px;
   font-size: 13px;
+  line-height: 1.7;
 }
-@media (min-width: 1100px) and (max-height: 850px) {
-  .gps-presentation {
-    padding-block: 24px;
+.gps-class-date {
+  display: flex;
+  gap: 12px;
+  margin-top: 19px;
+  color: #365468;
+}
+.gps-class-date > svg {
+  width: 24px;
+  height: 24px;
+  margin-top: 2px;
+  color: #006b70;
+}
+.gps-class-date p {
+  font-size: 13px;
+  line-height: 1.75;
+}
+.gps-class-date time,
+.gps-class-date span {
+  display: block;
+  margin-top: 5px;
+  color: #163e4b;
+  font-size: 12px;
+  font-weight: 600;
+}
+.gps-class-date p time {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+}
+.gps-methodology {
+  padding-top: 40px;
+}
+.gps-methodology > p {
+  margin-bottom: 24px;
+  color: #082d50;
+  font: 27px/1.3 Georgia, serif;
+}
+.gps-methodology ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.gps-methodology li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding-top: 19px;
+  border-top: 2px solid #a9c8c0;
+}
+.gps-methodology li > span {
+  color: #976b27;
+  font: 27px/1 Georgia, serif;
+}
+.gps-methodology h3 {
+  color: #082d50;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+}
+.gps-methodology li p {
+  margin-top: 9px;
+  color: #365468;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.gps-v2 .gps-cash-price strong,
+.gps-v2 .gps-financed-price strong,
+.gps-v2 .gps-official-prices dd {
+  font-family: var(--font-montserrat), Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: -.045em;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+.gps-v2 .gps-cash-price strong,
+.gps-v2 .gps-financed-price strong {
+  margin-block: 5px;
+  color: #163b52;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.3;
+  white-space: nowrap;
+}
+.gps-financed-price > span,
+.gps-financed-price > small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.gps-financed-price > span {
+  color: #81602f;
+}
+.gps-financed-price > small {
+  color: #365468;
+}
+.gps-price-conditions {
+  display: grid;
+  gap: 7px;
+  margin: 23px 0 0;
+  padding-left: 20px;
+  color: #365468;
+  font-size: 13px;
+  line-height: 1.8;
+  list-style: disc;
+}
+.gps-price-conditions li::marker {
+  color: #a47a32;
+}
+.gps-payment-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #d8dfd4;
+}
+.gps-payment-options .gps-button {
+  min-height: 54px;
+  font-size: 14px;
+}
+.gps-guarantee {
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin: 20px auto;
+  padding-block: 34px;
+  border: 1px solid #d5e4d7;
+  border-radius: 20px;
+  background: #edf3ed;
+}
+.gps-guarantee-container {
+  max-width: 1040px;
+  padding-inline: 25px;
+}
+.gps-guarantee-layout {
+  display: grid;
+  grid-template-columns: 182px minmax(0, 1fr);
+  align-items: center;
+  gap: 30px;
+}
+.gps-guarantee-badge {
+  display: grid;
+  place-items: center;
+}
+.gps-v2 .gps-satisfaction-seal {
+  display: block;
+  width: 100%;
+  max-width: 182px;
+  height: auto;
+}
+.gps-guarantee .gps-eyebrow {
+  margin-bottom: 11px !important;
+  font-size: 10px;
+}
+.gps-guarantee .gps-eyebrow::before {
+  margin-bottom: 10px;
+}
+.gps-guarantee h2 {
+  font-size: clamp(28px, 2.7vw, 36px);
+  line-height: 1.15;
+}
+.gps-guarantee-layout > div > p:not(.gps-eyebrow) {
+  max-width: 680px;
+  margin-top: 14px;
+  color: #2e514f;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.gps-guarantee-policy {
+  margin-top: 23px;
+  border-top: 1px solid #b6cabc;
+}
+.gps-guarantee-policy summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  min-height: 52px;
+  padding-block: 12px;
+  color: #123b44;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+.gps-guarantee-policy summary > span {
+  color: #006b70;
+  font-size: 23px;
+}
+.gps-guarantee-policy[open] summary > span {
+  rotate: 45deg;
+}
+.gps-guarantee-policy > div {
+  padding: 14px 0 5px;
+  color: #2e514f;
+  font-size: 14px;
+  line-height: 1.85;
+}
+.gps-guarantee-policy section {
+  margin-block: 17px;
+}
+.gps-guarantee-policy h3 {
+  margin-bottom: 8px;
+  color: #123b44;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+}
+.gps-guarantee-policy p + p {
+  margin-top: 15px;
+}
+.gps-final h2 {
+  max-width: 900px;
+  margin-inline: auto;
+  font-size: clamp(31px, 4vw, 50px);
+  line-height: 1.17;
+}
+.gps-final p:not(.gps-eyebrow) {
+  max-width: 790px;
+  margin-inline: auto;
+}
+.gps-final p.gps-final-invitation {
+  margin-top: 20px;
+  color: #efd090;
+  font-weight: 600;
+}
+.gps-final .gps-button {
+  max-width: 100%;
+  white-space: normal;
+}
+@media (hover: hover) and (pointer: fine) {
+  .gps-program-author a:hover {
+    color: #fff0c3;
   }
-  .gps-video-story {
-    padding: 25px;
-  }
-  .gps-presentation-heading h2 {
-    font-size: 32px;
+  .gps-plan-card:hover {
+    border-color: #a9c2b2;
+    box-shadow: 0 8px 23px rgb(12 60 60 / 6%);
   }
 }
-@media (max-width: 1023px) {
-  .gps-presentation-grid {
+@media (max-width: 767px) {
+  .gps-program-video {
+    margin-bottom: 27px;
+  }
+  .gps-program-author {
+    padding-inline: 6px;
+    font-size: 13px;
+  }
+  .gps-methodology ol {
     grid-template-columns: minmax(0, 1fr);
+    gap: 22px;
   }
-  .gps-director-card {
-    display: grid;
-    grid-template-columns: minmax(0, .7fr) minmax(0, 1fr);
-    align-items: center;
+  .gps-payment-options .gps-button {
+    width: 100%;
   }
-  .gps-director-photo {
-    padding: 18px;
-  }
-  .gps-director-portrait {
-    height: 300px;
+  .gps-guarantee-layout {
+    grid-template-columns: 140px minmax(0, 1fr);
+    gap: 21px;
   }
 }
-@media (max-width: 639px) {
-  .gps-presentation {
-    padding-block: 26px;
+@media (max-width: 479px) {
+  .gps-plan-card {
+    gap: 10px;
+    padding: 23px;
   }
-  .gps-presentation-layout {
-    padding-inline: 20px;
+  .gps-program-card .gps-program-outcome {
+    min-height: 74px;
   }
-  .gps-video-story {
-    padding: 25px 20px 20px;
-    border-radius: 18px;
+  .gps-guarantee {
+    padding-block: 27px;
   }
-  .gps-presentation-heading h2 {
+  .gps-guarantee-container {
+    padding-inline: 21px;
+  }
+  .gps-guarantee-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 19px;
+  }
+  .gps-v2 .gps-satisfaction-seal {
+    max-width: 136px;
+  }
+  .gps-guarantee h2 {
     font-size: 29px;
   }
-  .gps-presentation-heading > p {
-    line-height: 1.75;
+  .gps-guarantee .gps-eyebrow {
+    font-size: 9px;
   }
-  .gps-director-card {
-    display: block;
-    border-radius: 18px;
+  .gps-guarantee-policy summary {
+    font-size: 13px;
   }
-  .gps-director-photo {
-    padding-bottom: 0;
-  }
-  .gps-director-portrait {
-    height: 320px;
-  }
-  .gps-director-copy {
-    padding: 23px;
+  .gps-final .gps-button {
+    padding-inline: 22px;
+    font-size: 14px;
   }
 }
