@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/Container";
 export const metadata: Metadata = {
   title: "Gracias, tu lugar esta reservado | Academia GPS",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/gracias" },
 };
 
 const nextSteps = [

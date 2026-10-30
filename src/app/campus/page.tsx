@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Campus Virtual | Academia GPS",
   robots: { index: false, follow: false },
+  alternates: { canonical: "/campus" },
 };
 
 const campusUrl = "https://aula.vidroop.com/login/44c6fc57-9a61-4279-ac54-0d7c86a7c9ba";
