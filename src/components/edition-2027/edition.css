@@ -3173,13 +3173,32 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   margin-inline: auto;
 }
 .gps-final p.gps-final-invitation {
-  margin-top: 20px;
-  color: #efd090;
-  font-weight: 600;
+  margin-top: 28px;
+  color: #f4d598;
+  font-size: clamp(19px, 2.1vw, 26px);
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  text-transform: uppercase;
+  text-wrap: balance;
 }
 .gps-final .gps-button {
   max-width: 100%;
   white-space: normal;
+}
+.gps-final-payment-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  max-width: 760px;
+  margin: 28px auto 0;
+}
+.gps-v2 .gps-final-payment-options .gps-button {
+  width: 100%;
+  margin-top: 0;
+  padding-inline: 22px;
+  gap: 14px;
+  font-size: 14px;
 }
 @media (hover: hover) and (pointer: fine) {
   .gps-program-author a:hover {
@@ -3191,6 +3210,11 @@ body:has(.gps-v2)::-webkit-scrollbar-button {
   }
 }
 @media (max-width: 767px) {
+  .gps-final-payment-options {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 420px;
+    gap: 12px;
+  }
   .gps-program-video {
     margin-bottom: 27px;
   }

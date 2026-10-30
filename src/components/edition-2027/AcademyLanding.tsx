@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { academy } from "@/config/academy";
 import { getPrimaryWhatsappCta } from "@/config/contacts";
+import {
+  getInstallmentsPaymentCta,
+  getPrimaryPaymentCta,
+} from "@/config/payment-links";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/ui/Reveal";
 import { CheckList, Cta, Eyebrow, Icon } from "./Elements";
@@ -471,7 +475,8 @@ function Faq() {
 }
 
 function FinalCta() {
-  const whatsapp = getPrimaryWhatsappCta();
+  const cash = getPrimaryPaymentCta();
+  const installments = getInstallmentsPaymentCta();
   return (
     <section className="gps-section gps-final" aria-labelledby="final-title">
       <Container>
@@ -486,9 +491,14 @@ function FinalCta() {
         <p className="gps-final-invitation">
           Convertite en el CEO que tu clínica necesita con la Trilogía TOL 2.0.
         </p>
-        <Cta href={whatsapp.href} gold external>
-          ¡Quiero inscribirme y convertirme en CEO de mi clínica!
-        </Cta>
+        <div className="gps-final-payment-options" role="group" aria-label="Opciones de inscripción y pago">
+          <Cta href={cash.href} gold external={!cash.isPlaceholder}>
+            Inscribirme y pagar al contado
+          </Cta>
+          <Cta href={installments.href} gold external={!installments.isPlaceholder}>
+            Inscribirme y pagar en cuotas
+          </Cta>
+        </div>
       </Container>
     </section>
   );
